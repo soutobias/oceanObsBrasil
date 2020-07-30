@@ -71,7 +71,7 @@ def ftp_pnboia(filename):
 
     print('arquivo_copiado para o FTP')
 
-def buscabdsismo(tempo):
+def buscabdotherbuoys(tempo):
 
     db = MySQLdb.connect(host = user_config.host,
                          user = user_config.username,
@@ -83,11 +83,11 @@ def buscabdsismo(tempo):
 
     c1=[]
 
-    cur.execute("SELECT sismo_estacao.nome,sismo_estacao.lat,sismo_estacao.lon,\
-                sismo.datahora,sismo.mwd,sismo.hm0,sismo.seapeakdir,\
-                sismo.seahm0,sismo.swellpeakdir,sismo.swellhm0,sismo.wspd,sismo.gust \
-                FROM sismo INNER JOIN sismo_estacao WHERE sismo.datahora>='%s' \
-                AND sismo_estacao.id=sismo.esta_sismo \
+    cur.execute("SELECT otherbuoys_estacao.nome,otherbuoys_estacao.lat,otherbuoys_estacao.lon,\
+                otherbuoys.datahora,otherbuoys.mwd,otherbuoys.hm0,otherbuoys.seapeakdir,\
+                otherbuoys.seahm0,otherbuoys.swellpeakdir,otherbuoys.swellhm0,otherbuoys.wspd,otherbuoys.gust \
+                FROM otherbuoys INNER JOIN otherbuoys_estacao WHERE otherbuoys.datahora>='%s' \
+                AND otherbuoys_estacao.id=otherbuoys.esta_id \
                 ORDER BY datahora DESC" % (tempo))
 
 
@@ -352,7 +352,7 @@ def buscabdrico(tempo):
 
     return data
 
-def buscabdcodesa(tempo):
+def buscabdespiritosanto(tempo):
 
     db = MySQLdb.connect(host = user_config.host,
                          user = user_config.username,
@@ -362,14 +362,14 @@ def buscabdcodesa(tempo):
     cur=db.cursor()
 
     c1=[]
-    cur.execute("SELECT codesa_estacao.nome,codesa_estacao.lat,\
-                codesa_estacao.lon,\
-                codesa.datahora,codesa.wspd,codesa.wdir,codesa.wtmp,\
-                codesa.atmp,codesa.pres,codesa.humi,codesa.mwd,\
-                codesa.spred,codesa.dpd,codesa.wvht \
-                FROM codesa INNER JOIN codesa_estacao WHERE \
-                codesa.datahora>='%s' AND \
-                codesa_estacao.id=codesa.esta_id \
+    cur.execute("SELECT buoy_espiritosanto_estacao.nome,buoy_espiritosanto_estacao.lat,\
+                buoy_espiritosanto_estacao.lon,\
+                buoy_espiritosanto.datahora,buoy_espiritosanto.wspd,buoy_espiritosanto.wdir,buoy_espiritosanto.wtmp,\
+                buoy_espiritosanto.atmp,buoy_espiritosanto.pres,buoy_espiritosanto.humi,buoy_espiritosanto.mwd,\
+                buoy_espiritosanto.spred,buoy_espiritosanto.dpd,buoy_espiritosanto.wvht \
+                FROM buoy_espiritosanto INNER JOIN buoy_espiritosanto_estacao WHERE \
+                buoy_espiritosanto.datahora>='%s' AND \
+                buoy_espiritosanto_estacao.id=buoy_espiritosanto.esta_id \
                 ORDER BY datahora DESC" % (tempo))
 
     datahora,wspd,wdir,wtmp,atmp,pres,humi,mwd=[],[],[],[],[],[],[],[]
@@ -504,12 +504,12 @@ def fill_document(doc):
 
 
     wave=buscabdwavecheck(tempo)
-    codesa=buscabdcodesa(tempo)
+    buoy_espiritosanto=buscabdespiritosanto(tempo)
     rico=buscabdrico(tempo)
     ndbc=buscabdndbc(tempo)
     pnboia=buscabdpnboia(tempo)
     simcosta=buscabdsimcosta(tempo)
-    sismo=buscabdsismo(tempo)
+    otherbuoys=buscabdotherbuoys(tempo)
 
     datahora4=time.gmtime(time.time()-(3600*24*8))
     tempo4=datetime.datetime.strptime(str(datahora4[2])+"/"+str(datahora4[1])+"/"+str(datahora4[0])+" 00:00:00", '%d/%m/%Y %H:%M:%S')
@@ -691,31 +691,31 @@ def fill_document(doc):
 
 
             if estados[s]=="Espirito Santo":
-                with doc.create(Subsection('Codesa')):
+                with doc.create(Subsection('Boias')):
                     with doc.create(Tabular('|c|c|c|c|c|c|c|c|c|c|c|')) as table:
                         x=0
                         y=0
-                        for i in range(len(codesa)):
-                            if int(codesa[i][3])>=tempo1.hour-6 and int(codesa[i][2])==tempo1.day:
+                        for i in range(len(buoy_espiritosanto)):
+                            if int(buoy_espiritosanto[i][3])>=tempo1.hour-6 and int(buoy_espiritosanto[i][2])==tempo1.day:
                                     x=1
                                     if x==1 and y==0:
                                         table.add_hline()
                                         table.add_row(('mes','dia','hora','min','vvel(nos)','vdir','t_ag(°C)','t_ar(°C)','Hs(m)','Tp(s)','dirmed'))
                                         table.add_hline()
-                                        if codesa[i][8]!=None:
-                                            value=arredondar1(float(codesa[i][8])*1.94384)
+                                        if buoy_espiritosanto[i][8]!=None:
+                                            value=arredondar1(float(buoy_espiritosanto[i][8])*1.94384)
                                         else:
                                             value=None
-                                        table.add_row((codesa[i][1],codesa[i][2],codesa[i][3],codesa[i][4],value,codesa[i][9],codesa[i][10],codesa[i][11],codesa[i][17],codesa[i][16],codesa[i][14]))
+                                        table.add_row((buoy_espiritosanto[i][1],buoy_espiritosanto[i][2],buoy_espiritosanto[i][3],buoy_espiritosanto[i][4],value,buoy_espiritosanto[i][9],buoy_espiritosanto[i][10],buoy_espiritosanto[i][11],buoy_espiritosanto[i][17],buoy_espiritosanto[i][16],buoy_espiritosanto[i][14]))
                                         x=2
                                         y=1
                                     else:
                                         table.add_hline()
-                                        if codesa[i][8]!=None:
-                                            value=arredondar1(float(codesa[i][8])*1.94384)
+                                        if buoy_espiritosanto[i][8]!=None:
+                                            value=arredondar1(float(buoy_espiritosanto[i][8])*1.94384)
                                         else:
                                             value=None
-                                        table.add_row((codesa[i][1],codesa[i][2],codesa[i][3],codesa[i][4],value,codesa[i][9],codesa[i][10],codesa[i][11],codesa[i][17],codesa[i][16],codesa[i][14]))
+                                        table.add_row((buoy_espiritosanto[i][1],buoy_espiritosanto[i][2],buoy_espiritosanto[i][3],buoy_espiritosanto[i][4],value,buoy_espiritosanto[i][9],buoy_espiritosanto[i][10],buoy_espiritosanto[i][11],buoy_espiritosanto[i][17],buoy_espiritosanto[i][16],buoy_espiritosanto[i][14]))
                                     if x!=0:
                                         table.add_hline()
 
@@ -797,77 +797,77 @@ def fill_document(doc):
 
 
             if estados[s]=="Sergipe":
-                with doc.create(Subsection('Sismo')):
+                with doc.create(Subsection('Boias')):
                     with doc.create(Tabular('|c|c|c|c|c|c|c|c|')) as table:
                         x=0
                         y=0
-                        for i in range(len(sismo)):
-                            if int(sismo[i][3])>=tempo1.hour and int(sismo[i][2])==tempo1.day and sismo[i][5]=='celse':
+                        for i in range(len(otherbuoys)):
+                            if int(otherbuoys[i][3])>=tempo1.hour and int(otherbuoys[i][2])==tempo1.day and otherbuoys[i][5]=='celse':
                                 x=1
                                 if x==1 and y==0:
                                     table.add_hline()
                                     table.add_row(('mes','dia','hora','minuto','Onda_dirmed','Hs(m)','vvel(nos)','rajada(nos)'))
                                     table.add_hline()
-                                    if sismo[i][14]!=None:
-                                        value=arredondar1(float(sismo[i][14])*1.94384)
+                                    if otherbuoys[i][14]!=None:
+                                        value=arredondar1(float(otherbuoys[i][14])*1.94384)
                                     else:
                                         value=None
-                                    if sismo[i][15]!=None:
-                                        value1=arredondar1(float(sismo[i][15])*1.94384)
+                                    if otherbuoys[i][15]!=None:
+                                        value1=arredondar1(float(otherbuoys[i][15])*1.94384)
                                     else:
                                         value1=None
-                                    table.add_row((sismo[i][1],sismo[i][2],sismo[i][3],sismo[i][4],sismo[i][8],sismo[i][9],value,value1))
+                                    table.add_row((otherbuoys[i][1],otherbuoys[i][2],otherbuoys[i][3],otherbuoys[i][4],otherbuoys[i][8],otherbuoys[i][9],value,value1))
                                     x=2
                                     y=1
                                 else:
                                     table.add_hline()
-                                    if sismo[i][14]!=None:
-                                        value=arredondar1(float(sismo[i][14])*1.94384)
+                                    if otherbuoys[i][14]!=None:
+                                        value=arredondar1(float(otherbuoys[i][14])*1.94384)
                                     else:
                                         value=None
-                                    if sismo[i][15]!=None:
-                                        value1=arredondar1(float(sismo[i][15])*1.94384)
+                                    if otherbuoys[i][15]!=None:
+                                        value1=arredondar1(float(otherbuoys[i][15])*1.94384)
                                     else:
                                         value1=None
-                                    table.add_row((sismo[i][1],sismo[i][2],sismo[i][3],sismo[i][4],sismo[i][8],sismo[i][9],value,value1))
+                                    table.add_row((otherbuoys[i][1],otherbuoys[i][2],otherbuoys[i][3],otherbuoys[i][4],otherbuoys[i][8],otherbuoys[i][9],value,value1))
                                 if x!=0:
                                     table.add_hline()
 
 
             if estados[s]=="Pernambuco":
-                with doc.create(Subsection('Sismo')):
+                with doc.create(Subsection('Boias')):
                     with doc.create(Tabular('|c|c|c|c|c|c|c|c|')) as table:
                         x=0
                         y=0
-                        for i in range(len(sismo)):
-                            if int(sismo[i][3])>=tempo1.hour and int(sismo[i][2])==tempo1.day and sismo[i][5]=='suape':
+                        for i in range(len(otherbuoys)):
+                            if int(otherbuoys[i][3])>=tempo1.hour and int(otherbuoys[i][2])==tempo1.day and otherbuoys[i][5]=='suape':
                                 x=1
                                 if x==1 and y==0:
                                     table.add_hline()
                                     table.add_row(('mes','dia','hora','minuto','Onda_dirmed','Hs(m)','vvel(nos)','rajada(nos)'))
                                     table.add_hline()
-                                    if sismo[i][14]!=None:
-                                        value=arredondar1(float(sismo[i][14])*1.94384)
+                                    if otherbuoys[i][14]!=None:
+                                        value=arredondar1(float(otherbuoys[i][14])*1.94384)
                                     else:
                                         value=None
-                                    if sismo[i][15]!=None:
-                                        value1=arredondar1(float(sismo[i][15])*1.94384)
+                                    if otherbuoys[i][15]!=None:
+                                        value1=arredondar1(float(otherbuoys[i][15])*1.94384)
                                     else:
                                         value1=None
-                                    table.add_row((sismo[i][1],sismo[i][2],sismo[i][3],sismo[i][4],sismo[i][8],sismo[i][9],value,value1))
+                                    table.add_row((otherbuoys[i][1],otherbuoys[i][2],otherbuoys[i][3],otherbuoys[i][4],otherbuoys[i][8],otherbuoys[i][9],value,value1))
                                     x=2
                                     y=1
                                 else:
                                     table.add_hline()
-                                    if sismo[i][14]!=None:
-                                        value=arredondar1(float(sismo[i][14])*1.94384)
+                                    if otherbuoys[i][14]!=None:
+                                        value=arredondar1(float(otherbuoys[i][14])*1.94384)
                                     else:
                                         value=None
-                                    if sismo[i][15]!=None:
-                                        value1=arredondar1(float(sismo[i][15])*1.94384)
+                                    if otherbuoys[i][15]!=None:
+                                        value1=arredondar1(float(otherbuoys[i][15])*1.94384)
                                     else:
                                         value1=None
-                                    table.add_row((sismo[i][1],sismo[i][2],sismo[i][3],sismo[i][4],sismo[i][8],sismo[i][9],value,value1))
+                                    table.add_row((otherbuoys[i][1],otherbuoys[i][2],otherbuoys[i][3],otherbuoys[i][4],otherbuoys[i][8],otherbuoys[i][9],value,value1))
                                 if x!=0:
                                     table.add_hline()
 
