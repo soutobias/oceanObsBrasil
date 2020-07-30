@@ -13,7 +13,6 @@ from pandas.io import sql
 import sqlalchemy
 from pathlib import Path
 from sqlalchemy import create_engine
-import user_config
 import mysql.connector as MySQLdb
 
 import sys
