@@ -4,7 +4,9 @@ import sys
 import os
 from os.path import expanduser
 home = expanduser("~")
-
+sys.path.insert(0,home)
+import user_config
+os.chdir( user_config.path )
 
 import pandas as pd
 
@@ -18,15 +20,11 @@ from cartopy import config
 from shapely import geometry
 
 
-import os
-from os.path import expanduser
-
 
 # Builded Packages
 sys.path.insert(1,'/home/oceanObsBrasil/database')
 from databaseMySQL import consulta_dados
 
-os.chdir( user_config.path )
 
 # Dataframe from database
 
