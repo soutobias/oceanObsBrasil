@@ -920,8 +920,11 @@ def fill_document(doc):
             figura4.add_image('altimetro_mapa_12h.png', width='550px')
             figura4.add_caption('Altura de onda em metros')
         with doc.create(Figure(position='h!')) as figura5:
-            figura3.add_image('altimetro_mapa_6h.png', width='550px')
-            figura3.add_caption('Altura de onda em metros')
+            figura5.add_image('altimetro_mapa_6h.png', width='550px')
+            figura5.add_caption('Altura de onda em metros')
+        with doc.create(Figure(position='h!')) as figura6:
+            figura6.add_image('tsm_ultimo_dado.jpg', width='550px')
+            figura6.add_caption('Temperatura da Superficie do mar em ℃')
 
 
 if __name__ == '__main__':
