@@ -23,10 +23,10 @@ from os.path import expanduser
 
 
 # Builded Packages
-sys.path.insert(1,'/home/ocf/Marinha/Projetos/Remobs/remobs/database')
+sys.path.insert(1,'/home/oceanObsBrasil/database')
 from databaseMySQL import consulta_dados
 
-
+os.chdir( user_config.path )
 
 # Dataframe from database
 
