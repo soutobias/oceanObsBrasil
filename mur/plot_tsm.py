@@ -36,7 +36,7 @@ dados_sst = consulta_dados('mur', 'SELECT * FROM mur WHERE datahora = (SELECT ma
 
 # MetaAreas :
 
-lines = open('metareav.txt', 'r'')
+lines = open('metareav.txt', 'r')
 
 lat1,lat2,lat3,lat4,lat5,lat6,lat7,lat8,lat9,lat10=[],[],[],[],[],[],[],[],[],[]
 lon1,lon2,lon3,lon4,lon5,lon6,lon7,lon8,lon9,lon10=[],[],[],[],[],[],[],[],[],[]
