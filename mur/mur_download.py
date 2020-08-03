@@ -20,7 +20,7 @@ os.chdir( user_config.path )
 
 
 # Builded Packages
-sys.path.insert(1,'home/oceanObsBrasil/database')
+sys.path.insert(1,'/home/oceanObsBrasil/database')
 from databaseMySQL import consulta_data_banco, insere_dado_banco, deleta_dado
 
 
