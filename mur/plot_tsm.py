@@ -23,10 +23,10 @@ from os.path import expanduser
 
 
 # Builded Packages
-sys.path.insert(1,'/home/ocf/Marinha/Projetos/Remobs/remobs/database')
+sys.path.insert(1,'/home/oceanObsBrasil/database')
 from databaseMySQL import consulta_dados
 
-
+os.chdir( user_config.path )
 
 # Dataframe from database
 
@@ -36,7 +36,7 @@ dados_sst = consulta_dados('mur', 'SELECT * FROM mur WHERE datahora = (SELECT ma
 
 # MetaAreas :
 
-lines = open('/home/ocf/Marinha/Projetos/Remobs/remobs/metareav.txt', 'r')
+lines = open('metareav.txt', 'r'')
 
 lat1,lat2,lat3,lat4,lat5,lat6,lat7,lat8,lat9,lat10=[],[],[],[],[],[],[],[],[],[]
 lon1,lon2,lon3,lon4,lon5,lon6,lon7,lon8,lon9,lon10=[],[],[],[],[],[],[],[],[],[]
