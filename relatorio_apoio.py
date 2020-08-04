@@ -925,7 +925,21 @@ def fill_document(doc):
         with doc.create(Figure(position='h!')) as figura6:
             figura6.add_image('tsm_ultimo_dado.jpg', width='550px')
             figura6.add_caption('Temperatura da Superficie do mar em ℃')
-
+        with doc.create(Figure(position='h!')) as figura7:
+            figura7.add_image('estacoes_meteo_alfa.jpg', width='550px')
+            figura7.add_caption('Dados das estacoes meteorologicas na area Alfa.')
+        with doc.create(Figure(position='h!')) as figura8:
+            figura8.add_image('estacoes_meteo_charlie.jpg', width='550px')
+            figura8.add_caption('Dados das estacoes meteorologicas na area Charlie.')
+        with doc.create(Figure(position='h!')) as figura9:
+            figura9.add_image('estacoes_meteo_delta.jpg', width='550px')
+            figura9.add_caption('Dados das estacoes meteorologicas na area Delta.')
+        with doc.create(Figure(position='h!')) as figura10:
+            figura10.add_image('estacoes_meteo_echo.jpg', width='550px')
+            figura10.add_caption('Dados das estacoes meteorologicas na area Echo.')
+        with doc.create(Figure(position='h!')) as figura11:
+            figura11.add_image('estacoes_meteo_fox.jpg', width='550px')
+            figura11.add_caption('Dados das estacoes meteorologicas na area Foxtrot.')
 
 if __name__ == '__main__':
     # Basic document
