@@ -174,10 +174,10 @@ lon_g_2=-28
 
 
 # Area HOTEL
-lat_h_1=-37
-lat_h_2=-27
-lon_h_1=-55
-lon_h_2=-42
+lat_h_1=-2
+lat_h_2= 7
+lon_h_1= -53
+lon_h_2= -40
 
 
 # Box Coords das Metareas
@@ -185,11 +185,11 @@ lon_h_2=-42
 
 
 
-metareas = pd.DataFrame({'Area':['Alfa','Bravo','Charlie', 'Delta', 'Echo', 'Foxtrot', 'Golf'],
-                            'Lat_1': [lat_a_1, lat_b_1, lat_c_1, lat_d_1, lat_e_1, lat_f_1,lat_g_1],
-                            'Lat_2': [lat_a_2, lat_b_2, lat_c_2, lat_d_2, lat_e_2, lat_f_2,lat_g_2],
-                            'Lon_1': [lon_a_1, lon_b_1, lon_c_1, lon_d_1, lon_e_1, lon_f_1,lon_g_1],
-                            'Lon_2': [lon_a_2, lon_b_2, lon_c_2, lon_d_2, lon_e_2, lon_f_2,lon_g_2]})
+metareas = pd.DataFrame({'Area':['Alfa','Bravo','Charlie', 'Delta', 'Echo', 'Foxtrot', 'Golf','Hotel'],
+                            'Lat_1': [lat_a_1, lat_b_1, lat_c_1, lat_d_1, lat_e_1, lat_f_1,lat_g_1, lat_h_1],
+                            'Lat_2': [lat_a_2, lat_b_2, lat_c_2, lat_d_2, lat_e_2, lat_f_2,lat_g_2, lat_h_2],
+                            'Lon_1': [lon_a_1, lon_b_1, lon_c_1, lon_d_1, lon_e_1, lon_f_1,lon_g_1, lon_h_1],
+                            'Lon_2': [lon_a_2, lon_b_2, lon_c_2, lon_d_2, lon_e_2, lon_f_2,lon_g_2, lon_h_2]})
 
 #
 
@@ -239,7 +239,7 @@ for zona in range(len(lats)):
 
 
 
-ax.set_title("Área %s - Estacoes Meteorológicas" % metareas['Area'][area], loc = 'left')
+ax.set_title("Área %s - Estações Meteorológicas" % metareas['Area'][area], loc = 'left')
 ax.set_box_aspect(1)
 
 
@@ -404,7 +404,7 @@ for zona in range(len(lats)):
 
 
 
-ax2.set_title("Área %s - Estacoes Meteorológicas" % metareas['Area'][area], loc = 'left')
+ax2.set_title("Área %s - Estações Meteorológicas" % metareas['Area'][area], loc = 'left')
 ax2.set_box_aspect(1)
 
 
@@ -575,7 +575,7 @@ for zona in range(len(lats)):
 
 
 
-ax3.set_title("Área %s - Estacoes Meteorológicas" % metareas['Area'][area], loc = 'left')
+ax3.set_title("Área %s - Estações Meteorológicas" % metareas['Area'][area], loc = 'left')
 ax.set_box_aspect(1)
 
 
@@ -746,7 +746,7 @@ for zona in range(len(lats)):
 
 
 
-ax4.set_title("Área %s - Estacoes Meteorológicas" % metareas['Area'][area], loc = 'left')
+ax4.set_title("Área %s - Estações Meteorológicas" % metareas['Area'][area], loc = 'left')
 ax4.set_box_aspect(1)
 
 
@@ -915,7 +915,7 @@ for zona in range(len(lats)):
 
 
 
-ax5.set_title("Área %s - Estacoes Meteorológicas" % metareas['Area'][area], loc = 'left')
+ax5.set_title("Área %s - Estações Meteorológicas" % metareas['Area'][area], loc = 'left')
 ax5.set_box_aspect(1)
 
 
@@ -1041,4 +1041,350 @@ table.set_fontsize(4)
 
 plt.savefig("estacoes_meteo_fox.jpg", dpi = 300, bbox_inches="tight")
 print("Figura Estacoes - FOX Feita.")
+
+
+
+
+
+
+#######################################################
+######################## AREA GOLF
+
+
+
+area = 6
+
+max_lon_lim_golf = metareas['Lon_2'][area]
+max_lat_lim_golf = metareas['Lat_2'][area]
+
+#fig = plt.figure(figsize=(12,9))
+ax = plt.axes(projection=ccrs.PlateCarree())
+#ax = plt.axes(projection=ccrs.PlateCarree())
+ax.add_feature(cfeature.LAND)
+ax.add_feature(cfeature.COASTLINE)
+# ax.add_feature(states_provinces, edgecolor='gray')
+# ax.add_feature(cfeature.NaturalEarthFeature('physical', 'land', '50m', edgecolor='face', facecolor='0.8'))
+ax.set_xlim(metareas['Lon_1'][area] , max_lon_lim_golf)
+ax.set_ylim(metareas['Lat_1'][area] , max_lat_lim_golf)
+ax.set_position([0.05,.05,1,1])
+
+# Colocando a zona
+gr = ax.gridlines(crs=ccrs.PlateCarree(), draw_labels=True,
+             linewidth=0.5, color='gray', alpha=0.6, linestyle='--')
+
+gr.top_labels = False
+gr.right_labels = False
+gr.xlabel_style = {'size':6}
+gr.ylabel_style = {'size':6}
+
+# Lines zones
+
+for zona in range(len(lats)):
+    ax.plot(lons[zona],lats[zona],linewidth=0.5,color='k', alpha = 0.1)
+
+
+
+ax.set_title("Área %s - Estações Meteorológicas" % metareas['Area'][area], loc = 'left')
+ax.set_box_aspect(1)
+
+
+# Colocando os pontos
+
+dados_area = dados_meteo[(dados_meteo['lat'] > metareas['Lat_1'][area]) & (dados_meteo['lat'] < metareas['Lat_2'][area]) & (dados_meteo['lon'] > metareas['Lon_1'][area])]
+dados_area.reset_index(inplace = True)
+ax.scatter(dados_area['lon'],dados_area['lat'], s = 10, cmap = 'Reds', edgecolor = 'k')
+
+dados_area = dados_area.sort_values(by = 'lat', ascending= True)
+
+
+# Plotando temp em cada ponto :
+## Condicional em Golf para mudar a posição dos valores
+for pos in range(len(dados_area)):
+    if dados_area['id'][pos] == 'A867':
+        ax.annotate(dados_area['id'][pos],xy=(dados_area['lon'][pos]-0.7,dados_area['lat'][pos]),color='r',fontsize=5, fontweight = 'bold',bbox=dict(boxstyle="round4,pad=.5", fc="0.9"))
+    else:
+        ax.annotate(dados_area['id'][pos],xy=(dados_area['lon'][pos]+0.15,dados_area['lat'][pos]),color='r',fontsize=5, fontweight = 'bold',bbox=dict(boxstyle="round4,pad=.5", fc="0.9"))
+
+
+ax.margins(0.005,0.005)
+
+
+
+
+
+### COLETANDO OS DADOS DA AREA
+
+
+ ## CRIANDO AS TABELAS :
+
+
+
+
+rows_table = dados_area.columns
+
+
+rows_val = list(rows_table[2:-3].values)
+
+
+
+
+# Values to String
+date = list(dados_area['DATA'])
+hora = list(dados_area['HORA'])
+atmp = list(dados_area['atmp'].apply(lambda var: str(var)))
+humi = list(dados_area['humi'].apply(lambda var: str(var)))
+dewp = list(dados_area['dewp'].apply(lambda var: str(var)))
+pres = list(dados_area['pres'].apply(lambda var: str(var)))
+wspd = list(dados_area['wspd'].apply(lambda var: str(var)))
+wdir = list(dados_area['wdir'].apply(lambda var: str(var)))
+gust = list(dados_area['gust'].apply(lambda var: str(var)))
+
+# Replace nan by '-'
+
+atmp = [v.replace('nan','-') for v in atmp]
+humi = [v.replace('nan','-') for v in humi]
+dewp = [v.replace('nan','-') for v in dewp]
+pres = [v.replace('nan','-') for v in pres]
+wspd = [v.replace('nan','-') for v in wspd]
+wdir = [v.replace('nan','-') for v in wdir]
+gust = [v.replace('nan','-') for v in gust]
+
+
+values_list = [date, hora,atmp,humi,dewp, pres, wspd, wdir, gust]
+
+### HEADERS - IDs Stations
+
+ids_station = list(dados_area.id)
+
+
+
+box_golf = [0.5,0.5,0.4,0.22]
+#
+ax.set_axis_off()
+table = ax.table(
+    cellText = values_list,
+    rowLabels = rows_val,
+    colLabels = ids_station,
+    rowColours =["lightcyan"] * len(values_list),
+    colColours =["lightcyan"] * len(values_list),
+    cellColours = [['white'] * len(ids_station)]*len(values_list),
+    cellLoc ='center',
+    rowLoc = 'center',
+    loc = 'best',
+    bbox = box_golf)
+
+table.auto_set_font_size(False)
+table.auto_set_column_width([0,1,2,3,4,5,6,7])
+
+
+
+# Font Bold
+
+for (row, col), cell in table.get_celld().items():
+    cell.set_text_props(fontproperties=FontProperties(weight='bold'))
+    if (row==1 or row==2) and col >= 0:
+        cell.set_color('k')
+        cell.set_alpha(1)
+        cell.get_text().set_color('w')
+
+
+# Header Height
+
+#cellDict = table.get_celld()
+#for i in range(len(time_cols)):
+#    cellDict[0,i].set_height(0.08)
+
+
+
+
+
+table.set_fontsize(4)
+#table.scale(4,0.5)
+
+#table.get_celld()[0,0].get_width()
+
+
+plt.savefig("estacoes_meteo_golf.jpg", dpi = 300, bbox_inches="tight")
+print("Figura Estacoes - GOLF Feita.")
+
+
+plt.cla()
+plt.clf()
+
+
+
+
+
+
+
+
+
+
+
+#######################################################
+######################## AREA HOTEL
+
+
+
+area = 7
+#fig = plt.figure(figsize=(12,9))
+ax = plt.axes(projection=ccrs.PlateCarree())
+#ax = plt.axes(projection=ccrs.PlateCarree())
+ax.add_feature(cfeature.LAND)
+ax.add_feature(cfeature.COASTLINE)
+# ax.add_feature(states_provinces, edgecolor='gray')
+# ax.add_feature(cfeature.NaturalEarthFeature('physical', 'land', '50m', edgecolor='face', facecolor='0.8'))
+ax.set_xlim(metareas['Lon_1'][area] , metareas['Lon_2'][area])
+ax.set_ylim(metareas['Lat_1'][area] , metareas['Lat_2'][area])
+ax.set_position([0.05,.05,1,1])
+
+# Colocando a zona
+gr = ax.gridlines(crs=ccrs.PlateCarree(), draw_labels=True,
+             linewidth=0.5, color='gray', alpha=0.6, linestyle='--')
+
+gr.top_labels = False
+gr.right_labels = False
+gr.xlabel_style = {'size':6}
+gr.ylabel_style = {'size':6}
+
+# Lines zones
+
+for zona in range(len(lats)):
+    ax.plot(lons[zona],lats[zona],linewidth=0.5,color='k', alpha = 0.1)
+
+
+
+ax.set_title("Área %s - Estações Meteorológicas" % metareas['Area'][area], loc = 'left')
+ax.set_box_aspect(1)
+
+
+# Colocando os pontos
+
+dados_area = dados_meteo[(dados_meteo['lat'] > metareas['Lat_1'][area]) & (dados_meteo['lat'] < metareas['Lat_2'][area]) & (dados_meteo['lon'] > metareas['Lon_1'][area])]
+dados_area.reset_index(inplace = True)
+ax.scatter(dados_area['lon'],dados_area['lat'], s = 10, cmap = 'Reds', edgecolor = 'k')
+
+dados_area = dados_area.sort_values(by = 'lat', ascending= True)
+
+
+# Plotando temp em cada ponto :
+## Condicional em Golf para mudar a posição dos valores
+for pos in range(len(dados_area)):
+    if dados_area['id'][pos] == 'A867':
+        ax.annotate(dados_area['id'][pos],xy=(dados_area['lon'][pos]-0.7,dados_area['lat'][pos]),color='r',fontsize=5, fontweight = 'bold',bbox=dict(boxstyle="round4,pad=.5", fc="0.9"))
+    else:
+        ax.annotate(dados_area['id'][pos],xy=(dados_area['lon'][pos]+0.15,dados_area['lat'][pos]),color='r',fontsize=5, fontweight = 'bold',bbox=dict(boxstyle="round4,pad=.5", fc="0.9"))
+
+
+ax.margins(0.005,0.005)
+
+
+
+
+
+### COLETANDO OS DADOS DA AREA
+
+
+ ## CRIANDO AS TABELAS :
+
+
+
+
+rows_table = dados_area.columns
+
+
+rows_val = list(rows_table[2:-3].values)
+
+
+
+
+# Values to String
+date = list(dados_area['DATA'])
+hora = list(dados_area['HORA'])
+atmp = list(dados_area['atmp'].apply(lambda var: str(var)))
+humi = list(dados_area['humi'].apply(lambda var: str(var)))
+dewp = list(dados_area['dewp'].apply(lambda var: str(var)))
+pres = list(dados_area['pres'].apply(lambda var: str(var)))
+wspd = list(dados_area['wspd'].apply(lambda var: str(var)))
+wdir = list(dados_area['wdir'].apply(lambda var: str(var)))
+gust = list(dados_area['gust'].apply(lambda var: str(var)))
+
+# Replace nan by '-'
+
+atmp = [v.replace('nan','-') for v in atmp]
+humi = [v.replace('nan','-') for v in humi]
+dewp = [v.replace('nan','-') for v in dewp]
+pres = [v.replace('nan','-') for v in pres]
+wspd = [v.replace('nan','-') for v in wspd]
+wdir = [v.replace('nan','-') for v in wdir]
+gust = [v.replace('nan','-') for v in gust]
+
+
+values_list = [date, hora,atmp,humi,dewp, pres, wspd, wdir, gust]
+
+### HEADERS - IDs Stations
+
+ids_station = list(dados_area.id)
+
+
+
+box_hotel = [0.5,0.5,0.2,0.22]
+#
+ax.set_axis_off()
+table = ax.table(
+    cellText = values_list,
+    rowLabels = rows_val,
+    colLabels = ids_station,
+    rowColours =["lightcyan"] * len(values_list),
+    colColours =["lightcyan"] * len(values_list),
+    cellColours = [['white'] * len(ids_station)]*len(values_list),
+    cellLoc ='center',
+    rowLoc = 'center',
+    loc = 'best',
+    bbox = box_hotel)
+
+table.auto_set_font_size(False)
+table.auto_set_column_width([0,1,2,3,4,5,6,7])
+
+
+
+# Font Bold
+
+for (row, col), cell in table.get_celld().items():
+    cell.set_text_props(fontproperties=FontProperties(weight='bold'))
+    if (row==1 or row==2) and col >= 0:
+        cell.set_color('k')
+        cell.set_alpha(1)
+        cell.get_text().set_color('w')
+
+
+# Header Height
+
+#cellDict = table.get_celld()
+#for i in range(len(time_cols)):
+#    cellDict[0,i].set_height(0.08)
+
+
+
+
+
+table.set_fontsize(4)
+#table.scale(4,0.5)
+
+#table.get_celld()[0,0].get_width()
+
+
+plt.savefig("estacoes_meteo_hotel.jpg", dpi = 300, bbox_inches="tight")
+print("Figura Estacoes - HOTEL Feita.")
+
+
+plt.cla()
+plt.clf()
+
+
+
+
+
+
+
 print("Script Figuras Estacoes Meteorologicas Finalizado.")
