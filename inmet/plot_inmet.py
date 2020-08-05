@@ -253,7 +253,7 @@ dados_area = dados_area.sort_values(by = 'lat', ascending= True)
 
 
 # Plotando temp em cada ponto :
-## Condicional em Golf para mudar a posição dos valores
+
 for pos in range(len(dados_area)):
     if dados_area['id'][pos] == 'A867':
         ax.annotate(dados_area['id'][pos],xy=(dados_area['lon'][pos]-0.7,dados_area['lat'][pos]),color='r',fontsize=5, fontweight = 'bold',bbox=dict(boxstyle="round4,pad=.5", fc="0.9"))
@@ -586,7 +586,7 @@ dados_area.reset_index(inplace = True)
 ax3.scatter(dados_area['lon'],dados_area['lat'], s = 10, cmap = 'Reds', edgecolor = 'k')
 
 # Plotando temp em cada ponto :
-## Condicional em Golf para mudar a posição dos valores
+
 for pos in range(len(dados_area)):
     ax3.annotate(dados_area['id'][pos],xy=(dados_area['lon'][pos]+0.15,dados_area['lat'][pos]),color='r',fontsize=5, fontweight = 'bold',bbox=dict(boxstyle="round4,pad=.5", fc="0.9"))
 
@@ -757,7 +757,7 @@ dados_area.reset_index(inplace = True)
 ax4.scatter(dados_area['lon'],dados_area['lat'], s = 10, cmap = 'Reds', edgecolor = 'k')
 
 # Plotando temp em cada ponto :
-## Condicional em Golf para mudar a posição dos valores
+
 for pos in range(len(dados_area)):
     ax4.annotate(dados_area['id'][pos],xy=(dados_area['lon'][pos]+0.15,dados_area['lat'][pos]),color='r',fontsize=5, fontweight = 'bold',bbox=dict(boxstyle="round4,pad=.5", fc="0.9"))
 
@@ -1044,6 +1044,8 @@ print("Figura Estacoes - FOX Feita.")
 
 
 
+plt.cla()
+plt.clf()
 
 
 
@@ -1058,18 +1060,18 @@ max_lon_lim_golf = metareas['Lon_2'][area]
 max_lat_lim_golf = metareas['Lat_2'][area]
 
 #fig = plt.figure(figsize=(12,9))
-ax = plt.axes(projection=ccrs.PlateCarree())
+ax6 = plt.axes(projection=ccrs.PlateCarree())
 #ax = plt.axes(projection=ccrs.PlateCarree())
-ax.add_feature(cfeature.LAND)
-ax.add_feature(cfeature.COASTLINE)
+ax6.add_feature(cfeature.LAND)
+ax6.add_feature(cfeature.COASTLINE)
 # ax.add_feature(states_provinces, edgecolor='gray')
 # ax.add_feature(cfeature.NaturalEarthFeature('physical', 'land', '50m', edgecolor='face', facecolor='0.8'))
-ax.set_xlim(metareas['Lon_1'][area] , max_lon_lim_golf)
-ax.set_ylim(metareas['Lat_1'][area] , max_lat_lim_golf)
-ax.set_position([0.05,.05,1,1])
+ax6.set_xlim(metareas['Lon_1'][area] , max_lon_lim_golf)
+ax6.set_ylim(metareas['Lat_1'][area] , max_lat_lim_golf)
+ax6.set_position([0.05,.05,1,1])
 
 # Colocando a zona
-gr = ax.gridlines(crs=ccrs.PlateCarree(), draw_labels=True,
+gr = ax6.gridlines(crs=ccrs.PlateCarree(), draw_labels=True,
              linewidth=0.5, color='gray', alpha=0.6, linestyle='--')
 
 gr.top_labels = False
@@ -1080,33 +1082,30 @@ gr.ylabel_style = {'size':6}
 # Lines zones
 
 for zona in range(len(lats)):
-    ax.plot(lons[zona],lats[zona],linewidth=0.5,color='k', alpha = 0.1)
+    ax6.plot(lons[zona],lats[zona],linewidth=0.5,color='k', alpha = 0.1)
 
 
 
-ax.set_title("Área %s - Estações Meteorológicas" % metareas['Area'][area], loc = 'left')
-ax.set_box_aspect(1)
+ax6.set_title("Área %s - Estações Meteorológicas" % metareas['Area'][area], loc = 'left')
+ax6.set_box_aspect(1)
 
 
 # Colocando os pontos
 
 dados_area = dados_meteo[(dados_meteo['lat'] > metareas['Lat_1'][area]) & (dados_meteo['lat'] < metareas['Lat_2'][area]) & (dados_meteo['lon'] > metareas['Lon_1'][area])]
 dados_area.reset_index(inplace = True)
-ax.scatter(dados_area['lon'],dados_area['lat'], s = 10, cmap = 'Reds', edgecolor = 'k')
+ax6.scatter(dados_area['lon'],dados_area['lat'], s = 10, cmap = 'Reds', edgecolor = 'k')
 
 dados_area = dados_area.sort_values(by = 'lat', ascending= True)
 
 
 # Plotando temp em cada ponto :
-## Condicional em Golf para mudar a posição dos valores
+
 for pos in range(len(dados_area)):
-    if dados_area['id'][pos] == 'A867':
-        ax.annotate(dados_area['id'][pos],xy=(dados_area['lon'][pos]-0.7,dados_area['lat'][pos]),color='r',fontsize=5, fontweight = 'bold',bbox=dict(boxstyle="round4,pad=.5", fc="0.9"))
-    else:
-        ax.annotate(dados_area['id'][pos],xy=(dados_area['lon'][pos]+0.15,dados_area['lat'][pos]),color='r',fontsize=5, fontweight = 'bold',bbox=dict(boxstyle="round4,pad=.5", fc="0.9"))
+        ax6.annotate(dados_area['id'][pos],xy=(dados_area['lon'][pos]+0.15,dados_area['lat'][pos]),color='r',fontsize=5, fontweight = 'bold',bbox=dict(boxstyle="round4,pad=.5", fc="0.9"))
 
 
-ax.margins(0.005,0.005)
+ax6.margins(0.005,0.005)
 
 
 
@@ -1160,8 +1159,8 @@ ids_station = list(dados_area.id)
 
 box_golf = [0.5,0.5,0.4,0.22]
 #
-ax.set_axis_off()
-table = ax.table(
+ax6.set_axis_off()
+table = ax6.table(
     cellText = values_list,
     rowLabels = rows_val,
     colLabels = ids_station,
@@ -1228,18 +1227,18 @@ plt.clf()
 
 area = 7
 #fig = plt.figure(figsize=(12,9))
-ax = plt.axes(projection=ccrs.PlateCarree())
+ax7 = plt.axes(projection=ccrs.PlateCarree())
 #ax = plt.axes(projection=ccrs.PlateCarree())
-ax.add_feature(cfeature.LAND)
-ax.add_feature(cfeature.COASTLINE)
+ax7.add_feature(cfeature.LAND)
+ax7.add_feature(cfeature.COASTLINE)
 # ax.add_feature(states_provinces, edgecolor='gray')
 # ax.add_feature(cfeature.NaturalEarthFeature('physical', 'land', '50m', edgecolor='face', facecolor='0.8'))
-ax.set_xlim(metareas['Lon_1'][area] , metareas['Lon_2'][area])
-ax.set_ylim(metareas['Lat_1'][area] , metareas['Lat_2'][area])
-ax.set_position([0.05,.05,1,1])
+ax7.set_xlim(metareas['Lon_1'][area] , metareas['Lon_2'][area])
+ax7.set_ylim(metareas['Lat_1'][area] , metareas['Lat_2'][area])
+ax7.set_position([0.05,.05,1,1])
 
 # Colocando a zona
-gr = ax.gridlines(crs=ccrs.PlateCarree(), draw_labels=True,
+gr = ax7.gridlines(crs=ccrs.PlateCarree(), draw_labels=True,
              linewidth=0.5, color='gray', alpha=0.6, linestyle='--')
 
 gr.top_labels = False
@@ -1250,33 +1249,30 @@ gr.ylabel_style = {'size':6}
 # Lines zones
 
 for zona in range(len(lats)):
-    ax.plot(lons[zona],lats[zona],linewidth=0.5,color='k', alpha = 0.1)
+    ax7.plot(lons[zona],lats[zona],linewidth=0.5,color='k', alpha = 0.1)
 
 
 
-ax.set_title("Área %s - Estações Meteorológicas" % metareas['Area'][area], loc = 'left')
-ax.set_box_aspect(1)
+ax7.set_title("Área %s - Estações Meteorológicas" % metareas['Area'][area], loc = 'left')
+ax7.set_box_aspect(1)
 
 
 # Colocando os pontos
 
 dados_area = dados_meteo[(dados_meteo['lat'] > metareas['Lat_1'][area]) & (dados_meteo['lat'] < metareas['Lat_2'][area]) & (dados_meteo['lon'] > metareas['Lon_1'][area])]
 dados_area.reset_index(inplace = True)
-ax.scatter(dados_area['lon'],dados_area['lat'], s = 10, cmap = 'Reds', edgecolor = 'k')
+ax7.scatter(dados_area['lon'],dados_area['lat'], s = 10, cmap = 'Reds', edgecolor = 'k')
 
 dados_area = dados_area.sort_values(by = 'lat', ascending= True)
 
 
 # Plotando temp em cada ponto :
-## Condicional em Golf para mudar a posição dos valores
+
 for pos in range(len(dados_area)):
-    if dados_area['id'][pos] == 'A867':
-        ax.annotate(dados_area['id'][pos],xy=(dados_area['lon'][pos]-0.7,dados_area['lat'][pos]),color='r',fontsize=5, fontweight = 'bold',bbox=dict(boxstyle="round4,pad=.5", fc="0.9"))
-    else:
-        ax.annotate(dados_area['id'][pos],xy=(dados_area['lon'][pos]+0.15,dados_area['lat'][pos]),color='r',fontsize=5, fontweight = 'bold',bbox=dict(boxstyle="round4,pad=.5", fc="0.9"))
+        ax7.annotate(dados_area['id'][pos],xy=(dados_area['lon'][pos]+0.15,dados_area['lat'][pos]),color='r',fontsize=5, fontweight = 'bold',bbox=dict(boxstyle="round4,pad=.5", fc="0.9"))
 
 
-ax.margins(0.005,0.005)
+ax7.margins(0.005,0.005)
 
 
 
@@ -1330,8 +1326,8 @@ ids_station = list(dados_area.id)
 
 box_hotel = [0.5,0.5,0.2,0.22]
 #
-ax.set_axis_off()
-table = ax.table(
+ax7.set_axis_off()
+table = ax7.table(
     cellText = values_list,
     rowLabels = rows_val,
     colLabels = ids_station,
