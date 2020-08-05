@@ -70,20 +70,20 @@ dados_meteo.insert(1, 'DATA', data_df)
 dados_meteo.insert(2, 'HORA', hora_df)
 
 
-# Converting WindSpeed from meters to seconds to knots :
-
+# Converting WindSpeed and Gust from meters to seconds to knots :
 
 
 wspd = dados_meteo['wspd']
-
-
-estacoes_meteo[estacoes_meteo['wspd']>15]
+gust = dados_meteo['gust']
 
 wspd_km_h = wspd * 3.6
+gust_km_h = gust * 3.6
+
 wspd_knots = (wspd_km_h/1.852).round(2)
+gust_knots = (gust_km_h/1.852).round(2)
 
 dados_meteo['wspd'] = wspd_knots
-
+dados_meteo['gust'] = gust_knots
 
 
 ############# MetaAreas Contours ####
@@ -280,6 +280,9 @@ rows_table = dados_area.columns
 
 rows_val = list(rows_table[2:-3].values)
 
+rows_val
+rows_label = ['DATA','HORA','Temp.Ar(°C)','Umidade(%)','Pto.Orvalho(°C)','Pressão(hPa)','Vel.Vento(nó)','DirVento(°)','Raj.Vento(nó)']
+
 
 
 
@@ -318,7 +321,7 @@ teste_box = [0.5,0.3,0.4,0.22]
 ax.set_axis_off()
 table = ax.table(
     cellText = values_list,
-    rowLabels = rows_val,
+    rowLabels = rows_label,
     colLabels = ids_station,
     rowColours =["lightcyan"] * len(values_list),
     colColours =["lightcyan"] * len(values_list),
@@ -446,7 +449,7 @@ rows_table = dados_area.columns
 
 
 rows_val = list(rows_table[2:-3].values)
-
+rows_label = ['DATA','HORA','Temp.Ar(°C)','Umidade(%)','Pto.Orvalho(°C)','Pressão(hPa)','Vel.Vento(nó)','DirVento(°)','Raj.Vento(nó)']
 
 
 
@@ -481,12 +484,12 @@ ids_station = list(dados_area.id)
 len(values_list[0])
 
 
-teste_box_charlie = [0.2,0.18,0.8,0.22]
+box_charlie = [0.29,0.20,0.8,0.22]
 #
 ax2.set_axis_off()
 table = ax2.table(
     cellText = values_list,
-    rowLabels = rows_val,
+    rowLabels = rows_label,
     colLabels = ids_station,
     rowColours =["lightcyan"] * len(values_list),
     colColours =["lightcyan"] * len(values_list[0]),
@@ -494,7 +497,7 @@ table = ax2.table(
     cellLoc ='center',
     rowLoc = 'center',
     loc = 'best',
-    bbox = teste_box_charlie)
+    bbox = box_charlie)
 
 table.auto_set_font_size(False)
 #table.auto_set_column_width([0,1,2,3,4,5,6,7])
@@ -617,7 +620,7 @@ rows_table = dados_area.columns
 
 
 rows_val = list(rows_table[2:-3].values)
-
+rows_label = ['DATA','HORA','Temp.Ar(°C)','Umidade(%)','Pto.Orvalho(°C)','Pressão(hPa)','Vel.Vento(nó)','DirVento(°)','Raj.Vento(nó)']
 
 
 
@@ -657,7 +660,7 @@ teste_box_delta= [0.4,0.21,0.4,0.22]
 ax3.set_axis_off()
 table = ax3.table(
     cellText = values_list,
-    rowLabels = rows_val,
+    rowLabels = rows_label,
     colLabels = ids_station,
     rowColours =["lightcyan"] * len(values_list),
     colColours =["lightcyan"] * len(values_list[0]),
@@ -789,7 +792,7 @@ rows_table = dados_area.columns
 
 
 rows_val = list(rows_table[2:-3].values)
-
+rows_label = ['DATA','HORA','Temp.Ar(°C)','Umidade(%)','Pto.Orvalho(°C)','Pressão(hPa)','Vel.Vento(nó)','DirVento(°)','Raj.Vento(nó)']
 
 
 
@@ -829,7 +832,7 @@ box_echo= [0.4,0.3,0.4,0.22]
 ax4.set_axis_off()
 table = ax4.table(
     cellText = values_list,
-    rowLabels = rows_val,
+    rowLabels = rows_label,
     colLabels = ids_station,
     rowColours =["lightcyan"] * len(values_list),
     colColours =["lightcyan"] * len(values_list[0]),
@@ -928,7 +931,10 @@ ax5.scatter(dados_area['lon'],dados_area['lat'], s = 10, cmap = 'Reds', edgecolo
 # Plotando temp em cada ponto :
 ## Condicional em Golf para mudar a posição dos valores
 for pos in range(len(dados_area)):
-    ax5.annotate(dados_area['id'][pos],xy=(dados_area['lon'][pos]+0.15,dados_area['lat'][pos]),color='r',fontsize=5, fontweight = 'bold',bbox=dict(boxstyle="round4,pad=.5", fc="0.9"))
+    if dados_area['id'][pos] == 'A401':
+        ax5.annotate(dados_area['id'][pos],xy=(dados_area['lon'][pos]-0.65,dados_area['lat'][pos]-.3),color='r',fontsize=5, fontweight = 'bold',bbox=dict(boxstyle="round4,pad=.5", fc="0.9"))
+    else:
+        ax5.annotate(dados_area['id'][pos],xy=(dados_area['lon'][pos]+0.15,dados_area['lat'][pos]),color='r',fontsize=5, fontweight = 'bold',bbox=dict(boxstyle="round4,pad=.5", fc="0.9"))
 
 
 ax5.margins(0.005,0.005)
@@ -959,7 +965,7 @@ rows_table = dados_area.columns
 
 
 rows_val = list(rows_table[2:-3].values)
-
+rows_label = ['DATA','HORA','Temp.Ar(°C)','Umidade(%)','Pto.Orvalho(°C)','Pressão(hPa)','Vel.Vento(nó)','DirVento(°)','Raj.Vento(nó)']
 
 
 
@@ -994,12 +1000,12 @@ ids_station = list(dados_area.id)
 len(values_list[0])
 
 
-box_fox= [0.4,0.3,0.8,0.22]
+box_fox= [0.4,0.1,0.8,0.22]
 #
 ax5.set_axis_off()
 table = ax5.table(
     cellText = values_list,
-    rowLabels = rows_val,
+    rowLabels = rows_label,
     colLabels = ids_station,
     rowColours =["lightcyan"] * len(values_list),
     colColours =["lightcyan"] * len(values_list[0]),
@@ -1123,7 +1129,7 @@ rows_table = dados_area.columns
 
 
 rows_val = list(rows_table[2:-3].values)
-
+rows_label = ['DATA','HORA','Temp.Ar(°C)','Umidade(%)','Pto.Orvalho(°C)','Pressão(hPa)','Vel.Vento(nó)','DirVento(°)','Raj.Vento(nó)']
 
 
 
@@ -1157,12 +1163,12 @@ ids_station = list(dados_area.id)
 
 
 
-box_golf = [0.5,0.5,0.4,0.22]
+box_golf = [0.5,0.5,0.28,0.22]
 #
 ax6.set_axis_off()
 table = ax6.table(
     cellText = values_list,
-    rowLabels = rows_val,
+    rowLabels = rows_label,
     colLabels = ids_station,
     rowColours =["lightcyan"] * len(values_list),
     colColours =["lightcyan"] * len(values_list),
@@ -1290,7 +1296,7 @@ rows_table = dados_area.columns
 
 
 rows_val = list(rows_table[2:-3].values)
-
+rows_label = ['DATA','HORA','Temp.Ar(°C)','Umidade(%)','Pto.Orvalho(°C)','Pressão(hPa)','Vel.Vento(nó)','DirVento(°)','Raj.Vento(nó)']
 
 
 
@@ -1324,12 +1330,12 @@ ids_station = list(dados_area.id)
 
 
 
-box_hotel = [0.5,0.5,0.2,0.22]
+box_hotel = [0.5,0.5,0.15,0.22]
 #
 ax7.set_axis_off()
 table = ax7.table(
     cellText = values_list,
-    rowLabels = rows_val,
+    rowLabels = rows_label,
     colLabels = ids_station,
     rowColours =["lightcyan"] * len(values_list),
     colColours =["lightcyan"] * len(values_list),
