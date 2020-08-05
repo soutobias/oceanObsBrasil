@@ -239,7 +239,7 @@ for zona in range(len(lats)):
 
 
 
-ax.set_title("Área %s - Estacoes Meteorológicas" % metareas['Area'][area], loc = 'left')
+ax.set_title("Área %s - Estações Meteorológicas" % metareas['Area'][area], loc = 'left')
 ax.set_box_aspect(1)
 
 
@@ -404,7 +404,7 @@ for zona in range(len(lats)):
 
 
 
-ax2.set_title("Área %s - Estacoes Meteorológicas" % metareas['Area'][area], loc = 'left')
+ax2.set_title("Área %s - Estações Meteorológicas" % metareas['Area'][area], loc = 'left')
 ax2.set_box_aspect(1)
 
 
@@ -575,7 +575,7 @@ for zona in range(len(lats)):
 
 
 
-ax3.set_title("Área %s - Estacoes Meteorológicas" % metareas['Area'][area], loc = 'left')
+ax3.set_title("Área %s - Estações Meteorológicas" % metareas['Area'][area], loc = 'left')
 ax.set_box_aspect(1)
 
 
@@ -746,7 +746,7 @@ for zona in range(len(lats)):
 
 
 
-ax4.set_title("Área %s - Estacoes Meteorológicas" % metareas['Area'][area], loc = 'left')
+ax4.set_title("Área %s - Estações Meteorológicas" % metareas['Area'][area], loc = 'left')
 ax4.set_box_aspect(1)
 
 
@@ -915,7 +915,7 @@ for zona in range(len(lats)):
 
 
 
-ax5.set_title("Área %s - Estacoes Meteorológicas" % metareas['Area'][area], loc = 'left')
+ax5.set_title("Área %s - Estações Meteorológicas" % metareas['Area'][area], loc = 'left')
 ax5.set_box_aspect(1)
 
 
@@ -1084,7 +1084,7 @@ for zona in range(len(lats)):
 
 
 
-ax.set_title("Área %s" % metareas['Area'][area], loc = 'left')
+ax.set_title("Área %s - Estações Meteorológicas" % metareas['Area'][area], loc = 'left')
 ax.set_box_aspect(1)
 
 
@@ -1254,7 +1254,7 @@ for zona in range(len(lats)):
 
 
 
-ax.set_title("Área %s" % metareas['Area'][area], loc = 'left')
+ax.set_title("Área %s - Estações Meteorológicas" % metareas['Area'][area], loc = 'left')
 ax.set_box_aspect(1)
 
 
