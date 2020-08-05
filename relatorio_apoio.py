@@ -940,6 +940,12 @@ def fill_document(doc):
         with doc.create(Figure(position='h!')) as figura11:
             figura11.add_image('estacoes_meteo_fox.jpg', width='550px')
             figura11.add_caption('Dados das estacoes meteorologicas na area Foxtrot.')
+        with doc.create(Figure(position='h!')) as figura12:
+            figura12.add_image('estacoes_meteo_golf.jpg', width='550px')
+            figura12.add_caption('Dados das estacoes meteorologicas na area Echo.')
+        with doc.create(Figure(position='h!')) as figura13:
+            figura13.add_image('estacoes_meteo_hotel.jpg', width='550px')
+            figura13.add_caption('Dados das estacoes meteorologicas na area Foxtrot.')
 
 if __name__ == '__main__':
     # Basic document
