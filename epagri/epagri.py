@@ -117,11 +117,13 @@ df_meteoro.columns = ['datahora', 'atmp','wspd','wdir']
 df_meteoro = df_meteoro.replace(to_replace =['None', 'NULL', ' ', ''],
                         value =np.nan)
 
+
 print ("deletando dados antigos")
 for i in df_meteoro.index:
     deleta_dado("meteorologia",str(df_meteoro.datahora[i]), i)
 print ("Dados deletados")
 
+df_meteoro.wspd = df_meteoro.wspd*.27
 
 con = sqlalchemy.create_engine('mysql+mysqlconnector://{0}:{1}@{2}/{3}'.
                                         format(user_config.username,
