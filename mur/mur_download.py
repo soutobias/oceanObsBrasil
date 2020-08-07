@@ -25,6 +25,20 @@ from databaseMySQL import consulta_data_banco, insere_dado_banco, deleta_dado
 
 
 
+# Deleting any residual file from last download, in case they exists;
+
+
+list_all_files = os.listdir('.')
+
+list_files = [file for file in list_all_files if file.endswith("subset_MUR.nc")]
+
+if list_files:
+    for file in list_files:
+        os.remove(file)
+
+###
+
+
 # Last date of data to start the download
 start_date = consulta_data_banco('mur')
 
@@ -84,7 +98,7 @@ for p in range(len(pontos_lat)):
 
 
 # Loading data into a xarray
-data = xr.open_mfdataset('*.nc', combine = 'by_coords', concat_dim = 'ponto')
+data = xr.open_mfdataset('*subset_MUR.nc', combine = 'by_coords', concat_dim = 'ponto')
 
 
 dados_df = data.to_dataframe()
