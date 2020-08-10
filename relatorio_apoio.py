@@ -57,7 +57,7 @@ def ftp_pnboia(filename):
     username = user_config.ftpusername1
     password = user_config.ftppassword1
 
-    directory1 = '/ondas/dados_observacionais/'
+    directory1 = '/'
 
     ftp = ftplib.FTP(server)
     ftp.login(user=username, passwd=password)
