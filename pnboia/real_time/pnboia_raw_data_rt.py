@@ -12,7 +12,7 @@ import os
 from os.path import expanduser
 home = expanduser("~")
 sys.path.insert(0,home)
-import user_config1 as user_config
+import user_config as user_config
 os.chdir( user_config.path )
 
 

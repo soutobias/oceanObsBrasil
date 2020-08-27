@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+
+<html lang="pt-br" xml:lang="pt-br" xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="previsão do tempo, florianópolis, santa catarina, previsão para pesca, Previsão para navegação, imagem de satélite, risco de incêndio, Agricultura, agrometeorologia, meteorologia, geoprocessamento, zoneamento, hidrologia, níveis dos rios, climatologia, previsão climática" name="keywords"/>
+<meta content="Manu" name="author"/>
+<meta content="LITORAL ON-LINE" name="xreference"/>
+<meta content="O portal EPAGRI/CIRAM é um website oferecido pelo Governo de Santa Catarina à sociedade  visando a disponibilização de serviços e produtos relativos a meteorologia, agrometeorologia, zoneamento, hidrologia, geoprocessamento entre outros." name="description"/>
+<meta content="Joomla! - Open Source Content Management" name="generator"/>
+<title>EPAGRI/CIRAM  - LITORAL ON-LINE</title>
+<link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+<link href="http://ciram.epagri.sc.gov.br/templates/ammon/css/tipTip.css" rel="stylesheet" type="text/css"/>
+<link href="/libraries/gantry/css/grid-12.css" rel="stylesheet" type="text/css"/>
+<link href="/templates/ammon/css/gantry-override.css" rel="stylesheet" type="text/css"/>
+<link href="/templates/ammon/css/joomla-override.css" rel="stylesheet" type="text/css"/>
+<link href="/templates/ammon/css/styles.css" rel="stylesheet" type="text/css"/>
+<link href="http://ciram.epagri.sc.gov.br/templates/ammon/css/superfish.css" rel="stylesheet" type="text/css"/>
+<link href="http://ciram.epagri.sc.gov.br/templates/ammon/html/mod_menu/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="http://ciram.epagri.sc.gov.br/modules/mod_socialsharebuttons/style/style.css" rel="stylesheet" type="text/css"/>
+<link href="modules/mod_monitoramento_costeiro/css/menu.css" rel="stylesheet" type="text/css"/>
+<link href="modules/mod_monitoramento_costeiro/css/mod_monitoramento_costeiro.css" rel="stylesheet" type="text/css"/>
+<link href="modules/mod_monitoramento_costeiro/css/menu_right.css" rel="stylesheet" type="text/css"/>
+<link href="modules/mod_monitoramento_costeiro/css/menu_left.css" rel="stylesheet" type="text/css"/>
+<link href="modules/mod_monitoramento_costeiro/css/mapa.css" rel="stylesheet" type="text/css"/>
+<link href="modules/mod_monitoramento_costeiro/js/dhtml/dhtmlwindow.css" rel="stylesheet" type="text/css"/>
+<style type="text/css">
+
+body a {color:#009140;}
+#slideshow {background-color:#009140;}
+#rt-bottom {background-color:#dde6dd;}
+#rt-footer {background-color:#dde6dd;}
+.showcase-item h3 {color: #009140; }
+h1.title {color: #009140; }
+.plusSlider-controls a {background: #009140;}
+img.shadow:hover {-moz-box-shadow: 0 0 5px #009140;-webkit-box-shadow: 0 0 5px #009140; box-shadow: 0 0 5px #009140; border: 1px solid #009140;}
+::-moz-selection { background: #009140; }
+::selection { background: #009140; }
+input[type=text]:focus, input[type=password]:focus, textarea:focus, select:focus { -moz-box-shadow: 0 0 3px #009140;-webkit-box-shadow: 0 0 3px #009140; box-shadow: 0 0 3px #009140; border: 1px solid #009140; }
+input[type=submit], button { background:#009140; }
+.readon {background-color: #009140; }
+#simple-tabs ul.tabs li.active a { color:#009140; } 
+.tabs-clean-style ul.tabs li.active a {color:#009140;  }
+.intro-text {color:#009140;}
+.feature-item h3 {color:#009140;}
+
+
+  </style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script src="http://ciram.epagri.sc.gov.br/templates/ammon/js/jquery.infieldlabel.min.js" type="text/javascript"></script>
+<script src="http://ciram.epagri.sc.gov.br/templates/ammon/js/jquery.easing.1.3.js" type="text/javascript"></script>
+<script src="http://ciram.epagri.sc.gov.br/templates/ammon/js/jquery.tipTip.minified.js" type="text/javascript"></script>
+<script src="http://ciram.epagri.sc.gov.br/templates/ammon/js/functions.php?template_dir=http%3A%2F%2Fciram.epagri.sc.gov.br%2Ftemplates%2Fammon&amp;chaser=0" type="text/javascript"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7xNMGmtY_K176v1Wi8JiJwfiPDq1idj8&amp;libraries=geometry,places,visualization" type="text/javascript"></script>
+<script src="http://ciram.epagri.sc.gov.br/templates/ammon/js/jquery.supersubs.js" type="text/javascript"></script>
+<script src="http://ciram.epagri.sc.gov.br/modules/mod_jt_superfish_menu/js/superfish.js" type="text/javascript"></script>
+<script src="modules/mod_monitoramento_costeiro/js/infobox.js" type="text/javascript"></script>
+<script src="modules/mod_monitoramento_costeiro/js/richmarker.js" type="text/javascript"></script>
+<script src="modules/mod_monitoramento_costeiro/js/municipiomaps.js" type="text/javascript"></script>
+<script src="modules/mod_monitoramento_costeiro/js/dhtml/dhtmlwindow.js" type="text/javascript"></script>
+<script src="modules/mod_monitoramento_costeiro/js/flot/jquery.flot.js" type="text/javascript"></script>
+<script src="modules/mod_monitoramento_costeiro/js/gauge_barra.js" type="text/javascript"></script>
+<script src="modules/mod_monitoramento_costeiro/js/flot/jquery.flot.fillarea.js" type="text/javascript"></script>
+<script src="modules/mod_monitoramento_costeiro/js/flot/jquery.flot.time.js" type="text/javascript"></script>
+<script src="modules/mod_monitoramento_costeiro/js/flot/jquery.colorhelpers.js" type="text/javascript"></script>
+<script src="modules/mod_monitoramento_costeiro/js/flot/jquery.flot.canvas.js" type="text/javascript"></script>
+<script src="modules/mod_monitoramento_costeiro/js/flot/base64.js" type="text/javascript"></script>
+<script src="modules/mod_monitoramento_costeiro/js/flot/canvas2image.js" type="text/javascript"></script>
+<script src="modules/mod_monitoramento_costeiro/js/flot/jquery.flot.saveAsImage.js" type="text/javascript"></script>
+<script src="modules/mod_monitoramento_costeiro/js/flot/jquery.flot.navigate.js" type="text/javascript"></script>
+<script src="modules/mod_monitoramento_costeiro/js/flot/jquery.flot.selection.js" type="text/javascript"></script>
+<script src="modules/mod_monitoramento_costeiro/js/dateFormat.js" type="text/javascript"></script>
+<script src="modules/mod_monitoramento_costeiro/js/maregrama.js" type="text/javascript"></script>
+<script src="modules/mod_monitoramento_costeiro/js/maregramaHistorico.js" type="text/javascript"></script>
+<script src="modules/mod_monitoramento_costeiro/js/flot/jquery.flot.labels.js" type="text/javascript"></script>
+<script src="modules/mod_monitoramento_costeiro/js/maregramaData.js" type="text/javascript"></script>
+<script src="modules/mod_monitoramento_costeiro/js/maregramaDataHistorico.js" type="text/javascript"></script>
+<script type="text/javascript">
+jQuery.noConflict();		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+		__gaTracker('create', 'UA-2312725-4', 'auto');
+		__gaTracker('send', 'pageview');
+	
+			jQuery(document).ready(function($) {
+				$(".hasTip").tipTip();
+			});
+(function($){ 
+$(window).load(function() {
+  $("ul.sf-menu").supersubs({minWidth:13, maxWidth:30, extraWidth:0}).superfish({ 
+	  hoverClass: "sfHover",
+	  pathClass:  "sf-active",
+	  pathLevels: 0,
+	  animation:  {height:'show'},
+	  delay:      1000,
+	  speed:      "def",
+	  autoArrows: true,
+	  dropShadows: 0
+  }); 
+});
+})(jQuery);
+(function($){ 
+$(window).load(function() {
+  $("ul.sf-menu").supersubs({minWidth:13, maxWidth:30, extraWidth:0}).superfish({ 
+	  hoverClass: "sfHover",
+	  pathClass:  "sf-active",
+	  pathLevels: 0,
+	  animation:  {height:'show'},
+	  delay:      1000,
+	  speed:      "def",
+	  autoArrows: true,
+	  dropShadows: 0
+  }); 
+});
+})(jQuery);
+  </script>
+<link href="http://ciram.epagri.sc.gov.br/templates/ammon/images/favicon.png" rel="shortcut icon"/>
+<meta content="http://ciram.epagri.sc.gov.br/images/noimage.gif" property="og:image"/>
+</head>
+<body class="font-family-geneva font-size-is-default menu-type-fusionmenu col12 option-com-content menu-litoral-on-line">
+<!-- BARRA SUPERIOR DO GOVERNO -->
+<iframe border="0" frameborder="0" height="32" marginheight="0" marginwidth="0" name="principal" scrolling="no" src="https://www.sc.gov.br/barra_sc/barra_sc.html" style="top:32px;" width="100%">
+</iframe>
+<!-- FIM DA BARRA SUPERIOR DO GOVERNO -->
+<div class="" id="rt-header">
+<div class="rt-container">
+<div class="rt-grid-4 rt-alpha">
+<div class="rt-block">
+<a href="/" id="rt-logo"></a>
+</div>
+<div class="rt-block">
+<div class="custom">
+<div style="margin-top: -23px;"><img alt="EPAGRI/CIRAM" height="80" src="images/logo.png" usemap="#linklogo" width="284"/></div>
+<map name="linklogo">
+<area alt="EPAGRI" coords="0,0,76,80" href="http://www.epagri.sc.gov.br/" shape="rect" target="_blank"/>
+<area alt="CIRAM" coords="80,0,284,80" href="/" shape="rect"/>
+</map>
+</div>
+</div>
+</div>
+<div class="rt-grid-8 rt-omega">
+<div class="rt-block">
+<ul class="sf-menu menu">
+<li id="item-101"><a href="/index.php?option=com_content&amp;view=featured&amp;Itemid=101">Página inicial</a></li><li class="deeper parent" id="item-194"><a href="/index.php?option=com_content&amp;view=article&amp;id=50&amp;Itemid=194">Institucional</a><ul><li id="item-207"><a href="/index.php?option=com_content&amp;view=article&amp;id=50&amp;Itemid=207">O CIRAM</a></li><li id="item-208"><a href="/index.php?option=com_content&amp;view=article&amp;id=55&amp;Itemid=208">ÁREAS</a></li><li id="item-209"><a href="/index.php?option=com_content&amp;view=article&amp;id=56&amp;Itemid=209">EQUIPE</a></li></ul></li><li class="deeper parent" id="item-195"><a href="/index.php?option=com_content&amp;view=article&amp;id=104&amp;Itemid=195">Serviços</a><ul><li class="deeper parent" id="item-206"><a href="/index.php?option=com_content&amp;view=article&amp;id=2405&amp;Itemid=206">PREVISÃO DO TEMPO</a><ul><li id="item-262"><a href="/index.php?option=com_content&amp;view=article&amp;id=113&amp;Itemid=262">PREVISÃO PARA O MAR</a></li><li id="item-684"><a href="/index.php?option=com_content&amp;view=article&amp;id=812&amp;Itemid=684">MAREGRAMA</a></li><li id="item-263"><a href="/index.php?option=com_content&amp;view=article&amp;id=78&amp;Itemid=263">PREVISÃO DE GEADA</a></li><li id="item-264"><a href="/index.php?option=com_content&amp;view=article&amp;id=117&amp;Itemid=264">PREVISÃO EM ÁUDIO</a></li><li id="item-267"><a href="/index.php?option=com_content&amp;view=article&amp;id=120&amp;Itemid=267">TÁBUA DE MARÉS</a></li><li class="deeper parent" id="item-269"><a href="/index.php?option=com_content&amp;view=article&amp;id=85&amp;Itemid=269">PREVISÃO NUMÉRICA</a><ul><li id="item-271"><a href="/index.php?option=com_content&amp;view=article&amp;id=85&amp;Itemid=271">CHUVA</a></li><li id="item-268"><a href="/index.php?option=com_content&amp;view=article&amp;id=121&amp;Itemid=268">VENTO</a></li></ul></li></ul></li><li id="item-276"><a href="/index.php?option=com_content&amp;view=article&amp;id=2224&amp;Itemid=276">RIOS ON-LINE</a></li><li id="item-288"><a href="/index.php?option=com_content&amp;view=article&amp;id=2440&amp;Itemid=288">LITORAL ON-LINE</a></li><li class="deeper parent" id="item-213"><a href="/index.php?option=com_content&amp;view=article&amp;id=98&amp;Itemid=213">MONITORAMENTO</a><ul><li id="item-285"><a href="/index.php?option=com_content&amp;view=article&amp;id=98&amp;Itemid=285">MONITORAMENTO ON-LINE</a></li><li id="item-393"><a href="/index.php?option=com_content&amp;view=article&amp;id=60&amp;Itemid=393">IMAGEM DE SATÉLITE</a></li><li id="item-289"><a href="/index.php?option=com_content&amp;view=article&amp;id=103&amp;Itemid=289">TEMPERATURA DA SUPERFÍCIE DO MAR</a></li><li id="item-480"><a href="/index.php?option=com_content&amp;view=article&amp;id=510&amp;Itemid=480">MONITORAMENTO DO FRIO</a></li></ul></li><li class="deeper parent" id="item-214"><a href="/index.php?option=com_content&amp;view=article&amp;id=88&amp;Itemid=214">ZONEAMENTO</a><ul><li id="item-273"><a href="/index.php?option=com_content&amp;view=article&amp;id=88&amp;Itemid=273">ZONEAMENTO AGROECOLÓGICO</a></li><li id="item-274"><a href="/index.php?option=com_content&amp;view=article&amp;id=89&amp;Itemid=274">ZONEAMENTO AGRÍCOLA</a></li><li id="item-275"><a href="/index.php?option=com_content&amp;view=article&amp;id=90&amp;Itemid=275">ZONEAMENTO DE FLORES</a></li></ul></li><li class="deeper parent" id="item-483"><a href="/index.php?option=com_content&amp;view=article&amp;id=708&amp;Itemid=483">CLIMATOLOGIA</a><ul><li id="item-484"><a href="/index.php?option=com_content&amp;view=article&amp;id=708&amp;Itemid=484">ATLAS CLIMATOLÓGICO</a></li></ul></li><li class="deeper parent" id="item-278"><a href="/index.php?option=com_content&amp;view=article&amp;id=91&amp;Itemid=278">CONDIÇÕES EXTREMAS</a><ul><li id="item-392"><a href="/index.php?option=com_content&amp;view=article&amp;id=91&amp;Itemid=392">AVISOS METEOROLÓGICOS</a></li><li id="item-470"><a href="/index.php?option=com_content&amp;view=article&amp;id=477&amp;Itemid=470" title="AVISOS HIDROLÓGICOS">AVISOS HIDROLÓGICOS</a></li><li id="item-759"><a href="/index.php?option=com_content&amp;view=article&amp;id=2587&amp;Itemid=759" title="AVISOS HIDROLÓGICOS">AVISOS MARÍTIMOS</a></li><li id="item-661"><a href="/index.php?option=com_content&amp;view=article&amp;id=1498&amp;Itemid=661">CALCULE O ÍNDICE DE CALOR E A SENSAÇÃO TÉRMICA</a></li></ul></li></ul></li><li class="deeper parent" id="item-196"><a href="/index.php?option=com_content&amp;view=article&amp;id=53&amp;Itemid=196">Projetos</a><ul><li id="item-217"><a href="/index.php?option=com_content&amp;view=article&amp;id=53&amp;Itemid=217">EM ANDAMENTO</a></li><li id="item-218"><a href="/index.php?option=com_content&amp;view=article&amp;id=54&amp;Itemid=218">CONCLUÍDOS</a></li><li id="item-399"><a href="/index.php?option=com_content&amp;view=article&amp;id=211&amp;Itemid=399">SITE DOS PROJETOS</a></li></ul></li><li class="deeper parent" id="item-197"><a href="#">Publicações</a><ul><li id="item-219"><a href="/index.php?option=com_content&amp;view=article&amp;id=86&amp;Itemid=219">PUBLICAÇÕES TÉCNICO-CIENTÍFICAS</a></li><li id="item-220"><a href="/index.php?option=com_content&amp;view=article&amp;id=69&amp;Itemid=220">OUTRAS PUBLICAÇÕES</a></li><li id="item-215"><a href="/index.php?option=com_content&amp;view=article&amp;id=162&amp;Itemid=215">NOTÍCIAS</a></li><li id="item-272"><a href="/index.php?option=com_content&amp;view=article&amp;id=87&amp;Itemid=272">NOTAS METEOROLÓGICAS</a></li><li id="item-769"><a href="/index.php?option=com_content&amp;view=article&amp;id=2604&amp;Itemid=769">NOTAS MARÍTIMAS</a></li><li id="item-741"><a href="/index.php?option=com_content&amp;view=article&amp;id=407&amp;Itemid=741">BOLETINS HIDROLÓGICOS</a></li><li id="item-751"><a href="/index.php?option=com_content&amp;view=article&amp;id=2472&amp;Itemid=751">BOLETIM AMBIENTAL</a></li><li id="item-758"><a href="/index.php?option=com_content&amp;view=article&amp;id=2519&amp;Itemid=758">BOLETINS DE CULTURAS</a></li><li id="item-768"><a href="/index.php?option=com_content&amp;view=article&amp;id=2603&amp;Itemid=768">LITORAL ON-LINE</a></li></ul></li><li id="item-172"><a href="/index.php?option=com_content&amp;view=article&amp;id=40&amp;Itemid=172">Contato</a></li></ul>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="shadow-down"></div>
+</div>
+<div id="estacoes-ano">
+<div class="custom">
+<div style="text-align: center;"><span style="color: #ccffff; font-size: 12pt; font-family: comic sans ms, sans-serif;"><strong>Inverno</strong></span></div></div></div></body></html>Início:20/06 Fim:22/09
+
+
+<div id="icon-widgets">
+<ul class="icon-menu">
+<li class="custom_social">
+<div style="margin-top: 2px; margin-right: 4px;"><a href="http://twitter.com/epagriciram" rel="nofollow" style="margin: 1px;" target="_blank"><img alt="Twitter" src="modules/mod_socialmedialinks/icons/default/size2/twitter.png" title="Siga-nos no Twitter"/></a> <a href="https://www.facebook.com/pages/EpagriCiram/236061103085851" rel="nofollow" style="margin: 1px;" target="_blank"><img alt="Facebook" src="modules/mod_socialmedialinks/icons/default/size2/facebook.png" title="Siga-nos no Facebook"/></a> <a href="https://www.youtube.com/channel/UCLF0bRSR2Xb9dXiR0q6v93w" rel="nofollow" style="margin: 1px;" target="_blank"><img alt="Youtube" src="modules/mod_socialmedialinks/icons/default/size2/youtube.png" title="Siga-nos no Youtube"/></a><a href="http://imagens.ciram.sc.gov.br/" rel="nofollow" style="margin: 1px;" target="_blank"><img alt="Banco de Imagens" src="modules/mod_socialmedialinks/icons/default/size2/bancoimagens.png" title="Banco de Imagens"/></a></div>
+</li>
+<li class="custom_flags">
+<a href="index.php?option=com_content&amp;view=featured&amp;Itemid=101"><img alt="Versão em português" border="0" src="images/flag_brazil.png" title="Conteúdo em Português"/> </a> <a href="index.php?option=com_content&amp;view=article&amp;id=172:o-ciram-ingles&amp;catid=7:conteudo"><img alt="English version" border="0" src="images/flag_united_states.png" title="About CIRAM - English version"/> </a> <a href="index.php?option=com_content&amp;view=article&amp;id=173:o-ciram-espanhol&amp;catid=7:conteudo"><img alt="Versión en español" height="16" src="images/flag_spain.png" title="Sobre el CIRAM - Versión en español" width="16"/></a></li>
+</ul>
+</div>
+<div id="slideshow">
+<div class="random-image">
+<img alt="inverno3.png" height="90" src="/images/estacoes/Inverno/inverno3.png" width="1920"/></div>
+<!-- <div class="shadow-up"></div> -->
+</div>
+<div id="container">
+<div class="bg-transparent"></div>
+<div class="hidrologiaCenter" id="hidrologiaCenter">
+<div class="rt-grid-12 rt-alpha rt-omega">
+<div class="rt-block">
+<div id="municipioshidro">
+<div class="showmenu cbp-spmenu showmenu-button-left showmenu-button-left-open" id="showmenuleft">
+<div class="posisetas">
+<span class="setadireita"></span>
+<span class="setaesquerda"></span>
+</div>
+</div>
+<div class="cbp-spmenu cbp-spmenu-vertical-left cbp-spmenu-left cbp-spmenu-open" id="cbp-spmenu-left">
+<div class="module-title menu-titulo">
+<span class="filtro-titulo">Região</span>
+</div>
+<ul class="menuServicos">
+<li class="menuLeft">
+<select class="menuLeftItem" id="bacias" onchange="showHide('bacia', this.value, true); showBacia(this.value);">
+<option selected="" value="-1">Todas</option>
+<option value="65">Litoral Central</option><option value="64">Litoral Centro-Norte</option><option value="66">Litoral Centro-Sul</option><option value="63">Litoral Norte</option><option value="67">Litoral Sul</option> </select>
+</li>
+</ul>
+<br/>
+<div class="module-title">
+<span class="filtro-titulo">Município</span>
+</div>
+<input class="controls" id="buscaMunicipio" placeholder="Município" type="text"/><br/>
+<br/>
+<div class="historico10">
+<span class="filtro-titulo">Camadas</span>
+</div>
+<label class="labelTipo"><input checked="" id="tsm" onchange="mostraCamadas('tsm', this.checked);" type="checkbox"/>TSM</label>
+<label class="labelTipo"><input checked="" id="aux" onchange="mostraCamadas('aux', this.checked);" type="checkbox"/>Estações Auxiliares</label>
+<br/>
+<div class="historico10" id="showlegenda" style="cursor: pointer;">
+		Legenda:					
+		<br/><a target="a_self"><u>Mostrar</u></a>
+</div>
+<br/>
+<div align="left" class="historico10">					
+			Links:<br/>
+<a href="http://www.ciram.sc.gov.br/index.php?option=com_content&amp;view=article&amp;id=812&amp;Itemid=490" target="a_blank"><u>Maregrama</u></a><br/>
+<a href="http://www.ciram.sc.gov.br/index.php?option=com_content&amp;view=article&amp;id=120&amp;Itemid=455" target="a_blank"><u>Tábua Marés</u></a><br/>
+<!--a target="a_blank" href="http://ciram.epagri.sc.gov.br/index.php?option=com_content&view=article&id=224:escalas-dep-vento-e-mar&catid=2:sem-categoria&popup=true"><u>Escalas Vento/Mar</u></a><br-->
+<!--a target="a_blank" href="http://www.ciram.sc.gov.br/index.php?option=com_content&view=article&id=84&Itemid=270"><u>Previsão Onda</u></a><r-->
+<a href="http://www.ciram.sc.gov.br/index.php?option=com_content&amp;view=article&amp;id=121&amp;Itemid=268" target="a_blank"><u>Previsão Vento</u></a><br/>
+<a href="http://www.ciram.sc.gov.br/index.php?option=com_content&amp;view=article&amp;id=85&amp;Itemid=271" target="a_blank"><u>Previsão Chuva</u></a><br/>
+</div>
+<br/>
+<div align="left" class="historico10">					
+			Publicações:<br/>
+<a href="http://www.ciram.sc.gov.br/index.php?option=com_content&amp;view=article&amp;id=2603&amp;Itemid=768" target="a_blank"><u>Acesse Aqui</u></a><br/>
+<br/>
+<a href="https://docs.google.com/a/epagri.sc.gov.br/forms/d/e/1FAIpQLSd6Y31Lw9UMzI262uHcgtagxAM23cGMGsgol_qQP7kA-ZcqIw/viewform" target="a_blank"><u>CADASTRE-SE </u></a><br/> para receber novidades por e-mail.<br/>
+</div>
+</div>
+<div class="showmenu cbp-spmenu showmenu-button-right showmenu-button-right-open" id="showmenuright">
+<div class="posisetas">
+<span class="setadireita"></span>
+<span class="setaesquerda"></span>
+</div>
+</div>
+<div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right cbp-spmenu-right-open" id="cbp-spmenu-right">
+<div>
+<img alt="www.ciram.sc.gov.br" height="775" id="logoHelp" src="/modules/mod_monitoramento_costeiro/images/logos/Barra Lateral Direita 2018.png"/>
+</div>
+<div id="menu-geral-right">
+<div class="module-title menu-titulo">
+<span class="filtro-titulo" id="menurightestacao">Estação</span>
+</div>
+<div>
+<ul class="dadosEstacao">
+<li>
+<span class="dadosLinha" id="nmMuni">Município: teste </span>
+</li>
+</ul>
+</div>
+<div>
+<div align="center" class="obs">Maré Observada</div>
+<table align="center" class="portoSituacao">
+<tr>
+<th>Leitura:<td id="leituraUltima">29/08/2015 17:10</td></th>
+</tr>
+<tr>
+<th>Maré:<td id="nivelUltima">120cm</td></th>
+</tr>
+<tr>
+<th>Variação:<td id="variacaoUltima">120cm</td></th>
+</tr>
+</table>
+<br/>
+<div align="center" class="obs">Maré Astronômica</div>
+<table align="center" class="portoSituacao">
+<tr>
+<th>Tendência:<td id="tendenciaAstron"></td></th>
+</tr>
+<tr>
+<th>Mín.Dia:<td id="horaOcorrMinAstronDia"></td></th>
+</tr>
+<tr>
+<th>Máx.Dia:<td id="horaOcorrMaxAstronDia"></td></th>
+</tr>
+</table>
+<br/>
+<!--div class="subtit" align="center">Obs: Leitura a cada 1 hora</div-->
+<div align="center" class="subtit">
+<a href="#" onclick="graficoHistorico();"><u>Gráfico 5 dias</u></a>
+</div>
+<!--div class="subtit" align="center">Informações da Estação</div>
+				<div class="obs" align="center" style='font:11px arial'>				
+					<a href="#" onClick="dadosEstacaoTipo(1);"><u>Fotos</u></a>
+					<a href="#" onClick="dadosEstacaoTipo(2);"><u>Cadastro</u></a>
+					<a href="#" onClick="dadosEstacaoTipo(3);"><u>Sensores/Instrumentos</u></a>
+					<a href="#" onClick="dadosEstacaoTipo(4);"><u>Variavéis</u></a>
+					<a href="#" onClick="dadosEstacaoTipo(5);"><u>Meteograma</u></a>
+				</div-->
+<div align="center" class="subtit">
+<a href="#" onclick="dadosEstacao();"><u>Informações da Estação</u></a>
+<!--table align='center'><tr><th>Teste Min Dia:<td id='ocorrMinMare'></td></th></tr><tr><th>Teste Max Dia:<td id='ocorrMaxMare'></td></th></tr></table-->
+</div>
+<div id="recordes" style="display: none;">
+<b>Recordes</b><br/>
+<table width="300px"><tr><th>Menor maré:<td id="ocorrMinMare"></td></th></tr><tr><th>Maior maré:<td id="ocorrMaxMare"></td></th></tr></table>
+</div>
+<br/>
+<div class="painel" id="responsavel">
+<ul id="painel-responsavel-operador">
+<li>
+<figure class="logo">
+<a id="linkRe">
+<figcaption class="subtit">Parceiros</figcaption>
+<br/>
+<img alt="" id="logoPar" src=""/>
+</a>
+</figure>
+</li>
+</ul>
+</div>
+</div>
+<!--div style="height:201px;">
+				<div class="subtit" align="center">Altura da Maré Observada (m)</div>
+				<div align="center" style="display: inline-block; text-align: center; margin-top:25px; margin-left:15px;">
+					<!--div id='placeholderGauge' style='width:150px;height:205px;background-image:url("/modules/mod_monitoramento_costeiro/images/BarraFinalPorto2.png");background-size: 148px 200px; font:18px arial,sans-serif;'></div-->
+<!--div id='placeholderGauge' style='width:120px;height:200px;background-image:url("/modules/mod_monitoramento_costeiro/images/BarraFinalPorto2.png");background-size: 150px 200px; font:18px arial,sans-serif;'></div-->
+<!--div id='placeholderGauge' style='width:90px;height:200px;background-size: 150px 200px; font:18px arial,sans-serif;'></div-->
+<!--div id='placeholderGauge' style='left:35px;width:70px;height:200px;background-size: 100px 200px; font:18px arial,sans-serif;background-image:url("/modules/mod_monitoramento_costeiro/images/regua.png");'></div-->
+<!--div id='placeholderGauge' style='left:65px;width:85px;height:275px;background-size: 100px 275px; font:18px arial,sans-serif;background-image:url("/modules/mod_monitoramento_costeiro/images/regua.png");'></div>
+				</div>	
+				
+			</div-->
+<div>
+</div>
+</div>
+</div>
+<div style="margin-right:14px">
+<div id="mapa_base" style="height: 775px; width: 100%; z-index:1;"></div>
+<div id="legenda1" style="display: block;margin-top: -35px;"></div>
+<div id="legenda2" style="display: none;margin-top: -35px;"></div>
+</div>
+</div>
+<script>
+
+	function grafico() {
+		dNivel = estMare[cod.est].o;
+		dMareAstro = estMare[cod.est].a;					
+    //    divwin = dhtmlwindow.open('divbox', 'inline', ' <a id=\'imageLinkmaregrama\' href=\'\' style=\'font-size: 20px;margin-left: 40px;line-height:23px;font-weight: bold;\' onclick=saveImg(\'maregrama\'); download=\'Grafico.png\'> Salvar Gráfico </a> <div id=\'placeholdermaregrama\' style=\'width:1024px;height:250px;\'></div> <div id="maregramaLegend" style="margin-top:-20px"></div> <div id=\'overviewmaregrama\' style=\'width:1024px;height:100px;\'></div>', 'Maregrama', '/modules/mod_monitoramento_costeiro/images/dhtml/', 'width=1050px,height=370px,left=200px,top=150px,resize=0,scrolling=0');
+	//	divwin = dhtmlwindow.open('divbox', 'inline', ' <a id=\'imageLinkmaregrama\' href=\'\' style=\'font-size: 20px;margin-left: 40px;line-height:23px;font-weight: bold;\' onclick=saveImg(\'maregrama\'); download=\'Grafico.png\'> Salvar Gráfico </a> <div id=\'placeholdermaregrama\' style=\'width:785px;height:235px;\'></div><br> <div id="maregramaLegend" style="margin-top:-20px"></div> <div id=\'overviewmaregrama\' style=\'width:805px;height:100px;\'></div>', 'Maregrama', '/modules/mod_monitoramento_costeiro/images/dhtml/', 'width=805px,height=385px,left=200px,top=150px,resize=0,scrolling=0');
+		//divwin = dhtmlwindow.open('divbox', 'inline', ' <a id=\'imageLinkmaregrama\' href=\'\' style=\'font-size: 20px;margin-left: 40px;line-height:23px;font-weight: bold;\' onclick=saveImg(\'maregrama\'); download=\'Grafico.png\'> Salvar Gráfico </a> <div id=\'placeholdermaregrama\' style=\'width:585px;height:235px;\'></div><br> <div id="maregramaLegend" style="margin-top:-20px"></div> <div id=\'overviewmaregrama\' style=\'width:600px;height:100px;\'></div>', 'Maregrama', '/modules/mod_monitoramento_costeiro/images/dhtml/', 'width=600px,height=385px,left=200px,top=150px,resize=0,scrolling=0');
+		//divwin = dhtmlwindow.open('divbox', 'inline', ' <a id=\'imageLinkmaregrama\' href=\'\' style=\'font-size: 20px;margin-left: 40px;line-height:23px;font-weight: bold;\' onclick=saveImg(\'maregrama\'); download=\'Grafico.png\'> Salvar Gráfico </a> <div id=\'placeholdermaregrama\' style=\'width:485px;height:215px;\'></div><br> <div id="maregramaLegend" style="margin-top:-20px"></div> <div id=\'overviewmaregrama\' style=\'width:505px;height:100px;\'></div>', 'Maregrama', '/modules/mod_monitoramento_costeiro/images/dhtml/', 'width=505px,height=385px,left=475px,top=425px,resize=0,scrolling=0');
+		  //divwin = dhtmlwindow.open('divbox', 'inline', ' <a id=\'imageLinkmaregrama\' href=\'\' style=\'font-size: 13px;margin-left: 45px;line-height:23px;font-weight: bold;\' onclick=saveImg(\'maregrama\'); download=\'Grafico.png\'> Salvar Gráfico </a> <div id=\'placeholdermaregrama\' style=\'width:395px;height:215px;\'></div><br> <div id="maregramaLegend" style="margin-top:-35px;width:170px"></div>', 'Maregrama', '/modules/mod_monitoramento_costeiro/images/dhtml/', 'width=405px,height=285px,left=555px,top=475px,resize=0,scrolling=0');
+		// mesmo ocultando o overviewmaregrama, preciso deixá-lo na div pra nao dar erra no maregrama.
+		divwin = dhtmlwindow.open('divbox', 'inline', ' <a id=\'imageLinkmaregrama\' href=\'\' style=\'font-size: 13px;margin-left: 45px;line-height:23px;font-weight: bold;\' onclick=saveImg(\'maregrama\'); download=\'Grafico.png\'> Salvar Gráfico </a> <div id=\'placeholdermaregrama\' style=\'width:395px;height:215px;\'></div><br> <div id="maregramaLegend" style="margin-top:-20px;width:455px"></div> <div id=\'overviewmaregrama\' style=\'width:505px;height:100px;\'></div>', 'Maregrama', '/modules/mod_monitoramento_costeiro/images/dhtml/', 'width=405px,height=265px,left=855px,top=475px,resize=0,scrolling=0');
+		iniciomaregrama(cod);
+	}
+	
+	function graficoHistorico() {
+		dNivel = estMareHist[cod.est].o;
+		dMareAstro = estMareHist[cod.est].a;					      
+		//divwin = dhtmlwindow.open('divbox', 'inline', ' <a id=\'imageLinkmaregrama\' href=\'\' style=\'font-size: 15px;margin-left: 49px;line-height:23px;font-weight: bold;\' onclick=saveImg(\'maregrama\'); download=\'Grafico.png\'> Salvar Gráfico </a> <div id=\'placeholdermaregrama\' style=\'width:785px;height:235px;\'></div><br> <div id="maregramaLegend" style="margin-top:-20px"></div> <div id=\'overviewmaregrama\' style=\'width:805px;height:100px;\'></div>', 'Maregrama', '/modules/mod_monitoramento_costeiro/images/dhtml/', 'width=805px,height=385px,left=200px,top=150px,resize=0,scrolling=0');
+		divwin = dhtmlwindow.open('divbox', 'inline', ' <a id=\'imageLinkmaregrama\' href=\'\' style=\'font-size: 15px;margin-left: 49px;line-height:23px;font-weight: bold;\' onclick=saveImg(\'maregrama\'); download=\'Grafico.png\'> Salvar Gráfico </a> <div id=\'placeholdermaregrama\' style=\'width:785px;height:235px;\'></div><br> <div id="maregramaLegend" style="margin-top:-20px"></div> <div id=\'overviewmaregrama\' style=\'width:805px;height:100px;\'></div>', 'Maregrama', '/modules/mod_monitoramento_costeiro/images/dhtml/', 'width=805px,height=385px,left=550px,top=450px,resize=0,scrolling=0');
+		iniciomaregrama(cod);
+	}
+	
+	
+ 	
+	function dadosEstacao() {		    
+		
+		var link = "";	 
+		link=link+ " <div> Detalhes da Estação Maregráfica</div><br>";
+		// link com pdf | link=link+ "<div class='menu'><a href='#' onClick='mostraDiv(1);'><u>Fotos</u></a><a href='#' onClick='mostraDiv(2);'>&nbsp;<u>Cadastro</u></a><a href='#' onClick='mostraDiv(3);'>&nbsp;<u>Sensores/Instrumentos</u></a><a href='#' onClick='mostraDiv(4);'>&nbsp;<u>Variavéis</u></a><a href='#' onClick='mostraDiv(5);'>&nbsp;<u>Meteograma</u></a><a href='#' onClick='mostraDiv(6);'>&nbsp;<u>Arquivo PDF</u></a></div><br>";
+		link=link+ "<div class='menu'><a href='#' onClick='mostraDiv(1);'><u>Fotos</u></a><a href='#' onClick='mostraDiv(2);'>&nbsp;<u>Cadastro</u></a><a href='#' onClick='mostraDiv(3);'>&nbsp;<u>Sensores/Instrumentos</u></a><a href='#' onClick='mostraDiv(4);'>&nbsp;<u>Variavéis</u></a><a href='#' onClick='mostraDiv(5);'>&nbsp;<u>Meteograma</u></a></div><br>";
+	    //monta divs ocultas
+		link=link+ "<div id='INFO1'><b>Fotos</b><br><iframe src='http://ciram.epagri.sc.gov.br//metaestac/fotos.jsp?W=834&H=509&estacao=" + cod.est + "&tp=1' frameborder=0 width=875 height=800></iframe></DIV>";
+		link=link+ "<div id='INFO2' style='display:none'><b>Cadastro</b><br><iframe src='http://ciram.epagri.sc.gov.br//metaestac/cadastro.jsp?W=834&H=509&estacao=" + cod.est + "&tp=1' frameborder=0 width=875 height=300></iframe><div id='receber_conteudo'></div></DIV>";	   		
+		link=link+ "<div id='INFO3' style='display:none'><b>Sensores/Instrumentos</b><br><iframe src='http://ciram.epagri.sc.gov.br//metaestac/cadastro.jsp?W=834&H=509&estacao=" + cod.est + "&tp=2' frameborder=0 width=875 height=300></iframe></DIV>";	   	   
+		link=link+ "<div id='INFO4' style='display:none'><b>Variáveis</b><br><iframe src='http://ciram.epagri.sc.gov.br//metaestac/cadastro.jsp?W=834&H=509&estacao=" + cod.est + "&tp=3' frameborder=0 width=875 height=300></iframe></DIV>";	   
+		link=link+ "<div id='INFO5' style='display:none'><b>Meteograma</b><br><iframe src='http://www.ciram.sc.gov.br:8080/monitoramentosistemas/meteograma?cd_estacao=" + cod.est + "' frameborder=0 width=875 height=700></iframe></DIV>";	   
+//		link=link+ "<div id='INFO6' style='display:none'><b>Arquivo Pdf</b><br><iframe src='http://www.ciram.sc.gov.br/images/boletins_litoral/BoletimLitoral01_Ressaca.pdf' frameborder=0 width=875 height=500></iframe></DIV>";	   
+	   
+		var meteogramawin=dhtmlwindow.open("divbox","inline", link, "Informações da Estação" ,"","width=900px,height=500px,resize=1,scrolling=1,center=1", "recal")								
+		jQuery('#receber_conteudo').append(jQuery('#recordes').html()); 
+	}
+	
+	function mostraDiv(tipo) {		     
+		//jQuery("#recordes").css("display", "block"); 		
+		//jQuery("#receber_conteudo").append("<h1>Título</h1>");
+		
+		switch(tipo) {
+			case 1:
+				jQuery("#INFO1").css("display", "block");
+				jQuery("#INFO2").css("display", "none"); 
+				jQuery("#INFO3").css("display", "none"); 
+				jQuery("#INFO4").css("display", "none"); 
+				jQuery("#INFO5").css("display", "none"); 				
+				jQuery("#INFO6").css("display", "none"); 
+				break;
+			case 2:
+				jQuery("#INFO1").css("display", "none");
+				jQuery("#INFO2").css("display", "block"); 
+				jQuery("#INFO3").css("display", "none"); 
+				jQuery("#INFO4").css("display", "none"); 
+				jQuery("#INFO5").css("display", "none"); 
+				jQuery("#INFO6").css("display", "none"); 				
+				break;
+			case 3:
+				jQuery("#INFO1").css("display", "none");
+				jQuery("#INFO2").css("display", "none"); 
+				jQuery("#INFO3").css("display", "block"); 
+				jQuery("#INFO4").css("display", "none"); 
+				jQuery("#INFO5").css("display", "none"); 				
+				jQuery("#INFO6").css("display", "none"); 
+				break;
+			case 4:
+				jQuery("#INFO1").css("display", "none");
+				jQuery("#INFO2").css("display", "none"); 
+				jQuery("#INFO3").css("display", "none"); 
+				jQuery("#INFO4").css("display", "block"); 
+				jQuery("#INFO5").css("display", "none"); 
+				jQuery("#INFO6").css("display", "none"); 				
+				break;				
+			case 5:
+				jQuery("#INFO1").css("display", "none");
+				jQuery("#INFO2").css("display", "none"); 
+				jQuery("#INFO3").css("display", "none"); 
+				jQuery("#INFO4").css("display", "none"); 
+				jQuery("#INFO5").css("display", "block"); 				
+				jQuery("#INFO6").css("display", "none"); 
+				break;
+			/*case 6:
+				jQuery("#INFO1").css("display", "none");
+				jQuery("#INFO2").css("display", "none"); 
+				jQuery("#INFO3").css("display", "none"); 
+				jQuery("#INFO4").css("display", "none"); 
+				jQuery("#INFO5").css("display", "none"); 
+				jQuery("#INFO6").css("display", "block"); 				
+				break;				
+			*/	
+			//default:
+			//	code block			
+		
+		}			 
+		
+	}
+	
+	function dadosEstacaoTipo(tipo) {
+		     
+		var link = "";	 
+		switch(tipo) {
+			case 1:			
+				link = 'http://ciram.epagri.sc.gov.br//metaestac/fotos.jsp?W=834&H=509&estacao=' + cod.est + '&css=http://www.ciram.sc.gov.br:8080/agroconnect/css/stylef.css&tp=1';		
+				ds_link = "Informações da Estação - Fotos";
+				break;
+			case 2:
+				link = 'http://ciram.epagri.sc.gov.br//metaestac/cadastro.jsp?W=834&H=509&estacao=' + cod.est + '&css=http://www.ciram.sc.gov.br:8080/agroconnect/css/stylef.css&tp=1';		
+				ds_link = "Informações da Estação - Cadastro";
+				break;
+			case 3:
+				link = 'http://ciram.epagri.sc.gov.br//metaestac/cadastro.jsp?W=834&H=509&estacao=' + cod.est + '&css=http://www.ciram.sc.gov.br:8080/agroconnect/css/stylef.css&tp=2';		
+				ds_link = "Informações da Estação - Sensores/Instrumentos";
+				break;
+			case 4:
+				link = 'http://ciram.epagri.sc.gov.br//metaestac/cadastro.jsp?W=834&H=509&estacao=' + cod.est + '&css=http://www.ciram.sc.gov.br:8080/agroconnect/css/stylef.css&tp=3';		
+				ds_link = "Informações da Estação - Variáveis";
+				break;				
+			case 5:
+				link = 'http://www.ciram.sc.gov.br:8080/monitoramentosistemas/meteograma?cd_estacao=' + cod.est;
+				ds_link = "Informações da Estação - Meteograma";
+				break;	
+				
+			//default:
+			//	code block
+		}	 
+			 
+		//alert(tipo);
+		//meteograma da estacao
+		//var link1 = 'http://www.ciram.com.br:8080/monitoramentosistemas/meteograma?cd_estacao=' + cod.est;		
+	    //var meteogramawin=dhtmlwindow.open("divbox","iframe", link1, "Meteograma", "","width=700px,height=550px,resize=1,scrolling=1,center=1", "recal")								
+		
+		//cadastro da estacao
+		//var link2 = 'http://ciram.epagri.sc.gov.br//metaestac/cadastro.jsp?W=834&H=509&estacao=' + cod.est + '&css=http://www.ciram.sc.gov.br:8080/agroconnect/css/stylef.css&tp=1';		
+	    
+		//var myWindow = window.open("Fotos e Cadastro", "MsgWindow", "width=800,height=600");
+		//myWindow.document.write("<p>This is 'MsgWindow'. I am 200px wide and 100px tall!</p>");
+		//myWindow.document.write('<div class="namewinDiv">Fotos e Cadastro</div>');
+		//myWindow.document.write('<div class="namewinDiv2">Links Tabs</div><br><a href=# onClick="'+link2+'">Fotos</a> | <a href=# onClick="'+link2+'">Cadastro</a> | <a href=# onClick="'+link2+'">Sensores/Instrumentos</a> | <a href=# onClick="'+link2+'">Variáveis</a> ');
+		//myWindow.document.write('<a href=# onClick="pho('+es+',1)">Fotos</a> | <a href=# onClick="pho('+es+',2)">Cadastro</a> | <a href=# onClick="pho('+es+',3)">Sensores/Instrumentos</a>  | <a href=# onClick="pho('+es+',4)">Variáveis</a>');
+		
+				
+		var meteogramawin=dhtmlwindow.open("divbox","iframe", link, ds_link, "","width=850px,height=550px,resize=1,scrolling=1,center=1", "recal")										
+			
+		
+	}
+	
+	jQuery('#showmenuleft').click(function() {
+		if (jQuery("#showmenuleft").hasClass("showmenu-button-left-open")) {
+			jQuery("#cbp-spmenu-left").removeClass("cbp-spmenu-open");
+			jQuery("#showmenuleft").removeClass("showmenu-button-left-open");
+		} else {
+			jQuery("#cbp-spmenu-left").addClass("cbp-spmenu-open");
+			jQuery("#showmenuleft").addClass("showmenu-button-left-open");
+		}
+
+	});
+
+	jQuery('#showmenuright').click(function() {		
+		if (jQuery("#showmenuright").hasClass("showmenu-button-right-open")) {
+			jQuery("#cbp-spmenu-right").removeClass("cbp-spmenu-right-open");
+			jQuery("#showmenuright").removeClass("showmenu-button-right-open");
+		} else {
+			jQuery("#showmenuright").addClass("showmenu-button-right-open");
+			jQuery("#cbp-spmenu-right").addClass("cbp-spmenu-right-open");
+		}
+
+	});	
+	
+	jQuery('#showlegenda').click(function() {
+		window.close();
+		/*console.log('show legenda - status divwin = ' + divwin);	
+		if (divwin!=null && !divwin.closed) {
+		alert("A janela está aberta")
+		}else if(divwin!=null && divwin.closed) {
+		alert("A janela está fechada")*/
+		jQuery("#showmenuright").addClass("showmenu-button-right-open");
+		jQuery("#cbp-spmenu-right").addClass("cbp-spmenu-right-open");
+		document.getElementById('logoHelp').style.display="block";	
+		document.getElementById('menu-geral-right').style.display="none";
+	});
+	
+			
+	var show_tsm = "nao";
+	//console.log ('tsm no php: ' + show_tsm);
+	
+	inicializa(1, 0, 0, 0, show_tsm);	
+	//inicializa(1, 0, 0, 0);
+	//inicializa(1, 0, 0);
+	updatepage("");	
+</script>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="mb9-sa3" id="rt-main">
+<div class="rt-container">
+<div class="rt-grid-9">
+<div id="rt-content-top">
+</div>
+<div class="clear"></div>
+<div class="separator"></div>
+<div class="rt-block">
+<div id="rt-mainbody">
+<div class="component-content">
+<div class="rt-article"><div class="rt-article-bg">
+<div class="item-page">
+<h1 class="title">
+							Litoral On-line					</h1>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+<div id="rt-content-bottom">
+<div class="rt-grid-9 rt-alpha rt-omega">
+<div class="rt-block">
+<!-- Social Share Buttons | Powered by <a href="http://www.e-max.it" title="Web Agency" target="_blank">Web Agency</a> --><div class="social-share-button-mod">
+<div class="social-share-button-mod-fbl"><div id="fb-root"></div><script src="http://connect.facebook.net/pt_BR/all.js#xfbml=1"></script>
+<fb:like action="like" colorscheme="light" font="arial" href="http://ciram.epagri.sc.gov.br/index.php?option=com_content&amp;view=article&amp;id=2440&amp;Itemid=753" layout="button_count" send="true" show_faces="false" width="100"></fb:like>
+</div>
+<div class="social-share-button-mod-tw">
+<a class="twitter-share-button" data-count="horizontal" data-lang="en" data-text="EPAGRI/CIRAM  - LITORAL ON-LINE" data-url="http://ciram.epagri.sc.gov.br/index.php?option=com_content&amp;view=article&amp;id=2440&amp;Itemid=753" data-via="" href="http://twitter.com/share">Tweet</a><script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+</div>
+<div class="social-share-button-mod-retweetme">
+<script type="text/javascript">
+tweetmeme_url = "http://ciram.epagri.sc.gov.br/index.php?option=com_content&view=article&id=2440&Itemid=753";
+tweetmeme_style = "compact";
+tweetmeme_source = "";
+</script>
+<script src="http://tweetmeme.com/i/scripts/button.js" type="text/javascript"></script>
+</div>
+<div class="social-share-button-mod-gone">
+<!-- Place this tag in your head or just before your close body tag -->
+<script src="http://apis.google.com/js/plusone.js" type="text/javascript"> {lang: 'pt_BR'}</script>
+<!-- Place this tag where you want the +1 button to render -->
+<g:plusone href="http://ciram.epagri.sc.gov.br/index.php?option=com_content&amp;view=article&amp;id=2440&amp;Itemid=753" size="medium"></g:plusone>
+</div>
+</div>
+<div style="clear:both;"></div>
+<div class="social_share_buttons_credits" style="display:none;">Powered by <a href="http://www.e-max.it" target="_blank" title="Web Marketing">Web Marketing</a></div><!-- Social Share Buttons | Powered by <a href="http://www.e-max.it" title="Web Agency" target="_blank">Web Agency</a> --><div style="clear:both;"></div> </div>
+</div>
+</div>
+<div class="clear"></div>
+<div class="separator"></div>
+</div>
+<div class="rt-grid-3">
+<div id="rt-sidebar-a">
+<div class="rt-block">
+<div class="menuLeftHeader">PRINCIPAIS SERVIÇOS</div>
+<ul class="menuServicos">
+<li class="menuLeft"><a href="http://www.ciram.sc.gov.br/agroconnect/" target="_blank"><img alt="Agroconnect" src="images/menu_servicos/ico_agroalerta.jpg"/><span class="menuTexto">Agroconnect</span> </a></li><li class="menuLeft"><a href="/index.php?option=com_content&amp;view=article&amp;id=2405&amp;Itemid=141" title="Previsão do Tempo"><img alt="Previsão do Tempo" src="images/menu_servicos/ico_previsaotempo.jpg"/><span class="image-title">Previsão do Tempo</span> </a></li><li class="menuLeft"><a href="/index.php?option=com_content&amp;view=article&amp;id=113&amp;Itemid=427" title="Previsão para o Mar"><img alt="Previsão para o Mar" src="images/menu_servicos/ico_mar.jpg"/><span class="image-title">Previsão para o Mar</span> </a></li><li class="menuLeft"><a href="/index.php?option=com_content&amp;view=article&amp;id=98&amp;Itemid=198" title="Monitoramento On-line"><img alt="Monitoramento On-line" src="images/menu_servicos/ico_monitoramento.jpg"/><span class="image-title">Monitoramento On-line</span> </a></li><li class="menuLeft"><a href="/index.php?option=com_content&amp;view=article&amp;id=2224&amp;Itemid=250" title="Nível dos Rios"><img alt="Rios On-Line" src="images/menu_servicos/ico_nivelrios.jpg"/><span class="image-title">Rios On-Line</span> </a></li><li class="menuLeft"><a href="/index.php?option=com_content&amp;view=article&amp;id=2440&amp;Itemid=753"><img alt="Litoral On-Line" src="images/ico_litoral_online.png"/><span class="image-title">Litoral On-Line</span> </a></li><li class="menuLeft"><a href="http://ciram.epagri.sc.gov.br/apicultura/" target="_blank" title="Apicultura"><img alt="Apis On-Line" src="images/menu_servicos/ico_apicultura.png"/><span class="menuTexto">Apis On-Line</span> </a></li><li class="menuLeft"><a href="http://ciram.epagri.sc.gov.br/CebolaNet/" target="_blank" title="Cebola Net"><img alt="Cebola Net" src="images/menu_servicos/ico_cebola.png"/><span class="menuTexto">Cebola Net</span> </a></li><li class="menuLeft"><a href="/index.php?option=com_content&amp;view=article&amp;id=60&amp;Itemid=199" title="Imagem de Satélite"><img alt="Imagem de Satélite" src="images/menu_servicos/ico_imagemsatelite.jpg"/><span class="image-title">Imagem de Satélite</span> </a></li><li class="menuLeft"><a href="/index.php?option=com_content&amp;view=article&amp;id=2943&amp;Itemid=664" title="Imagens do Radar/SC"><img alt="Imagens do Radar/SC" src="images/menu_servicos/ico_radar1.png"/><span class="image-title">Imagens do Radar/SC</span> </a></li><li class="menuLeft"><a href="/index.php?option=com_content&amp;view=article&amp;id=559&amp;Itemid=200" title="WebGis e Mapas para Download"><img alt="Mapas Digitais" src="images/menu_servicos/ico_mapasdigitais.jpg"/><span class="image-title">Mapas Digitais</span> </a></li><li class="menuLeft"><a href="/index.php?option=com_content&amp;view=article&amp;id=64&amp;Itemid=226" title="Solicitação de Informações"><img alt="Solicitação de Laudos e Dados" src="images/menu_servicos/ico_laudotecni.jpg"/><span class="image-title">Solicitação de Laudos e Dados</span> </a></li></ul>
+</div>
+<div class="rt-block">
+<div class="custom">
+<style scoped="scoped" type="text/css"><!--
+.restritoLogos {height:80px;}
+--></style>
+<div class="restrito"><img align="absmiddle" src="images/ico_acessorestrito.jpg"/>Acesso restrito</div>
+<div class="restritoLogos"><a href="intra_meteorologia/" style="color: #0000cc; text-decoration: none;" target="_blank"> <img alt="ciram-intranet" height="61" src="images/ciram-intranet.png" width="79"/> </a>  <!--
+	<a href="parceiros/defesa_civil/" target="_blank">
+		<img src="images/lg_restrito_defesacivil.png" height="61" width="79" />
+	</a>&nbsp;
+	--> <!--
+	<a href="baseweb/" target="_blank">
+		<img src="images/logo_sds_novo.png" alt="defesa_civil" />
+	</a>
+	--> <img alt="defesa_civil" src="images/logo_sds_novo.png"/></div>
+</div>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<div id="rt-conteudobaixo">
+<div class="rt-container">
+<div class="clear"></div>
+</div>
+</div>
+<div id="rt-bottom">
+<div class="shadow-up"><img alt="" src="http://ciram.epagri.sc.gov.br/templates/ammon/images/shadow-up.png"/></div>
+<div class="rt-container">
+<div class="rt-grid-12 rt-alpha rt-omega">
+<div class="rt-block">
+<ul class="sf-menu menu">
+<li id="item-229"><a href="http://ciram.epagri.sc.gov.br/index.php?option=com_content&amp;view=featured&amp;Itemid=101">Pagina Inicial</a></li><li id="item-230"><a href="/index.php?option=com_content&amp;view=article&amp;id=50&amp;Itemid=230">INSTITUCIONAL</a></li><li id="item-231"><a href="/index.php?option=com_content&amp;view=article&amp;id=104&amp;Itemid=231">SERVIÇOS</a></li><li id="item-232"><a href="/index.php?option=com_content&amp;view=article&amp;id=53&amp;Itemid=196">PROJETOS</a></li><li id="item-233"><a href="/index.php?option=com_content&amp;view=article&amp;id=86&amp;Itemid=233">PUBLICAÇÕES</a></li><li id="item-234"><a href="/index.php?option=com_content&amp;view=article&amp;id=40&amp;Itemid=234">CONTATO</a></li></ul>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<div id="rt-footer">
+<div class="rt-container">
+<div class="rt-grid-12 rt-alpha rt-omega">
+<div class="rt-block">
+<div class="copyright">
+<a href="http://ciram.epagri.sc.gov.br/" title="EPAGRI/CIRAM"><img alt="EPAGRI/CIRAM" src="images/logo2.png"/></a>
+<div class="copyright-text"><p>Empresa de Pesquisa Agropecuária e Extensão Rural de Santa Catarina - Epagri<br>Rod. Admar Gonzaga, 1.347, Itacorubi - Caixa Postal 502 - CEP 88034-901 Florianópolis - SC - Brasil<br>Fone: 55 48 3665.5006 | Fax: 55 48 3665.5142</br></br></p></div>
+<div class="clear"></div>
+</div> </div>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div><!-- Container End -->
+
+
