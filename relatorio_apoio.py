@@ -507,7 +507,7 @@ def fill_document(doc):
     buoy_espiritosanto=buscabdespiritosanto(tempo)
     rico=buscabdrico(tempo)
     ndbc=buscabdndbc(tempo)
-    pnboia=buscabdpnboia(tempo)
+    #pnboia=buscabdpnboia(tempo)
     simcosta=buscabdsimcosta(tempo)
     otherbuoys=buscabdotherbuoys(tempo)
 
@@ -720,80 +720,80 @@ def fill_document(doc):
                                         table.add_hline()
 
             if estados[s]=="Rio de Janeiro":
-                with doc.create(Subsection('Pnboia')):
-                    with doc.create(Tabular('|c|c|c|c|c|c|c|c|c|c|c|c|c|')) as table:
-                        x=0
-                        y=0
-                        for i in range(len(pnboia)):
-                            if pnboia[i][4]=='itaguai':
-                                if int(pnboia[i][3])>=tempo1.hour-8 and int(pnboia[i][2])==tempo1.day:
-                                    x=1
-                                    if x==1 and y==0:
-                                        table.add_hline()
-                                        table.add_row(('mes','dia','hora','boia','vvel(nós)','vdir','rajada(nós)','t_ar(°C)','t_ag(°C)','Hs(m)','Hmax(m)','Tp(m)','dirmed'))
-                                        table.add_hline()
-                                        try:
-                                            value=arredondar1(float(pnboia[i][5])*1.94384)
-                                        except:
-                                            value=None
-                                        try:
-                                            value1=arredondar1(float(pnboia[i][7])*1.94384)
-                                        except:
-                                            value1=None
-                                        table.add_row((pnboia[i][1],pnboia[i][2],pnboia[i][3],pnboia[i][4],value,pnboia[i][6],value1,pnboia[i][8],pnboia[i][9],pnboia[i][10],pnboia[i][11],pnboia[i][12],pnboia[i][13]))
-                                        x=2
-                                        y=1
-                                    else:
-                                        table.add_hline()
-                                        try:
-                                            value=arredondar1(float(pnboia[i][5])*1.94384)
-                                        except:
-                                            value=None
-                                        try:
-                                            value1=arredondar1(float(pnboia[i][7])*1.94384)
-                                        except:
-                                            value1=None
-                                        table.add_row((pnboia[i][1],pnboia[i][2],pnboia[i][3],pnboia[i][4],value,pnboia[i][6],value1,pnboia[i][8],pnboia[i][9],pnboia[i][10],pnboia[i][11],pnboia[i][12],pnboia[i][13]))
-                                    if x!=0:
-                                        table.add_hline()
+                # with doc.create(Subsection('Pnboia')):
+                #     with doc.create(Tabular('|c|c|c|c|c|c|c|c|c|c|c|c|c|')) as table:
+                #         x=0
+                #         y=0
+                #         for i in range(len(pnboia)):
+                #             if pnboia[i][4]=='itaguai':
+                #                 if int(pnboia[i][3])>=tempo1.hour-8 and int(pnboia[i][2])==tempo1.day:
+                #                     x=1
+                #                     if x==1 and y==0:
+                #                         table.add_hline()
+                #                         table.add_row(('mes','dia','hora','boia','vvel(nós)','vdir','rajada(nós)','t_ar(°C)','t_ag(°C)','Hs(m)','Hmax(m)','Tp(m)','dirmed'))
+                #                         table.add_hline()
+                #                         try:
+                #                             value=arredondar1(float(pnboia[i][5])*1.94384)
+                #                         except:
+                #                             value=None
+                #                         try:
+                #                             value1=arredondar1(float(pnboia[i][7])*1.94384)
+                #                         except:
+                #                             value1=None
+                #                         table.add_row((pnboia[i][1],pnboia[i][2],pnboia[i][3],pnboia[i][4],value,pnboia[i][6],value1,pnboia[i][8],pnboia[i][9],pnboia[i][10],pnboia[i][11],pnboia[i][12],pnboia[i][13]))
+                #                         x=2
+                #                         y=1
+                #                     else:
+                #                         table.add_hline()
+                #                         try:
+                #                             value=arredondar1(float(pnboia[i][5])*1.94384)
+                #                         except:
+                #                             value=None
+                #                         try:
+                #                             value1=arredondar1(float(pnboia[i][7])*1.94384)
+                #                         except:
+                #                             value1=None
+                #                         table.add_row((pnboia[i][1],pnboia[i][2],pnboia[i][3],pnboia[i][4],value,pnboia[i][6],value1,pnboia[i][8],pnboia[i][9],pnboia[i][10],pnboia[i][11],pnboia[i][12],pnboia[i][13]))
+                #                     if x!=0:
+                #                         table.add_hline()
 
             if estados[s]=="Santa Catarina":
-                with doc.create(Subsection('Pnboia')):
-                    with doc.create(Tabular('|c|c|c|c|c|c|c|c|c|c|c|c|c|')) as table:
-                        x=0
-                        y=0
-                        for i in range(len(pnboia)):
-                            if pnboia[i][4]=='itajai':
-                                if int(pnboia[i][3])>=tempo1.hour-8 and int(pnboia[i][2])==tempo1.day:
-                                    x=1
-                                    if x==1 and y==0:
-                                        table.add_hline()
-                                        table.add_row(('mes','dia','hora','boia','vvel(nós)','vdir','rajada(nós)','t_ar(°C)','t_ag(°C)','Hs(m)','Hmax(m)','Tp(m)','dirmed'))
-                                        table.add_hline()
-                                        try:
-                                            value=arredondar1(float(pnboia[i][5])*1.94384)
-                                        except:
-                                            value=None
-                                        try:
-                                            value1=arredondar1(float(pnboia[i][7])*1.94384)
-                                        except:
-                                            value1=None
-                                        table.add_row((pnboia[i][1],pnboia[i][2],pnboia[i][3],pnboia[i][4],value,pnboia[i][6],value1,pnboia[i][8],pnboia[i][9],pnboia[i][10],pnboia[i][11],pnboia[i][12],pnboia[i][13]))
-                                        x=2
-                                        y=1
-                                    else:
-                                        table.add_hline()
-                                        try:
-                                            value=arredondar1(float(pnboia[i][5])*1.94384)
-                                        except:
-                                            value=None
-                                        try:
-                                            value1=arredondar1(float(pnboia[i][7])*1.94384)
-                                        except:
-                                            value1=None
-                                        table.add_row((pnboia[i][1],pnboia[i][2],pnboia[i][3],pnboia[i][4],value,pnboia[i][6],value1,pnboia[i][8],pnboia[i][9],pnboia[i][10],pnboia[i][11],pnboia[i][12],pnboia[i][13]))
-                                    if x!=0:
-                                        table.add_hline()
+                # with doc.create(Subsection('Pnboia')):
+                #     with doc.create(Tabular('|c|c|c|c|c|c|c|c|c|c|c|c|c|')) as table:
+                #         x=0
+                #         y=0
+                #         for i in range(len(pnboia)):
+                #             if pnboia[i][4]=='itajai':
+                #                 if int(pnboia[i][3])>=tempo1.hour-8 and int(pnboia[i][2])==tempo1.day:
+                #                     x=1
+                #                     if x==1 and y==0:
+                #                         table.add_hline()
+                #                         table.add_row(('mes','dia','hora','boia','vvel(nós)','vdir','rajada(nós)','t_ar(°C)','t_ag(°C)','Hs(m)','Hmax(m)','Tp(m)','dirmed'))
+                #                         table.add_hline()
+                #                         try:
+                #                             value=arredondar1(float(pnboia[i][5])*1.94384)
+                #                         except:
+                #                             value=None
+                #                         try:
+                #                             value1=arredondar1(float(pnboia[i][7])*1.94384)
+                #                         except:
+                #                             value1=None
+                #                         table.add_row((pnboia[i][1],pnboia[i][2],pnboia[i][3],pnboia[i][4],value,pnboia[i][6],value1,pnboia[i][8],pnboia[i][9],pnboia[i][10],pnboia[i][11],pnboia[i][12],pnboia[i][13]))
+                #                         x=2
+                #                         y=1
+                #                     else:
+                #                         table.add_hline()
+                #                         try:
+                #                             value=arredondar1(float(pnboia[i][5])*1.94384)
+                #                         except:
+                #                             value=None
+                #                         try:
+                #                             value1=arredondar1(float(pnboia[i][7])*1.94384)
+                #                         except:
+                #                             value1=None
+                #                         table.add_row((pnboia[i][1],pnboia[i][2],pnboia[i][3],pnboia[i][4],value,pnboia[i][6],value1,pnboia[i][8],pnboia[i][9],pnboia[i][10],pnboia[i][11],pnboia[i][12],pnboia[i][13]))
+                #                     if x!=0:
+                #                         table.add_hline()
 
 
             if estados[s]=="Sergipe":
