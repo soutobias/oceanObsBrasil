@@ -719,7 +719,7 @@ def fill_document(doc):
                                     if x!=0:
                                         table.add_hline()
 
-            if estados[s]=="Rio de Janeiro":
+            #if estados[s]=="Rio de Janeiro":
                 # with doc.create(Subsection('Pnboia')):
                 #     with doc.create(Tabular('|c|c|c|c|c|c|c|c|c|c|c|c|c|')) as table:
                 #         x=0
@@ -757,7 +757,7 @@ def fill_document(doc):
                 #                     if x!=0:
                 #                         table.add_hline()
 
-            if estados[s]=="Santa Catarina":
+           # if estados[s]=="Santa Catarina":
                 # with doc.create(Subsection('Pnboia')):
                 #     with doc.create(Tabular('|c|c|c|c|c|c|c|c|c|c|c|c|c|')) as table:
                 #         x=0
