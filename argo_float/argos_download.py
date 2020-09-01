@@ -6,6 +6,26 @@ from datetime import datetime as dt
 
 from argopy import DataFetcher as ArgoDataFetcher
 
+import pathlib
+import sys
+import os
+from os.path import expanduser
+home = expanduser("~")
+sys.path.insert(0,home)
+
+current_path = pathlib.Path(os.getcwd())
+parent_path = str(current_path.parents[0])
+
+
+# Builded Packages
+sys.path.insert(1,parent_path + '/database')
+from databaseMySQL import consulta_data_banco, insere_dado_banco, deleta_dado
+
+
+import user_config
+os.chdir( user_config.path )
+
+
 
 
 # List of ARGOs buoy launched by Navy Hidrographyc Center
@@ -53,16 +73,65 @@ argo8 = ('5903135', dt.strptime('2015-10-15 17:40:00',time_format), -41.212,
 buoys = [argo1, argo2, argo3, argo4, argo5, argo6, argo7, argo8]
 
 
-columns_details = ['argos_ID', 'start_date', 'latitude', 'longitude', 'ship_plataform', 'last_date']
+columns_details = ['argo_id', 'start_date', 'latitude', 'longitude', 'ship_plataform', 'last_date']
 argos_details = pd.DataFrame.from_records(buoys, columns = columns_details)
 
 
 
-
+### Download data from ARGO platform
 
 argo_loader = ArgoDataFetcher()
 
 
-argo_teste = argo_loader.float(list_argos).to_xarray()
+argo_teste = argo_loader.float(list_argos)
 
 df_argo = argo_teste.to_dataframe()
+
+
+df_argo_final = df_argo[['CYCLE_NUMBER', 'DIRECTION', 'PLATFORM_NUMBER','PRES','PSAL','TEMP','TIME','LONGITUDE','LATITUDE']]
+
+
+df_argo_final.loc[:,['PSAL','TEMP']] = df_argo_final[['PSAL','TEMP']].apply(lambda x: pd.Series.round(x, 3))
+
+
+### INSERTING DATA ON database
+
+# 1 -- ARGO INFO
+
+
+
+
+import sqlalchemy
+from sqlalchemy.engine.reflection import Inspector
+
+
+con = sqlalchemy.create_engine('mysql+mysqlconnector://{0}:{1}@{2}/{3}'.
+                                        format(user_config.username,
+                                            user_config.password,
+                                            user_config.host,
+                                            user_config.database))
+
+
+
+
+
+table = 'argo_info'
+# To insert new data, uncomment below:
+# argos_details.to_sql(con=con, name= table, if_exists='append', index = False)
+
+
+
+# 2 -- ARGO DATA
+df_argo_final.rename(columns = {'PLATFORM_NUMBER':'argo_id',
+                                'CYCLE_NUMBER':'cycle_number',
+                                'TIME':'date_time',
+                                'DIRECTION':'direction',
+                                'LATITUDE':'latitude',
+                                'LONGITUDE':'longitude',
+                                'PRES':'press',
+                                'PSAL':'psal',
+                                'TEMP': 'temp'}, inplace = True)
+
+table = 'argo_data'
+# To insert new data, uncomment below:
+# df_argo_final.to_sql(con=con, name= table, if_exists='replace', index = False)
