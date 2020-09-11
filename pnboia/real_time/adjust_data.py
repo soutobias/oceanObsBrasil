@@ -68,7 +68,7 @@ def adjust_data(raw_data):
             mwd.append(np.nan)
             spred.append(np.nan)
 
-            epoca.append((datetime.datetime(int(float(data[6])),int(float(data[7])),int(float(data[8])),int(float(data[9])),0) - datetime.datetime(1970,1,1)).total_seconds())
+            epoca.append((datetime(int(float(data[6])),int(float(data[7])),int(float(data[8])),int(float(data[9])),0) - datetime(1970,1,1)).total_seconds())
 
         elif int(float(data[5]))==2:
             year0.append(int(data[4].year))
@@ -270,11 +270,6 @@ def adjust_different_message_data(df):
             df['lat'][i] = df['lat'][i+1]
             df['lon'][i] = df['lon'][i+1]
             df['sensor00'][i] = df['sensor00'][i+1]
-            df['year'][i] = df['year'][i+1]
-            df['month'][i] = df['month'][i+1]
-            df['day'][i] = df['day'][i+1]
-            df['hour'][i] = df['hour'][i+1]
-            df['minute'][i] = df['minute'][i+1]
             df['atmp'][i] = df['atmp'][i+1]
             df['humi'][i] = df['humi'][i+1]
             df['dewp'][i] = df['dewp'][i+1]
