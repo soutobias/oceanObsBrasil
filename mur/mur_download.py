@@ -96,7 +96,7 @@ for p in range(len(pontos_lat)):
 
 
 
-
+breakpoint()
 # Loading data into a xarray
 data = xr.open_mfdataset('*subset_MUR.nc', combine = 'by_coords', concat_dim = 'ponto')
 
