@@ -2,138 +2,83 @@
 """
 Created on Thu Feb 21 02:54:25 2019
 
-@author: tobia
+@author: tobias
 """
 
 import json
-from bs4 import BeautifulSoup
-import requests
-import numpy as np
-import time
-import datetime
 import pandas as pd
+import numpy as np
+
 from pandas.io import sql
 import sqlalchemy
-import mysql.connector as MySQLdb
-
+import psutil
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from bs4 import BeautifulSoup
+import time
+import datetime
+from selenium.webdriver.common.action_chains import ActionChains
+import operator
+import requests
 import re
 
 import sys
 import os
-from os.path import expanduser
-home = expanduser("~")
-sys.path.insert(0,home)
+
+sys.path.append(os.environ['HOME'])
 import user_config
-os.chdir( user_config.path )
 
-def deleta_dado(tabela,tempoini,boia):
+sys.path.append(user_config.path )
+sys.path.append(user_config.path + "/database" )
 
-    db = MySQLdb.connect(host = user_config.host,
-                         user = user_config.username,
-                         password = user_config.password,
-                         database = user_config.database)
-
-    cur=db.cursor()
-
-    cur.execute("DELETE FROm %s WHERE datahora>='%s' AND id = '%s'"% (tabela, tempoini, boia))
-    # cur.execute("SELECT wmo FROm deriva_estacao")
-    db.commit()
-    cur.close()
-    db.close()
-
-    return
+import db_function as db
 
 print ("Conectando ao site do epagri")
-url="http://ciram.epagri.sc.gov.br/index.php?option=com_content&view=article&id=2440&Itemid=753"
+url="https://ciram.epagri.sc.gov.br/index.php/maregrafos/"
 
-resp=requests.get(url)
-soup=BeautifulSoup(resp.text,'html.parser')
-text_file = open('Output.txt', "w")
-text_file.write(str(soup))
-text_file.close()
-
-x = re.search('updatepage.*\s*</script>', soup.decode('ascii'))
-x = x.group(0).replace('},','};').replace("'","\"")
-
-match = re.findall('{.*}', x)[0]
-
-print ("Baixando os dados")
-match = match.split(";")
-# parse x:
-
-df = pd.DataFrame()
-for m in match:
-    m = json.loads(m)
-    df = pd.concat([df,  pd.DataFrame([m])])
-
-df["id"] = df["estacao"]
-df.time = df.time + 3600000 * 3
-df.index = df.id
-df.time = pd.to_datetime(df.time, unit = 'ms')
-df["datahora"] = df["time"]
-
-df = df[['datahora','nivel',\
-        'temp', 'vento',\
-        'direcaoRajadaNum']]
+options = webdriver.FirefoxOptions()
+options.add_argument('-headless')
+#options.add_argument("--no-sandbox");
+options.add_argument("--disable-dev-shm-usage");
+options.set_preference("dom.disable_beforeunload", True)
+options.set_preference("browser.tabs.warnOnClose", False)
 
 
-df_mare = df.loc[df.index > 2000]
+driver = webdriver.Firefox(options=options)
+print("conectado com sucesso")
 
-df_mare.columns = ['datahora', 'Water_l','Air_Tmp','Wnd_Sp','Wnd_dir_N']
+driver.get(url)
 
-df_mare.Water_l = df_mare.Water_l * 1000
-
-df_mare = df_mare.replace(to_replace =['None', 'NULL', ' ', ''],
-                        value =np.nan)
-
-print ("deletando dados antigos")
-for i in df_mare.index:
-    deleta_dado("maregrafos",str(df_mare.datahora[i]), i)
-print ("Dados deletados")
-
-con = sqlalchemy.create_engine('mysql+mysqlconnector://{0}:{1}@{2}/{3}'.
-                                        format(user_config.username,
-                                            user_config.password,
-                                            user_config.host,
-                                            user_config.database))
+time.sleep(3)
 
 
+table_NM = pd.read_html(driver.page_source)
+soup=BeautifulSoup(driver.page_source, 'html.parser')
 
+stations = db.select_station(["institution", "type"], ["epagri", "tide"]).sort_values(by=['id'])
+for i in range(len(stations)):
+    # l = soup.find("div", {"id": stations.url[i] }).get_text().split("Mare Obser")[0].strip()
+    df = table_NM[i]
+    station = stations.id[i]
+    df["date_time"] = pd.to_datetime(df.Topping, format='%d/%m %H:%M') + pd.offsets.DateOffset(years=120)
 
-print ("Alimentando banco de dados")
-df_mare.to_sql(con=con, name='maregrafos', if_exists='append')
+    try:
+        del df["BSO"]
+    except:
+        print("não tem coluna BS0")
+    del df["Mare Astron"]
+    del df["NMM"]
+    del df["Topping"]
 
-print ("Banco de dados atualizado")
+    df.columns = ["water_level", "meteorological_tide", "date_time"]
 
+    df = df.replace(to_replace =['None', 'NULL', ' ', ''], value =np.nan)
+    df = df.loc[np.isnan(df.water_level) == False]
 
-df_meteoro = df.loc[df.index < 1100]
+    df['station_id'] = station
 
-df_meteoro = df_meteoro.loc[df_meteoro.index > 1040]
+    db.delete_old_data(df, station)
+    db.insert_new_data(df)
 
-df_meteoro = df_meteoro[['datahora','temp', 'vento','direcaoRajadaNum']]
+    print('dados da epagri '+ str(station) + ' inseridos no banco')
 
-df_meteoro.columns = ['datahora', 'atmp','wspd','wdir']
-
-df_meteoro = df_meteoro.replace(to_replace =['None', 'NULL', ' ', ''],
-                        value =np.nan)
-
-
-print ("deletando dados antigos")
-for i in df_meteoro.index:
-    deleta_dado("meteorologia",str(df_meteoro.datahora[i]), i)
-print ("Dados deletados")
-
-df_meteoro.wspd = df_meteoro.wspd*.27
-
-con = sqlalchemy.create_engine('mysql+mysqlconnector://{0}:{1}@{2}/{3}'.
-                                        format(user_config.username,
-                                            user_config.password,
-                                            user_config.host,
-                                            user_config.database))
-
-
-
-print ("Alimentando banco de dados")
-df_meteoro.to_sql(con=con, name='meteorologia', if_exists='append')
-
-print ("Banco de dados atualizado")

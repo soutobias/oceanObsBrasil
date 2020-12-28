@@ -20,14 +20,14 @@ def download_ftplib_nodc(datahora1):
     directory = 'pub/data.nodc/jason2/subs/'
 
     datahora=time.gmtime()
-    ano=datahora.tm_year;
-    dia=datahora.tm_mday;
-    mes=datahora.tm_mon;
-    hora=datahora.tm_hour;
-    ano1=datahora1.tm_year;
-    dia1=datahora1.tm_mday;
-    mes1=datahora1.tm_mon;
-    hora1=datahora1.tm_hour;
+    ano=datahora.tm_year
+    dia=datahora.tm_mday
+    mes=datahora.tm_mon
+    hora=datahora.tm_hour
+    ano1=datahora1.tm_year
+    dia1=datahora1.tm_mday
+    mes1=datahora1.tm_mon
+    hora1=datahora1.tm_hour
 
     if dia<10:
         dia="0"+str(dia)
@@ -61,13 +61,6 @@ def download_ftplib_nodc(datahora1):
                 ftp.retrbinary('RETR ' + filename, fhandle.write)
                 fhandle.close()
                 print(filename)
-            filematch = "*JA2_OPR_*"+str(ano)+mes+dia+"_"+valor+"*.nc"
-            for filename in ftp.nlst(filematch):
-                fhandle = open(filename, 'wb')
-                print ('Getting ' + filename)
-                ftp.retrbinary('RETR ' + filename, fhandle.write)
-                fhandle.close()
-                print(filename)
             hour=hour+1
 
         while hora1<=23:
@@ -76,13 +69,6 @@ def download_ftplib_nodc(datahora1):
             else:
                 valor=str(hora1)
             filematch = "*JA3_OPR_*_*_"+str(ano)+mes1+dia1+"_"+valor+"*_*_*.nc"
-            for filename in ftp.nlst(filematch):
-                fhandle = open(filename, 'wb')
-                print ('Getting ' + filename)
-                ftp.retrbinary('RETR ' + filename, fhandle.write)
-                fhandle.close()
-                print(filename)
-            filematch = "*JA2_OPR_*_*_"+str(ano)+mes1+dia1+"_"+valor+"*_*_*.nc"
             for filename in ftp.nlst(filematch):
                 fhandle = open(filename, 'wb')
                 print ('Getting ' + filename)
@@ -99,13 +85,6 @@ def download_ftplib_nodc(datahora1):
             else:
                 valor=str(hour1)
             filematch = "*JA3_OPR_*_*_"+str(ano)+mes+dia+"_"+valor+"*_*_*.nc"
-            for filename in ftp.nlst(filematch):
-                fhandle = open(filename, 'wb')
-                print ('Getting ' + filename)
-                ftp.retrbinary('RETR ' + filename, fhandle.write)
-                fhandle.close()
-                print(filename)
-            filematch = "*JA2_OPR_*_*_"+str(ano)+mes+dia+"_"+valor+"*_*_*.nc"
             for filename in ftp.nlst(filematch):
                 fhandle = open(filename, 'wb')
                 print ('Getting ' + filename)
