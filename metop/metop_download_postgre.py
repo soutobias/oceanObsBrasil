@@ -87,7 +87,6 @@ try:
     ascat_a["institution"] = 'ascat'
     ascat_a["type"] = 'A'
     db.delete_old_data_no_station(ascat_a)
-    breakpoint()
     db.insert_new_data_no_station(ascat_a)
 except:
     print("Algo errado com Metop-A")
