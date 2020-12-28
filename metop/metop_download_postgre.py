@@ -31,9 +31,9 @@ except:
     date_a = None
 
 if date_a == None: # Caso não exista dados no banco // Primeira carga
-    start_date_a = (datetime.now()- timedelta(days = 3)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    start_date_a = (datetime.now()- timedelta(days = 1)).strftime("%Y-%m-%dT%H:%M:%SZ")
 else:
-    start_date_a = date_a - timedelta(days = 2) # Iniciando o download em x dias antes do último dado (que serão apagados e substituidos pelos novos)
+    start_date_a = date_a - timedelta(days = 1) # Iniciando o download em x dias antes do último dado (que serão apagados e substituidos pelos novos)
     start_date_a = datetime.strftime(start_date_a, date_format)
 
 
