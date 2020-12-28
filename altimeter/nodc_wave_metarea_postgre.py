@@ -10,61 +10,19 @@ from math import radians, cos, sin, asin, sqrt
 import mysql.connector as MySQLdb
 from download_ftplib_nodc import *
 
+import pandas as pd
 import sys
 import os
-from os.path import expanduser
-home = expanduser("~")
-sys.path.insert(0,home)
+
+sys.path.append(os.environ['HOME'])
 import user_config
-os.chdir( user_config.path )
+
+sys.path.append(user_config.path )
+sys.path.append(user_config.path + "/database" )
+sys.path.append(user_config.path + "/altimeter" )
 
 
-def alimentarbd(Data1):
-
-    db = MySQLdb.connect(host = user_config.host,
-                         user = user_config.username,
-                         password = user_config.password,
-                         database = user_config.database)
-
-    cur=db.cursor()
-
-    c1=[]
-    if len(Data1)>0:
-        cur.execute("SELECT datahora FROM altimetro WHERE satelite='%s' \
-        ORDER BY datahora DESC limit 20"%Data1[0][0])
-        for row in cur.fetchall():
-            c1.append(row)
-        if c1!=[]:
-            for i in range(len(Data1)):
-                if Data1[i][1]>max(c1)[0]:
-                    sql = "INSERT INTO altimetro (satelite,datahora,lat,lon,swh)\
-                    VALUES ('%s', '%s', %s, %s, %s)" % \
-                    ((Data1[i][0]),(Data1[i][1]),(Data1[i][2]),(Data1[i][3]),\
-                    (Data1[i][4]))
-                    cur.execute(sql)
-                    db.commit()
-                else: #inserir update
-                    sql = "UPDATE altimetro SET satelite='%s',datahora='%s',lat=%s,lon=%s,swh=%s\
-                    WHERE datahora='%s' and satelite='%s'  and swh=%s" % \
-                    ((Data1[i][0]),(Data1[i][1]),(Data1[i][2]),(Data1[i][3]),\
-                    (Data1[i][4]),(Data1[i][1]),(Data1[0][0]),(Data1[i][4]))
-                    cur.execute(sql)
-                    db.commit()
-        else:
-            for i in range(len(Data1)):
-                sql = "INSERT INTO altimetro (satelite,datahora,lat,lon,swh)\
-                VALUES ('%s', '%s', %s, %s, %s)" % \
-                ((Data1[i][0]),(Data1[i][1]),(Data1[i][2]),(Data1[i][3]),\
-                (Data1[i][4]))
-                cur.execute(sql)
-                db.commit()
-
-        cur.close()
-        db.close()
-        print('Dados inseridos no banco')
-    else:
-        print('nao há dados para serem inseridos')
-
+import db_function as db
 
 def haversine(lon1, lat1, lon2, lat2):
     lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
@@ -79,15 +37,13 @@ def haversine(lon1, lat1, lon2, lat2):
 
 
 # ABRINDO ARQUIVO COM A POSICAO DAS BOIAS DO PNBOIA
-datahora1=time.gmtime(time.time()-3600*10)
+datahora1=time.gmtime(time.time()-3600*12)
 download_ftplib_nodc(datahora1)
-
 
 lat01=-35.8333
 lat02=7
 lon01=-55.20
 lon02=-20
-
 
 #VARIAVEL DOS ARQUIVOS NETCDF. CRIADO PARA FACILITAR OS LOOPS POSTERIORES
 variables=['tempo','lat','lon','swh_ku','swh_ku_mle3','wind_speed_alt','wind_speed_alt_mle3']
@@ -102,62 +58,11 @@ for i in range(len(variables)):
 
 #glob_pattern = "GW_L2P_ALT_JAS2_NRT_20161024*.nc"
 
-datahora=time.gmtime()
-ano=datahora.tm_year
-dia=datahora.tm_mday
-mes=datahora.tm_mon
-hora=datahora.tm_hour
-datahora=time.gmtime(time.time()-3600*10)
-ano1=datahora.tm_year
-dia1=datahora.tm_mday
-mes1=datahora.tm_mon
-hora1=datahora.tm_hour
-if dia<10:
-    dia="0"+str(dia)
-if dia1<10:
-    dia1="0"+str(dia1)
-if mes<10:
-    mes="0"+str(mes)
-if mes1<10:
-    mes1="0"+str(mes1)
-
-dia=str(dia)
-mes=str(mes)
-dia1=str(dia1)
-mes1=str(mes1)
 file_list=[]
-if dia1!=dia:
-    hour=0
-    while hour<=hora:
-        if hour<10:
-            valor="0"+str(hour)
-        else:
-            valor=str(hour)
-        glob_pattern = "*JA3_OPR_*_*_"+str(ano)+mes+dia+"_"+valor+"*_*_*.nc"
-        if glob.glob(glob_pattern)!=[]:
-            file_list.append(glob.glob(glob_pattern))
-        hour=hour+1
-    while hora1<=23:
-        if hora1<10:
-            valor="0"+str(hora1)
-        else:
-            valor=str(hora1)
-        glob_pattern = "*JA3_OPR_*_*_"+str(ano)+mes1+dia1+"_"+valor+"*_*_*.nc"
-        if glob.glob(glob_pattern)!=[]:
-            file_list.append(glob.glob(glob_pattern))
-        hora1=hora1+1
-else:
-    hour1=hora1
-    while hour1<=hora:
-        if hour1<10:
-            valor="0"+str(hour1)
-        else:
-            valor=str(hour1)
-        glob_pattern = "*JA3_OPR_*_*_"+str(ano)+mes1+dia1+"_"+valor+"*_*_*.nc"
-        if glob.glob(glob_pattern)!=[]:
-            file_list.append(glob.glob(glob_pattern))
-        hour1=hour1+1
-#ABRINDO CADA NETCDF POR VEZ
+glob_pattern = "*JA3*.nc"
+if glob.glob(glob_pattern)!=[]:
+    file_list.append(glob.glob(glob_pattern))
+
 for i6 in range(len(file_list)):
     for f in  file_list[i6]:
         print(f)
@@ -169,7 +74,6 @@ for i6 in range(len(file_list)):
         wind_speed_alt_mle3 = NC.groups['data_01'].variables['wind_speed_alt_mle3']
         swh_ku = NC.groups['data_01'].groups["ku"].variables['swh_ocean']
         swh_ku_mle3 = NC.groups['data_01'].groups["ku"].variables['swh_ocean_mle3']
-        breakpoint()
 
         #ARTIMANHAS PARA ACELERAR A ROTINA. LIMITES ESCOLHIDOS DE MODO QUE NAO SE BUSQUE ARQUIVOS QUE NAO TENHA DADOS PARA AS BOIAS
         f1=np.where((np.array([lat])<lat02) & (np.array([lat])>lat01))
@@ -185,8 +89,8 @@ for i6 in range(len(file_list)):
             else:
                 for i in range(len(lat)):
                     if lat[i]>=lat01 and lat[i]<=lat02 and lon[i]>=lon01+360 and lon[i]<=lon02+360:
+                        print("ok")
                         if np.ma.is_masked(swh_ku[i])==False:
-                            print(i)
                             for i2 in range(len(variables)):
                                 if variables[i2]=="lat" or variables[i2]=="tempo":
                                     exec("%s_99.append(float(%s[i]))"% (variables[i2],variables[i2]))
@@ -198,8 +102,6 @@ for i6 in range(len(file_list)):
                                 else:
                                     exec("%s_99.append(%s[i])"% (variables[i2],variables[i2]))
         NC.close()
-
-breakpoint()
 
 
 #CONVERTENDO O TEMPO DOS DADOS DE SATELITE PARA ANO, MES. DIA, HORA, MIN
@@ -379,30 +281,36 @@ for i in range(len(lon_99)-12):
 datahora_med=[]
 origem=[]
 for i in range(len(day_med)):
-    origem.append('jason3')
     datahora_med.append(datetime.datetime.strptime(str(day_med[i])+"/"+str(month_med[i])+"/"+str(year_med[i])+" "+str(hour_med[i])+":"+str(minute_med[i])+":00", '%d/%m/%Y %H:%M:%S'))
 
-Data=np.array([origem,datahora_med,lat_med,lon_med,swh_med])
-Data = Data.transpose()
-# header="year,month,day,hour,minute,lat,lon,swh"
-# np.savetxt("jason03.csv", Data,'%s',delimiter=" ",header=header)
+Data = np.array([datahora_med, lat_med, lon_med, swh_med])
+Data3 = Data.transpose()
 
-# import xlsxwriter
-# import math
-# workbook=xlsxwriter.Workbook("jason03.xls")
-# worksheet=workbook.add_worksheet()
+df = pd.DataFrame(Data3)
 
-# cabecalho=['datahora','lat','lon','wvht','wvht2']
+df.columns = ['date_time', 'lat', 'lon', 'swvht']
 
-# for ii in range(len(cabecalho)):
-#     worksheet.write(0,ii,cabecalho[ii])
+df = df.replace(to_replace =['None', 'NULL', ' ', ''], value =np.nan)
 
-# for i in range(len(Data)):
-#     for ii in range(len(Data[0])):
-#         worksheet.write(i+1,ii,Data[i][ii])
+df["institution"] = 'jason3'
+df["type"] = 'altimeter'
 
-# workbook.close()
-breakpoint()
+print(df)
+try:
+    # Deleting existing data // avoid duplicate
+    db.delete_old_data_no_station(df)
+    # Insert new data
+    db.insert_new_data_no_station(df)
+except:
+    print("No data to insert")
 
-print('Alimentando o banco de dados')
-alimentarbd(Data)
+print('Programa finalizado.')
+
+
+dir_name = "./"
+test = os.listdir(dir_name)
+
+for item in test:
+    if item.endswith(".nc"):
+        os.remove(os.path.join(dir_name, item))
+
