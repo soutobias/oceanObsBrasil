@@ -1,644 +1,1264 @@
 <!DOCTYPE html>
 
-<html lang="pt-br" xml:lang="pt-br" xmlns="http://www.w3.org/1999/xhtml"><head>
-<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
-<meta content="previsão do tempo, florianópolis, santa catarina, previsão para pesca, Previsão para navegação, imagem de satélite, risco de incêndio, Agricultura, agrometeorologia, meteorologia, geoprocessamento, zoneamento, hidrologia, níveis dos rios, climatologia, previsão climática" name="keywords"/>
-<meta content="Manu" name="author"/>
-<meta content="LITORAL ON-LINE" name="xreference"/>
-<meta content="O portal EPAGRI/CIRAM é um website oferecido pelo Governo de Santa Catarina à sociedade  visando a disponibilização de serviços e produtos relativos a meteorologia, agrometeorologia, zoneamento, hidrologia, geoprocessamento entre outros." name="description"/>
-<meta content="Joomla! - Open Source Content Management" name="generator"/>
-<title>EPAGRI/CIRAM  - LITORAL ON-LINE</title>
-<link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
-<link href="http://ciram.epagri.sc.gov.br/templates/ammon/css/tipTip.css" rel="stylesheet" type="text/css"/>
-<link href="/libraries/gantry/css/grid-12.css" rel="stylesheet" type="text/css"/>
-<link href="/templates/ammon/css/gantry-override.css" rel="stylesheet" type="text/css"/>
-<link href="/templates/ammon/css/joomla-override.css" rel="stylesheet" type="text/css"/>
-<link href="/templates/ammon/css/styles.css" rel="stylesheet" type="text/css"/>
-<link href="http://ciram.epagri.sc.gov.br/templates/ammon/css/superfish.css" rel="stylesheet" type="text/css"/>
-<link href="http://ciram.epagri.sc.gov.br/templates/ammon/html/mod_menu/css/style.css" rel="stylesheet" type="text/css"/>
-<link href="http://ciram.epagri.sc.gov.br/modules/mod_socialsharebuttons/style/style.css" rel="stylesheet" type="text/css"/>
-<link href="modules/mod_monitoramento_costeiro/css/menu.css" rel="stylesheet" type="text/css"/>
-<link href="modules/mod_monitoramento_costeiro/css/mod_monitoramento_costeiro.css" rel="stylesheet" type="text/css"/>
-<link href="modules/mod_monitoramento_costeiro/css/menu_right.css" rel="stylesheet" type="text/css"/>
-<link href="modules/mod_monitoramento_costeiro/css/menu_left.css" rel="stylesheet" type="text/css"/>
-<link href="modules/mod_monitoramento_costeiro/css/mapa.css" rel="stylesheet" type="text/css"/>
-<link href="modules/mod_monitoramento_costeiro/js/dhtml/dhtmlwindow.css" rel="stylesheet" type="text/css"/>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<title>EPAGRI/CIRAM – Centro de Informações de Recursos Ambientais e de Hidrometeorologia de Santa Catarina</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/><link href="//fonts.googleapis.com" rel="dns-prefetch"/>
+<link href="//s.w.org" rel="dns-prefetch"/>
+<link href="https://ciram.epagri.sc.gov.br/index.php/feed/" rel="alternate" title="Feed para EPAGRI/CIRAM »" type="application/rss+xml"/>
+<link href="https://ciram.epagri.sc.gov.br/index.php/comments/feed/" rel="alternate" title="Feed de comentários para EPAGRI/CIRAM »" type="application/rss+xml"/>
+<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/ciram.epagri.sc.gov.br\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
 <style type="text/css">
-
-body a {color:#009140;}
-#slideshow {background-color:#009140;}
-#rt-bottom {background-color:#dde6dd;}
-#rt-footer {background-color:#dde6dd;}
-.showcase-item h3 {color: #009140; }
-h1.title {color: #009140; }
-.plusSlider-controls a {background: #009140;}
-img.shadow:hover {-moz-box-shadow: 0 0 5px #009140;-webkit-box-shadow: 0 0 5px #009140; box-shadow: 0 0 5px #009140; border: 1px solid #009140;}
-::-moz-selection { background: #009140; }
-::selection { background: #009140; }
-input[type=text]:focus, input[type=password]:focus, textarea:focus, select:focus { -moz-box-shadow: 0 0 3px #009140;-webkit-box-shadow: 0 0 3px #009140; box-shadow: 0 0 3px #009140; border: 1px solid #009140; }
-input[type=submit], button { background:#009140; }
-.readon {background-color: #009140; }
-#simple-tabs ul.tabs li.active a { color:#009140; } 
-.tabs-clean-style ul.tabs li.active a {color:#009140;  }
-.intro-text {color:#009140;}
-.feature-item h3 {color:#009140;}
-
-
-  </style>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
-<script src="http://ciram.epagri.sc.gov.br/templates/ammon/js/jquery.infieldlabel.min.js" type="text/javascript"></script>
-<script src="http://ciram.epagri.sc.gov.br/templates/ammon/js/jquery.easing.1.3.js" type="text/javascript"></script>
-<script src="http://ciram.epagri.sc.gov.br/templates/ammon/js/jquery.tipTip.minified.js" type="text/javascript"></script>
-<script src="http://ciram.epagri.sc.gov.br/templates/ammon/js/functions.php?template_dir=http%3A%2F%2Fciram.epagri.sc.gov.br%2Ftemplates%2Fammon&amp;chaser=0" type="text/javascript"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7xNMGmtY_K176v1Wi8JiJwfiPDq1idj8&amp;libraries=geometry,places,visualization" type="text/javascript"></script>
-<script src="http://ciram.epagri.sc.gov.br/templates/ammon/js/jquery.supersubs.js" type="text/javascript"></script>
-<script src="http://ciram.epagri.sc.gov.br/modules/mod_jt_superfish_menu/js/superfish.js" type="text/javascript"></script>
-<script src="modules/mod_monitoramento_costeiro/js/infobox.js" type="text/javascript"></script>
-<script src="modules/mod_monitoramento_costeiro/js/richmarker.js" type="text/javascript"></script>
-<script src="modules/mod_monitoramento_costeiro/js/municipiomaps.js" type="text/javascript"></script>
-<script src="modules/mod_monitoramento_costeiro/js/dhtml/dhtmlwindow.js" type="text/javascript"></script>
-<script src="modules/mod_monitoramento_costeiro/js/flot/jquery.flot.js" type="text/javascript"></script>
-<script src="modules/mod_monitoramento_costeiro/js/gauge_barra.js" type="text/javascript"></script>
-<script src="modules/mod_monitoramento_costeiro/js/flot/jquery.flot.fillarea.js" type="text/javascript"></script>
-<script src="modules/mod_monitoramento_costeiro/js/flot/jquery.flot.time.js" type="text/javascript"></script>
-<script src="modules/mod_monitoramento_costeiro/js/flot/jquery.colorhelpers.js" type="text/javascript"></script>
-<script src="modules/mod_monitoramento_costeiro/js/flot/jquery.flot.canvas.js" type="text/javascript"></script>
-<script src="modules/mod_monitoramento_costeiro/js/flot/base64.js" type="text/javascript"></script>
-<script src="modules/mod_monitoramento_costeiro/js/flot/canvas2image.js" type="text/javascript"></script>
-<script src="modules/mod_monitoramento_costeiro/js/flot/jquery.flot.saveAsImage.js" type="text/javascript"></script>
-<script src="modules/mod_monitoramento_costeiro/js/flot/jquery.flot.navigate.js" type="text/javascript"></script>
-<script src="modules/mod_monitoramento_costeiro/js/flot/jquery.flot.selection.js" type="text/javascript"></script>
-<script src="modules/mod_monitoramento_costeiro/js/dateFormat.js" type="text/javascript"></script>
-<script src="modules/mod_monitoramento_costeiro/js/maregrama.js" type="text/javascript"></script>
-<script src="modules/mod_monitoramento_costeiro/js/maregramaHistorico.js" type="text/javascript"></script>
-<script src="modules/mod_monitoramento_costeiro/js/flot/jquery.flot.labels.js" type="text/javascript"></script>
-<script src="modules/mod_monitoramento_costeiro/js/maregramaData.js" type="text/javascript"></script>
-<script src="modules/mod_monitoramento_costeiro/js/maregramaDataHistorico.js" type="text/javascript"></script>
-<script type="text/javascript">
-jQuery.noConflict();		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
-		__gaTracker('create', 'UA-2312725-4', 'auto');
-		__gaTracker('send', 'pageview');
-	
-			jQuery(document).ready(function($) {
-				$(".hasTip").tipTip();
-			});
-(function($){ 
-$(window).load(function() {
-  $("ul.sf-menu").supersubs({minWidth:13, maxWidth:30, extraWidth:0}).superfish({ 
-	  hoverClass: "sfHover",
-	  pathClass:  "sf-active",
-	  pathLevels: 0,
-	  animation:  {height:'show'},
-	  delay:      1000,
-	  speed:      "def",
-	  autoArrows: true,
-	  dropShadows: 0
-  }); 
-});
-})(jQuery);
-(function($){ 
-$(window).load(function() {
-  $("ul.sf-menu").supersubs({minWidth:13, maxWidth:30, extraWidth:0}).superfish({ 
-	  hoverClass: "sfHover",
-	  pathClass:  "sf-active",
-	  pathLevels: 0,
-	  animation:  {height:'show'},
-	  delay:      1000,
-	  speed:      "def",
-	  autoArrows: true,
-	  dropShadows: 0
-  }); 
-});
-})(jQuery);
-  </script>
-<link href="http://ciram.epagri.sc.gov.br/templates/ammon/images/favicon.png" rel="shortcut icon"/>
-<meta content="http://ciram.epagri.sc.gov.br/images/noimage.gif" property="og:image"/>
-</head>
-<body class="font-family-geneva font-size-is-default menu-type-fusionmenu col12 option-com-content menu-litoral-on-line">
-<!-- BARRA SUPERIOR DO GOVERNO -->
-<iframe border="0" frameborder="0" height="32" marginheight="0" marginwidth="0" name="principal" scrolling="no" src="https://www.sc.gov.br/barra_sc/barra_sc.html" style="top:32px;" width="100%">
-</iframe>
-<!-- FIM DA BARRA SUPERIOR DO GOVERNO -->
-<div class="" id="rt-header">
-<div class="rt-container">
-<div class="rt-grid-4 rt-alpha">
-<div class="rt-block">
-<a href="/" id="rt-logo"></a>
-</div>
-<div class="rt-block">
-<div class="custom">
-<div style="margin-top: -23px;"><img alt="EPAGRI/CIRAM" height="80" src="images/logo.png" usemap="#linklogo" width="284"/></div>
-<map name="linklogo">
-<area alt="EPAGRI" coords="0,0,76,80" href="http://www.epagri.sc.gov.br/" shape="rect" target="_blank"/>
-<area alt="CIRAM" coords="80,0,284,80" href="/" shape="rect"/>
-</map>
-</div>
-</div>
-</div>
-<div class="rt-grid-8 rt-omega">
-<div class="rt-block">
-<ul class="sf-menu menu">
-<li id="item-101"><a href="/index.php?option=com_content&amp;view=featured&amp;Itemid=101">Página inicial</a></li><li class="deeper parent" id="item-194"><a href="/index.php?option=com_content&amp;view=article&amp;id=50&amp;Itemid=194">Institucional</a><ul><li id="item-207"><a href="/index.php?option=com_content&amp;view=article&amp;id=50&amp;Itemid=207">O CIRAM</a></li><li id="item-208"><a href="/index.php?option=com_content&amp;view=article&amp;id=55&amp;Itemid=208">ÁREAS</a></li><li id="item-209"><a href="/index.php?option=com_content&amp;view=article&amp;id=56&amp;Itemid=209">EQUIPE</a></li></ul></li><li class="deeper parent" id="item-195"><a href="/index.php?option=com_content&amp;view=article&amp;id=104&amp;Itemid=195">Serviços</a><ul><li class="deeper parent" id="item-206"><a href="/index.php?option=com_content&amp;view=article&amp;id=2405&amp;Itemid=206">PREVISÃO DO TEMPO</a><ul><li id="item-262"><a href="/index.php?option=com_content&amp;view=article&amp;id=113&amp;Itemid=262">PREVISÃO PARA O MAR</a></li><li id="item-684"><a href="/index.php?option=com_content&amp;view=article&amp;id=812&amp;Itemid=684">MAREGRAMA</a></li><li id="item-263"><a href="/index.php?option=com_content&amp;view=article&amp;id=78&amp;Itemid=263">PREVISÃO DE GEADA</a></li><li id="item-264"><a href="/index.php?option=com_content&amp;view=article&amp;id=117&amp;Itemid=264">PREVISÃO EM ÁUDIO</a></li><li id="item-267"><a href="/index.php?option=com_content&amp;view=article&amp;id=120&amp;Itemid=267">TÁBUA DE MARÉS</a></li><li class="deeper parent" id="item-269"><a href="/index.php?option=com_content&amp;view=article&amp;id=85&amp;Itemid=269">PREVISÃO NUMÉRICA</a><ul><li id="item-271"><a href="/index.php?option=com_content&amp;view=article&amp;id=85&amp;Itemid=271">CHUVA</a></li><li id="item-268"><a href="/index.php?option=com_content&amp;view=article&amp;id=121&amp;Itemid=268">VENTO</a></li></ul></li></ul></li><li id="item-276"><a href="/index.php?option=com_content&amp;view=article&amp;id=2224&amp;Itemid=276">RIOS ON-LINE</a></li><li id="item-288"><a href="/index.php?option=com_content&amp;view=article&amp;id=2440&amp;Itemid=288">LITORAL ON-LINE</a></li><li class="deeper parent" id="item-213"><a href="/index.php?option=com_content&amp;view=article&amp;id=98&amp;Itemid=213">MONITORAMENTO</a><ul><li id="item-285"><a href="/index.php?option=com_content&amp;view=article&amp;id=98&amp;Itemid=285">MONITORAMENTO ON-LINE</a></li><li id="item-393"><a href="/index.php?option=com_content&amp;view=article&amp;id=60&amp;Itemid=393">IMAGEM DE SATÉLITE</a></li><li id="item-289"><a href="/index.php?option=com_content&amp;view=article&amp;id=103&amp;Itemid=289">TEMPERATURA DA SUPERFÍCIE DO MAR</a></li><li id="item-480"><a href="/index.php?option=com_content&amp;view=article&amp;id=510&amp;Itemid=480">MONITORAMENTO DO FRIO</a></li></ul></li><li class="deeper parent" id="item-214"><a href="/index.php?option=com_content&amp;view=article&amp;id=88&amp;Itemid=214">ZONEAMENTO</a><ul><li id="item-273"><a href="/index.php?option=com_content&amp;view=article&amp;id=88&amp;Itemid=273">ZONEAMENTO AGROECOLÓGICO</a></li><li id="item-274"><a href="/index.php?option=com_content&amp;view=article&amp;id=89&amp;Itemid=274">ZONEAMENTO AGRÍCOLA</a></li><li id="item-275"><a href="/index.php?option=com_content&amp;view=article&amp;id=90&amp;Itemid=275">ZONEAMENTO DE FLORES</a></li></ul></li><li class="deeper parent" id="item-483"><a href="/index.php?option=com_content&amp;view=article&amp;id=708&amp;Itemid=483">CLIMATOLOGIA</a><ul><li id="item-484"><a href="/index.php?option=com_content&amp;view=article&amp;id=708&amp;Itemid=484">ATLAS CLIMATOLÓGICO</a></li></ul></li><li class="deeper parent" id="item-278"><a href="/index.php?option=com_content&amp;view=article&amp;id=91&amp;Itemid=278">CONDIÇÕES EXTREMAS</a><ul><li id="item-392"><a href="/index.php?option=com_content&amp;view=article&amp;id=91&amp;Itemid=392">AVISOS METEOROLÓGICOS</a></li><li id="item-470"><a href="/index.php?option=com_content&amp;view=article&amp;id=477&amp;Itemid=470" title="AVISOS HIDROLÓGICOS">AVISOS HIDROLÓGICOS</a></li><li id="item-759"><a href="/index.php?option=com_content&amp;view=article&amp;id=2587&amp;Itemid=759" title="AVISOS HIDROLÓGICOS">AVISOS MARÍTIMOS</a></li><li id="item-661"><a href="/index.php?option=com_content&amp;view=article&amp;id=1498&amp;Itemid=661">CALCULE O ÍNDICE DE CALOR E A SENSAÇÃO TÉRMICA</a></li></ul></li></ul></li><li class="deeper parent" id="item-196"><a href="/index.php?option=com_content&amp;view=article&amp;id=53&amp;Itemid=196">Projetos</a><ul><li id="item-217"><a href="/index.php?option=com_content&amp;view=article&amp;id=53&amp;Itemid=217">EM ANDAMENTO</a></li><li id="item-218"><a href="/index.php?option=com_content&amp;view=article&amp;id=54&amp;Itemid=218">CONCLUÍDOS</a></li><li id="item-399"><a href="/index.php?option=com_content&amp;view=article&amp;id=211&amp;Itemid=399">SITE DOS PROJETOS</a></li></ul></li><li class="deeper parent" id="item-197"><a href="#">Publicações</a><ul><li id="item-219"><a href="/index.php?option=com_content&amp;view=article&amp;id=86&amp;Itemid=219">PUBLICAÇÕES TÉCNICO-CIENTÍFICAS</a></li><li id="item-220"><a href="/index.php?option=com_content&amp;view=article&amp;id=69&amp;Itemid=220">OUTRAS PUBLICAÇÕES</a></li><li id="item-215"><a href="/index.php?option=com_content&amp;view=article&amp;id=162&amp;Itemid=215">NOTÍCIAS</a></li><li id="item-272"><a href="/index.php?option=com_content&amp;view=article&amp;id=87&amp;Itemid=272">NOTAS METEOROLÓGICAS</a></li><li id="item-769"><a href="/index.php?option=com_content&amp;view=article&amp;id=2604&amp;Itemid=769">NOTAS MARÍTIMAS</a></li><li id="item-741"><a href="/index.php?option=com_content&amp;view=article&amp;id=407&amp;Itemid=741">BOLETINS HIDROLÓGICOS</a></li><li id="item-751"><a href="/index.php?option=com_content&amp;view=article&amp;id=2472&amp;Itemid=751">BOLETIM AMBIENTAL</a></li><li id="item-758"><a href="/index.php?option=com_content&amp;view=article&amp;id=2519&amp;Itemid=758">BOLETINS DE CULTURAS</a></li><li id="item-768"><a href="/index.php?option=com_content&amp;view=article&amp;id=2603&amp;Itemid=768">LITORAL ON-LINE</a></li></ul></li><li id="item-172"><a href="/index.php?option=com_content&amp;view=article&amp;id=40&amp;Itemid=172">Contato</a></li></ul>
-</div>
-</div>
-<div class="clear"></div>
-</div>
-<div class="shadow-down"></div>
-</div>
-<div id="estacoes-ano">
-<div class="custom">
-<div style="text-align: center;"><span style="color: #ccffff; font-size: 12pt; font-family: comic sans ms, sans-serif;"><strong>Inverno</strong></span></div></div></div></body></html>Início:20/06 Fim:22/09
-
-
-<div id="icon-widgets">
-<ul class="icon-menu">
-<li class="custom_social">
-<div style="margin-top: 2px; margin-right: 4px;"><a href="http://twitter.com/epagriciram" rel="nofollow" style="margin: 1px;" target="_blank"><img alt="Twitter" src="modules/mod_socialmedialinks/icons/default/size2/twitter.png" title="Siga-nos no Twitter"/></a> <a href="https://www.facebook.com/pages/EpagriCiram/236061103085851" rel="nofollow" style="margin: 1px;" target="_blank"><img alt="Facebook" src="modules/mod_socialmedialinks/icons/default/size2/facebook.png" title="Siga-nos no Facebook"/></a> <a href="https://www.youtube.com/channel/UCLF0bRSR2Xb9dXiR0q6v93w" rel="nofollow" style="margin: 1px;" target="_blank"><img alt="Youtube" src="modules/mod_socialmedialinks/icons/default/size2/youtube.png" title="Siga-nos no Youtube"/></a><a href="http://imagens.ciram.sc.gov.br/" rel="nofollow" style="margin: 1px;" target="_blank"><img alt="Banco de Imagens" src="modules/mod_socialmedialinks/icons/default/size2/bancoimagens.png" title="Banco de Imagens"/></a></div>
-</li>
-<li class="custom_flags">
-<a href="index.php?option=com_content&amp;view=featured&amp;Itemid=101"><img alt="Versão em português" border="0" src="images/flag_brazil.png" title="Conteúdo em Português"/> </a> <a href="index.php?option=com_content&amp;view=article&amp;id=172:o-ciram-ingles&amp;catid=7:conteudo"><img alt="English version" border="0" src="images/flag_united_states.png" title="About CIRAM - English version"/> </a> <a href="index.php?option=com_content&amp;view=article&amp;id=173:o-ciram-espanhol&amp;catid=7:conteudo"><img alt="Versión en español" height="16" src="images/flag_spain.png" title="Sobre el CIRAM - Versión en español" width="16"/></a></li>
-</ul>
-</div>
-<div id="slideshow">
-<div class="random-image">
-<img alt="inverno3.png" height="90" src="/images/estacoes/Inverno/inverno3.png" width="1920"/></div>
-<!-- <div class="shadow-up"></div> -->
-</div>
-<div id="container">
-<div class="bg-transparent"></div>
-<div class="hidrologiaCenter" id="hidrologiaCenter">
-<div class="rt-grid-12 rt-alpha rt-omega">
-<div class="rt-block">
-<div id="municipioshidro">
-<div class="showmenu cbp-spmenu showmenu-button-left showmenu-button-left-open" id="showmenuleft">
-<div class="posisetas">
-<span class="setadireita"></span>
-<span class="setaesquerda"></span>
-</div>
-</div>
-<div class="cbp-spmenu cbp-spmenu-vertical-left cbp-spmenu-left cbp-spmenu-open" id="cbp-spmenu-left">
-<div class="module-title menu-titulo">
-<span class="filtro-titulo">Região</span>
-</div>
-<ul class="menuServicos">
-<li class="menuLeft">
-<select class="menuLeftItem" id="bacias" onchange="showHide('bacia', this.value, true); showBacia(this.value);">
-<option selected="" value="-1">Todas</option>
-<option value="65">Litoral Central</option><option value="64">Litoral Centro-Norte</option><option value="66">Litoral Centro-Sul</option><option value="63">Litoral Norte</option><option value="67">Litoral Sul</option> </select>
-</li>
-</ul>
-<br/>
-<div class="module-title">
-<span class="filtro-titulo">Município</span>
-</div>
-<input class="controls" id="buscaMunicipio" placeholder="Município" type="text"/><br/>
-<br/>
-<div class="historico10">
-<span class="filtro-titulo">Camadas</span>
-</div>
-<label class="labelTipo"><input checked="" id="tsm" onchange="mostraCamadas('tsm', this.checked);" type="checkbox"/>TSM</label>
-<label class="labelTipo"><input checked="" id="aux" onchange="mostraCamadas('aux', this.checked);" type="checkbox"/>Estações Auxiliares</label>
-<br/>
-<div class="historico10" id="showlegenda" style="cursor: pointer;">
-		Legenda:					
-		<br/><a target="a_self"><u>Mostrar</u></a>
-</div>
-<br/>
-<div align="left" class="historico10">					
-			Links:<br/>
-<a href="http://www.ciram.sc.gov.br/index.php?option=com_content&amp;view=article&amp;id=812&amp;Itemid=490" target="a_blank"><u>Maregrama</u></a><br/>
-<a href="http://www.ciram.sc.gov.br/index.php?option=com_content&amp;view=article&amp;id=120&amp;Itemid=455" target="a_blank"><u>Tábua Marés</u></a><br/>
-<!--a target="a_blank" href="http://ciram.epagri.sc.gov.br/index.php?option=com_content&view=article&id=224:escalas-dep-vento-e-mar&catid=2:sem-categoria&popup=true"><u>Escalas Vento/Mar</u></a><br-->
-<!--a target="a_blank" href="http://www.ciram.sc.gov.br/index.php?option=com_content&view=article&id=84&Itemid=270"><u>Previsão Onda</u></a><r-->
-<a href="http://www.ciram.sc.gov.br/index.php?option=com_content&amp;view=article&amp;id=121&amp;Itemid=268" target="a_blank"><u>Previsão Vento</u></a><br/>
-<a href="http://www.ciram.sc.gov.br/index.php?option=com_content&amp;view=article&amp;id=85&amp;Itemid=271" target="a_blank"><u>Previsão Chuva</u></a><br/>
-</div>
-<br/>
-<div align="left" class="historico10">					
-			Publicações:<br/>
-<a href="http://www.ciram.sc.gov.br/index.php?option=com_content&amp;view=article&amp;id=2603&amp;Itemid=768" target="a_blank"><u>Acesse Aqui</u></a><br/>
-<br/>
-<a href="https://docs.google.com/a/epagri.sc.gov.br/forms/d/e/1FAIpQLSd6Y31Lw9UMzI262uHcgtagxAM23cGMGsgol_qQP7kA-ZcqIw/viewform" target="a_blank"><u>CADASTRE-SE </u></a><br/> para receber novidades por e-mail.<br/>
-</div>
-</div>
-<div class="showmenu cbp-spmenu showmenu-button-right showmenu-button-right-open" id="showmenuright">
-<div class="posisetas">
-<span class="setadireita"></span>
-<span class="setaesquerda"></span>
-</div>
-</div>
-<div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right cbp-spmenu-right-open" id="cbp-spmenu-right">
-<div>
-<img alt="www.ciram.sc.gov.br" height="775" id="logoHelp" src="/modules/mod_monitoramento_costeiro/images/logos/Barra Lateral Direita 2018.png"/>
-</div>
-<div id="menu-geral-right">
-<div class="module-title menu-titulo">
-<span class="filtro-titulo" id="menurightestacao">Estação</span>
-</div>
-<div>
-<ul class="dadosEstacao">
-<li>
-<span class="dadosLinha" id="nmMuni">Município: teste </span>
-</li>
-</ul>
-</div>
-<div>
-<div align="center" class="obs">Maré Observada</div>
-<table align="center" class="portoSituacao">
-<tr>
-<th>Leitura:<td id="leituraUltima">29/08/2015 17:10</td></th>
-</tr>
-<tr>
-<th>Maré:<td id="nivelUltima">120cm</td></th>
-</tr>
-<tr>
-<th>Variação:<td id="variacaoUltima">120cm</td></th>
-</tr>
-</table>
-<br/>
-<div align="center" class="obs">Maré Astronômica</div>
-<table align="center" class="portoSituacao">
-<tr>
-<th>Tendência:<td id="tendenciaAstron"></td></th>
-</tr>
-<tr>
-<th>Mín.Dia:<td id="horaOcorrMinAstronDia"></td></th>
-</tr>
-<tr>
-<th>Máx.Dia:<td id="horaOcorrMaxAstronDia"></td></th>
-</tr>
-</table>
-<br/>
-<!--div class="subtit" align="center">Obs: Leitura a cada 1 hora</div-->
-<div align="center" class="subtit">
-<a href="#" onclick="graficoHistorico();"><u>Gráfico 5 dias</u></a>
-</div>
-<!--div class="subtit" align="center">Informações da Estação</div>
-				<div class="obs" align="center" style='font:11px arial'>				
-					<a href="#" onClick="dadosEstacaoTipo(1);"><u>Fotos</u></a>
-					<a href="#" onClick="dadosEstacaoTipo(2);"><u>Cadastro</u></a>
-					<a href="#" onClick="dadosEstacaoTipo(3);"><u>Sensores/Instrumentos</u></a>
-					<a href="#" onClick="dadosEstacaoTipo(4);"><u>Variavéis</u></a>
-					<a href="#" onClick="dadosEstacaoTipo(5);"><u>Meteograma</u></a>
-				</div-->
-<div align="center" class="subtit">
-<a href="#" onclick="dadosEstacao();"><u>Informações da Estação</u></a>
-<!--table align='center'><tr><th>Teste Min Dia:<td id='ocorrMinMare'></td></th></tr><tr><th>Teste Max Dia:<td id='ocorrMaxMare'></td></th></tr></table-->
-</div>
-<div id="recordes" style="display: none;">
-<b>Recordes</b><br/>
-<table width="300px"><tr><th>Menor maré:<td id="ocorrMinMare"></td></th></tr><tr><th>Maior maré:<td id="ocorrMaxMare"></td></th></tr></table>
-</div>
-<br/>
-<div class="painel" id="responsavel">
-<ul id="painel-responsavel-operador">
-<li>
-<figure class="logo">
-<a id="linkRe">
-<figcaption class="subtit">Parceiros</figcaption>
-<br/>
-<img alt="" id="logoPar" src=""/>
-</a>
-</figure>
-</li>
-</ul>
-</div>
-</div>
-<!--div style="height:201px;">
-				<div class="subtit" align="center">Altura da Maré Observada (m)</div>
-				<div align="center" style="display: inline-block; text-align: center; margin-top:25px; margin-left:15px;">
-					<!--div id='placeholderGauge' style='width:150px;height:205px;background-image:url("/modules/mod_monitoramento_costeiro/images/BarraFinalPorto2.png");background-size: 148px 200px; font:18px arial,sans-serif;'></div-->
-<!--div id='placeholderGauge' style='width:120px;height:200px;background-image:url("/modules/mod_monitoramento_costeiro/images/BarraFinalPorto2.png");background-size: 150px 200px; font:18px arial,sans-serif;'></div-->
-<!--div id='placeholderGauge' style='width:90px;height:200px;background-size: 150px 200px; font:18px arial,sans-serif;'></div-->
-<!--div id='placeholderGauge' style='left:35px;width:70px;height:200px;background-size: 100px 200px; font:18px arial,sans-serif;background-image:url("/modules/mod_monitoramento_costeiro/images/regua.png");'></div-->
-<!--div id='placeholderGauge' style='left:65px;width:85px;height:275px;background-size: 100px 275px; font:18px arial,sans-serif;background-image:url("/modules/mod_monitoramento_costeiro/images/regua.png");'></div>
-				</div>	
-				
-			</div-->
-<div>
-</div>
-</div>
-</div>
-<div style="margin-right:14px">
-<div id="mapa_base" style="height: 775px; width: 100%; z-index:1;"></div>
-<div id="legenda1" style="display: block;margin-top: -35px;"></div>
-<div id="legenda2" style="display: none;margin-top: -35px;"></div>
-</div>
-</div>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link href="https://ciram.epagri.sc.gov.br/wp-includes/css/dist/block-library/style.min.css?ver=5.6" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://ciram.epagri.sc.gov.br/wp-includes/css/dist/block-library/theme.min.css?ver=5.6" id="wp-block-library-theme-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://ciram.epagri.sc.gov.br/wp-content/plugins/header-footer-elementor/assets/css/header-footer-elementor.css?ver=1.5.4" id="hfe-style-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://ciram.epagri.sc.gov.br/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.9.1" id="elementor-icons-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://ciram.epagri.sc.gov.br/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.0.15" id="elementor-animations-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://ciram.epagri.sc.gov.br/wp-content/plugins/elementor/assets/css/frontend-legacy.min.css?ver=3.0.15" id="elementor-frontend-legacy-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://ciram.epagri.sc.gov.br/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.0.15" id="elementor-frontend-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://ciram.epagri.sc.gov.br/wp-content/uploads/elementor/css/post-954.css?ver=1598392238" id="elementor-post-954-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://ciram.epagri.sc.gov.br/wp-content/plugins/post-grid-elementor-addon/assets/css/main.css?ver=5.6" id="post-grid-elementor-addon-main-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://ciram.epagri.sc.gov.br/wp-content/uploads/elementor/css/global.css?ver=1598392243" id="elementor-global-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://ciram.epagri.sc.gov.br/wp-content/uploads/elementor/css/post-617.css?ver=1602276505" id="elementor-post-617-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://ciram.epagri.sc.gov.br/wp-content/plugins/header-footer-elementor/inc/widgets-css/frontend.css?ver=1.5.4" id="hfe-widgets-style-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://ciram.epagri.sc.gov.br/wp-content/uploads/elementor/css/post-2741.css?ver=1598392238" id="elementor-post-2741-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://ciram.epagri.sc.gov.br/wp-content/uploads/elementor/css/post-2756.css?ver=1598532436" id="elementor-post-2756-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://ciram.epagri.sc.gov.br/wp-content/uploads/oceanwp/main-style.css?ver=1.0" id="oceanwp-style-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://ciram.epagri.sc.gov.br/wp-content/themes/oceanwp-child-theme-master/style.css?ver=5.6" id="child-style-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://ciram.epagri.sc.gov.br/wp-content/themes/oceanwp/assets/fonts/fontawesome/css/all.min.css?ver=5.15.1" id="font-awesome-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://ciram.epagri.sc.gov.br/wp-content/themes/oceanwp/assets/css/third/simple-line-icons.min.css?ver=2.4.0" id="simple-line-icons-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://ciram.epagri.sc.gov.br/wp-content/uploads/dynamic-mobmenu.css?ver=2.8.1.6.1-789" id="tf-compiled-options-mobmenu-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="//fonts.googleapis.com/css?family=Dosis%3Ainherit%2C400&amp;subset=latin%2Clatin-ext&amp;ver=5.6" id="tf-google-webfont-dosis-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://ciram.epagri.sc.gov.br/wp-content/plugins/pojo-accessibility/assets/css/style.min.css?ver=1.0.0" id="pojo-a11y-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://ciram.epagri.sc.gov.br/wp-content/plugins/mobile-menu/includes/css/mobmenu-icons.css?ver=5.6" id="cssmobmenu-icons-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://ciram.epagri.sc.gov.br/wp-content/plugins/mobile-menu/includes/css/mobmenu.css?ver=2.8.1.6.1" id="cssmobmenu-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://ciram.epagri.sc.gov.br/wp-content/plugins/ocean-extra/assets/css/widgets.css?ver=5.6" id="oe-widgets-style-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Condensed%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;ver=5.6" id="google-fonts-1-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://ciram.epagri.sc.gov.br/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.12.0" id="elementor-icons-shared-0-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://ciram.epagri.sc.gov.br/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.12.0" id="elementor-icons-fa-solid-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://ciram.epagri.sc.gov.br/wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css?ver=5.12.0" id="elementor-icons-fa-regular-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://ciram.epagri.sc.gov.br/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.12.0" id="elementor-icons-fa-brands-css" media="all" rel="stylesheet" type="text/css"/>
+<script id="jquery-core-js" src="https://ciram.epagri.sc.gov.br/wp-includes/js/jquery/jquery.min.js?ver=3.5.1" type="text/javascript"></script>
+<script id="jquery-migrate-js" src="https://ciram.epagri.sc.gov.br/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" type="text/javascript"></script>
+<script id="stickyAnythingLib-js" src="https://ciram.epagri.sc.gov.br/wp-content/plugins/sticky-menu-or-anything-on-scroll/assets/js/jq-sticky-anything.min.js?ver=2.1.1" type="text/javascript"></script>
+<script id="mobmenujs-js" src="https://ciram.epagri.sc.gov.br/wp-content/plugins/mobile-menu/includes/js/mobmenu.js?ver=2.8.1.6.1" type="text/javascript"></script>
+<link href="https://ciram.epagri.sc.gov.br/index.php/wp-json/" rel="https://api.w.org/"/><link href="https://ciram.epagri.sc.gov.br/index.php/wp-json/wp/v2/pages/617" rel="alternate" type="application/json"/><link href="https://ciram.epagri.sc.gov.br/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
+<link href="https://ciram.epagri.sc.gov.br/wp-includes/wlwmanifest.xml" rel="wlwmanifest" type="application/wlwmanifest+xml"/>
+<meta content="WordPress 5.6" name="generator">
+<link href="https://ciram.epagri.sc.gov.br/" rel="canonical"/>
+<link href="https://ciram.epagri.sc.gov.br/" rel="shortlink"/>
+<link href="https://ciram.epagri.sc.gov.br/index.php/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fciram.epagri.sc.gov.br%2F" rel="alternate" type="application/json+oembed"/>
+<link href="https://ciram.epagri.sc.gov.br/index.php/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fciram.epagri.sc.gov.br%2F&amp;format=xml" rel="alternate" type="text/xml+oembed"/>
+<style type="text/css"> .ae_data .elementor-editor-element-setting {
+                        display:none !important;
+                }
+                </style>
+<!-- GA Google Analytics @ https://m0n.co/ga -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-2312725-4"></script>
 <script>
-
-	function grafico() {
-		dNivel = estMare[cod.est].o;
-		dMareAstro = estMare[cod.est].a;					
-    //    divwin = dhtmlwindow.open('divbox', 'inline', ' <a id=\'imageLinkmaregrama\' href=\'\' style=\'font-size: 20px;margin-left: 40px;line-height:23px;font-weight: bold;\' onclick=saveImg(\'maregrama\'); download=\'Grafico.png\'> Salvar Gráfico </a> <div id=\'placeholdermaregrama\' style=\'width:1024px;height:250px;\'></div> <div id="maregramaLegend" style="margin-top:-20px"></div> <div id=\'overviewmaregrama\' style=\'width:1024px;height:100px;\'></div>', 'Maregrama', '/modules/mod_monitoramento_costeiro/images/dhtml/', 'width=1050px,height=370px,left=200px,top=150px,resize=0,scrolling=0');
-	//	divwin = dhtmlwindow.open('divbox', 'inline', ' <a id=\'imageLinkmaregrama\' href=\'\' style=\'font-size: 20px;margin-left: 40px;line-height:23px;font-weight: bold;\' onclick=saveImg(\'maregrama\'); download=\'Grafico.png\'> Salvar Gráfico </a> <div id=\'placeholdermaregrama\' style=\'width:785px;height:235px;\'></div><br> <div id="maregramaLegend" style="margin-top:-20px"></div> <div id=\'overviewmaregrama\' style=\'width:805px;height:100px;\'></div>', 'Maregrama', '/modules/mod_monitoramento_costeiro/images/dhtml/', 'width=805px,height=385px,left=200px,top=150px,resize=0,scrolling=0');
-		//divwin = dhtmlwindow.open('divbox', 'inline', ' <a id=\'imageLinkmaregrama\' href=\'\' style=\'font-size: 20px;margin-left: 40px;line-height:23px;font-weight: bold;\' onclick=saveImg(\'maregrama\'); download=\'Grafico.png\'> Salvar Gráfico </a> <div id=\'placeholdermaregrama\' style=\'width:585px;height:235px;\'></div><br> <div id="maregramaLegend" style="margin-top:-20px"></div> <div id=\'overviewmaregrama\' style=\'width:600px;height:100px;\'></div>', 'Maregrama', '/modules/mod_monitoramento_costeiro/images/dhtml/', 'width=600px,height=385px,left=200px,top=150px,resize=0,scrolling=0');
-		//divwin = dhtmlwindow.open('divbox', 'inline', ' <a id=\'imageLinkmaregrama\' href=\'\' style=\'font-size: 20px;margin-left: 40px;line-height:23px;font-weight: bold;\' onclick=saveImg(\'maregrama\'); download=\'Grafico.png\'> Salvar Gráfico </a> <div id=\'placeholdermaregrama\' style=\'width:485px;height:215px;\'></div><br> <div id="maregramaLegend" style="margin-top:-20px"></div> <div id=\'overviewmaregrama\' style=\'width:505px;height:100px;\'></div>', 'Maregrama', '/modules/mod_monitoramento_costeiro/images/dhtml/', 'width=505px,height=385px,left=475px,top=425px,resize=0,scrolling=0');
-		  //divwin = dhtmlwindow.open('divbox', 'inline', ' <a id=\'imageLinkmaregrama\' href=\'\' style=\'font-size: 13px;margin-left: 45px;line-height:23px;font-weight: bold;\' onclick=saveImg(\'maregrama\'); download=\'Grafico.png\'> Salvar Gráfico </a> <div id=\'placeholdermaregrama\' style=\'width:395px;height:215px;\'></div><br> <div id="maregramaLegend" style="margin-top:-35px;width:170px"></div>', 'Maregrama', '/modules/mod_monitoramento_costeiro/images/dhtml/', 'width=405px,height=285px,left=555px,top=475px,resize=0,scrolling=0');
-		// mesmo ocultando o overviewmaregrama, preciso deixá-lo na div pra nao dar erra no maregrama.
-		divwin = dhtmlwindow.open('divbox', 'inline', ' <a id=\'imageLinkmaregrama\' href=\'\' style=\'font-size: 13px;margin-left: 45px;line-height:23px;font-weight: bold;\' onclick=saveImg(\'maregrama\'); download=\'Grafico.png\'> Salvar Gráfico </a> <div id=\'placeholdermaregrama\' style=\'width:395px;height:215px;\'></div><br> <div id="maregramaLegend" style="margin-top:-20px;width:455px"></div> <div id=\'overviewmaregrama\' style=\'width:505px;height:100px;\'></div>', 'Maregrama', '/modules/mod_monitoramento_costeiro/images/dhtml/', 'width=405px,height=265px,left=855px,top=475px,resize=0,scrolling=0');
-		iniciomaregrama(cod);
-	}
-	
-	function graficoHistorico() {
-		dNivel = estMareHist[cod.est].o;
-		dMareAstro = estMareHist[cod.est].a;					      
-		//divwin = dhtmlwindow.open('divbox', 'inline', ' <a id=\'imageLinkmaregrama\' href=\'\' style=\'font-size: 15px;margin-left: 49px;line-height:23px;font-weight: bold;\' onclick=saveImg(\'maregrama\'); download=\'Grafico.png\'> Salvar Gráfico </a> <div id=\'placeholdermaregrama\' style=\'width:785px;height:235px;\'></div><br> <div id="maregramaLegend" style="margin-top:-20px"></div> <div id=\'overviewmaregrama\' style=\'width:805px;height:100px;\'></div>', 'Maregrama', '/modules/mod_monitoramento_costeiro/images/dhtml/', 'width=805px,height=385px,left=200px,top=150px,resize=0,scrolling=0');
-		divwin = dhtmlwindow.open('divbox', 'inline', ' <a id=\'imageLinkmaregrama\' href=\'\' style=\'font-size: 15px;margin-left: 49px;line-height:23px;font-weight: bold;\' onclick=saveImg(\'maregrama\'); download=\'Grafico.png\'> Salvar Gráfico </a> <div id=\'placeholdermaregrama\' style=\'width:785px;height:235px;\'></div><br> <div id="maregramaLegend" style="margin-top:-20px"></div> <div id=\'overviewmaregrama\' style=\'width:805px;height:100px;\'></div>', 'Maregrama', '/modules/mod_monitoramento_costeiro/images/dhtml/', 'width=805px,height=385px,left=550px,top=450px,resize=0,scrolling=0');
-		iniciomaregrama(cod);
-	}
-	
-	
- 	
-	function dadosEstacao() {		    
-		
-		var link = "";	 
-		link=link+ " <div> Detalhes da Estação Maregráfica</div><br>";
-		// link com pdf | link=link+ "<div class='menu'><a href='#' onClick='mostraDiv(1);'><u>Fotos</u></a><a href='#' onClick='mostraDiv(2);'>&nbsp;<u>Cadastro</u></a><a href='#' onClick='mostraDiv(3);'>&nbsp;<u>Sensores/Instrumentos</u></a><a href='#' onClick='mostraDiv(4);'>&nbsp;<u>Variavéis</u></a><a href='#' onClick='mostraDiv(5);'>&nbsp;<u>Meteograma</u></a><a href='#' onClick='mostraDiv(6);'>&nbsp;<u>Arquivo PDF</u></a></div><br>";
-		link=link+ "<div class='menu'><a href='#' onClick='mostraDiv(1);'><u>Fotos</u></a><a href='#' onClick='mostraDiv(2);'>&nbsp;<u>Cadastro</u></a><a href='#' onClick='mostraDiv(3);'>&nbsp;<u>Sensores/Instrumentos</u></a><a href='#' onClick='mostraDiv(4);'>&nbsp;<u>Variavéis</u></a><a href='#' onClick='mostraDiv(5);'>&nbsp;<u>Meteograma</u></a></div><br>";
-	    //monta divs ocultas
-		link=link+ "<div id='INFO1'><b>Fotos</b><br><iframe src='http://ciram.epagri.sc.gov.br//metaestac/fotos.jsp?W=834&H=509&estacao=" + cod.est + "&tp=1' frameborder=0 width=875 height=800></iframe></DIV>";
-		link=link+ "<div id='INFO2' style='display:none'><b>Cadastro</b><br><iframe src='http://ciram.epagri.sc.gov.br//metaestac/cadastro.jsp?W=834&H=509&estacao=" + cod.est + "&tp=1' frameborder=0 width=875 height=300></iframe><div id='receber_conteudo'></div></DIV>";	   		
-		link=link+ "<div id='INFO3' style='display:none'><b>Sensores/Instrumentos</b><br><iframe src='http://ciram.epagri.sc.gov.br//metaestac/cadastro.jsp?W=834&H=509&estacao=" + cod.est + "&tp=2' frameborder=0 width=875 height=300></iframe></DIV>";	   	   
-		link=link+ "<div id='INFO4' style='display:none'><b>Variáveis</b><br><iframe src='http://ciram.epagri.sc.gov.br//metaestac/cadastro.jsp?W=834&H=509&estacao=" + cod.est + "&tp=3' frameborder=0 width=875 height=300></iframe></DIV>";	   
-		link=link+ "<div id='INFO5' style='display:none'><b>Meteograma</b><br><iframe src='http://www.ciram.sc.gov.br:8080/monitoramentosistemas/meteograma?cd_estacao=" + cod.est + "' frameborder=0 width=875 height=700></iframe></DIV>";	   
-//		link=link+ "<div id='INFO6' style='display:none'><b>Arquivo Pdf</b><br><iframe src='http://www.ciram.sc.gov.br/images/boletins_litoral/BoletimLitoral01_Ressaca.pdf' frameborder=0 width=875 height=500></iframe></DIV>";	   
-	   
-		var meteogramawin=dhtmlwindow.open("divbox","inline", link, "Informações da Estação" ,"","width=900px,height=500px,resize=1,scrolling=1,center=1", "recal")								
-		jQuery('#receber_conteudo').append(jQuery('#recordes').html()); 
-	}
-	
-	function mostraDiv(tipo) {		     
-		//jQuery("#recordes").css("display", "block"); 		
-		//jQuery("#receber_conteudo").append("<h1>Título</h1>");
-		
-		switch(tipo) {
-			case 1:
-				jQuery("#INFO1").css("display", "block");
-				jQuery("#INFO2").css("display", "none"); 
-				jQuery("#INFO3").css("display", "none"); 
-				jQuery("#INFO4").css("display", "none"); 
-				jQuery("#INFO5").css("display", "none"); 				
-				jQuery("#INFO6").css("display", "none"); 
-				break;
-			case 2:
-				jQuery("#INFO1").css("display", "none");
-				jQuery("#INFO2").css("display", "block"); 
-				jQuery("#INFO3").css("display", "none"); 
-				jQuery("#INFO4").css("display", "none"); 
-				jQuery("#INFO5").css("display", "none"); 
-				jQuery("#INFO6").css("display", "none"); 				
-				break;
-			case 3:
-				jQuery("#INFO1").css("display", "none");
-				jQuery("#INFO2").css("display", "none"); 
-				jQuery("#INFO3").css("display", "block"); 
-				jQuery("#INFO4").css("display", "none"); 
-				jQuery("#INFO5").css("display", "none"); 				
-				jQuery("#INFO6").css("display", "none"); 
-				break;
-			case 4:
-				jQuery("#INFO1").css("display", "none");
-				jQuery("#INFO2").css("display", "none"); 
-				jQuery("#INFO3").css("display", "none"); 
-				jQuery("#INFO4").css("display", "block"); 
-				jQuery("#INFO5").css("display", "none"); 
-				jQuery("#INFO6").css("display", "none"); 				
-				break;				
-			case 5:
-				jQuery("#INFO1").css("display", "none");
-				jQuery("#INFO2").css("display", "none"); 
-				jQuery("#INFO3").css("display", "none"); 
-				jQuery("#INFO4").css("display", "none"); 
-				jQuery("#INFO5").css("display", "block"); 				
-				jQuery("#INFO6").css("display", "none"); 
-				break;
-			/*case 6:
-				jQuery("#INFO1").css("display", "none");
-				jQuery("#INFO2").css("display", "none"); 
-				jQuery("#INFO3").css("display", "none"); 
-				jQuery("#INFO4").css("display", "none"); 
-				jQuery("#INFO5").css("display", "none"); 
-				jQuery("#INFO6").css("display", "block"); 				
-				break;				
-			*/	
-			//default:
-			//	code block			
-		
-		}			 
-		
-	}
-	
-	function dadosEstacaoTipo(tipo) {
-		     
-		var link = "";	 
-		switch(tipo) {
-			case 1:			
-				link = 'http://ciram.epagri.sc.gov.br//metaestac/fotos.jsp?W=834&H=509&estacao=' + cod.est + '&css=http://www.ciram.sc.gov.br:8080/agroconnect/css/stylef.css&tp=1';		
-				ds_link = "Informações da Estação - Fotos";
-				break;
-			case 2:
-				link = 'http://ciram.epagri.sc.gov.br//metaestac/cadastro.jsp?W=834&H=509&estacao=' + cod.est + '&css=http://www.ciram.sc.gov.br:8080/agroconnect/css/stylef.css&tp=1';		
-				ds_link = "Informações da Estação - Cadastro";
-				break;
-			case 3:
-				link = 'http://ciram.epagri.sc.gov.br//metaestac/cadastro.jsp?W=834&H=509&estacao=' + cod.est + '&css=http://www.ciram.sc.gov.br:8080/agroconnect/css/stylef.css&tp=2';		
-				ds_link = "Informações da Estação - Sensores/Instrumentos";
-				break;
-			case 4:
-				link = 'http://ciram.epagri.sc.gov.br//metaestac/cadastro.jsp?W=834&H=509&estacao=' + cod.est + '&css=http://www.ciram.sc.gov.br:8080/agroconnect/css/stylef.css&tp=3';		
-				ds_link = "Informações da Estação - Variáveis";
-				break;				
-			case 5:
-				link = 'http://www.ciram.sc.gov.br:8080/monitoramentosistemas/meteograma?cd_estacao=' + cod.est;
-				ds_link = "Informações da Estação - Meteograma";
-				break;	
-				
-			//default:
-			//	code block
-		}	 
-			 
-		//alert(tipo);
-		//meteograma da estacao
-		//var link1 = 'http://www.ciram.com.br:8080/monitoramentosistemas/meteograma?cd_estacao=' + cod.est;		
-	    //var meteogramawin=dhtmlwindow.open("divbox","iframe", link1, "Meteograma", "","width=700px,height=550px,resize=1,scrolling=1,center=1", "recal")								
-		
-		//cadastro da estacao
-		//var link2 = 'http://ciram.epagri.sc.gov.br//metaestac/cadastro.jsp?W=834&H=509&estacao=' + cod.est + '&css=http://www.ciram.sc.gov.br:8080/agroconnect/css/stylef.css&tp=1';		
-	    
-		//var myWindow = window.open("Fotos e Cadastro", "MsgWindow", "width=800,height=600");
-		//myWindow.document.write("<p>This is 'MsgWindow'. I am 200px wide and 100px tall!</p>");
-		//myWindow.document.write('<div class="namewinDiv">Fotos e Cadastro</div>');
-		//myWindow.document.write('<div class="namewinDiv2">Links Tabs</div><br><a href=# onClick="'+link2+'">Fotos</a> | <a href=# onClick="'+link2+'">Cadastro</a> | <a href=# onClick="'+link2+'">Sensores/Instrumentos</a> | <a href=# onClick="'+link2+'">Variáveis</a> ');
-		//myWindow.document.write('<a href=# onClick="pho('+es+',1)">Fotos</a> | <a href=# onClick="pho('+es+',2)">Cadastro</a> | <a href=# onClick="pho('+es+',3)">Sensores/Instrumentos</a>  | <a href=# onClick="pho('+es+',4)">Variáveis</a>');
-		
-				
-		var meteogramawin=dhtmlwindow.open("divbox","iframe", link, ds_link, "","width=850px,height=550px,resize=1,scrolling=1,center=1", "recal")										
-			
-		
-	}
-	
-	jQuery('#showmenuleft').click(function() {
-		if (jQuery("#showmenuleft").hasClass("showmenu-button-left-open")) {
-			jQuery("#cbp-spmenu-left").removeClass("cbp-spmenu-open");
-			jQuery("#showmenuleft").removeClass("showmenu-button-left-open");
-		} else {
-			jQuery("#cbp-spmenu-left").addClass("cbp-spmenu-open");
-			jQuery("#showmenuleft").addClass("showmenu-button-left-open");
-		}
-
-	});
-
-	jQuery('#showmenuright').click(function() {		
-		if (jQuery("#showmenuright").hasClass("showmenu-button-right-open")) {
-			jQuery("#cbp-spmenu-right").removeClass("cbp-spmenu-right-open");
-			jQuery("#showmenuright").removeClass("showmenu-button-right-open");
-		} else {
-			jQuery("#showmenuright").addClass("showmenu-button-right-open");
-			jQuery("#cbp-spmenu-right").addClass("cbp-spmenu-right-open");
-		}
-
-	});	
-	
-	jQuery('#showlegenda').click(function() {
-		window.close();
-		/*console.log('show legenda - status divwin = ' + divwin);	
-		if (divwin!=null && !divwin.closed) {
-		alert("A janela está aberta")
-		}else if(divwin!=null && divwin.closed) {
-		alert("A janela está fechada")*/
-		jQuery("#showmenuright").addClass("showmenu-button-right-open");
-		jQuery("#cbp-spmenu-right").addClass("cbp-spmenu-right-open");
-		document.getElementById('logoHelp').style.display="block";	
-		document.getElementById('menu-geral-right').style.display="none";
-	});
-	
-			
-	var show_tsm = "nao";
-	//console.log ('tsm no php: ' + show_tsm);
-	
-	inicializa(1, 0, 0, 0, show_tsm);	
-	//inicializa(1, 0, 0, 0);
-	//inicializa(1, 0, 0);
-	updatepage("");	
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-2312725-4');
+		</script>
+<style type="text/css">
+#pojo-a11y-toolbar .pojo-a11y-toolbar-toggle a{ background-color: #107707;	color: #ffffff;}
+#pojo-a11y-toolbar .pojo-a11y-toolbar-overlay, #pojo-a11y-toolbar .pojo-a11y-toolbar-overlay ul.pojo-a11y-toolbar-items.pojo-a11y-links{ border-color: #107707;}
+body.pojo-a11y-focusable a:focus{ outline-style: dotted !important;	outline-width: 1px !important;	outline-color: #FF0000 !important;}
+#pojo-a11y-toolbar{ top: 80px !important;}
+#pojo-a11y-toolbar .pojo-a11y-toolbar-overlay{ background-color: #ffffff;}
+#pojo-a11y-toolbar .pojo-a11y-toolbar-overlay ul.pojo-a11y-toolbar-items li.pojo-a11y-toolbar-item a, #pojo-a11y-toolbar .pojo-a11y-toolbar-overlay p.pojo-a11y-toolbar-title{ color: #333333;}
+#pojo-a11y-toolbar .pojo-a11y-toolbar-overlay ul.pojo-a11y-toolbar-items li.pojo-a11y-toolbar-item a.active{ background-color: #135617;	color: #ffffff;}
+@media (max-width: 767px) { #pojo-a11y-toolbar { top: 50px !important; } }</style> <style id="wp-custom-css" type="text/css">
+			table.ciramTable{font-family:"Roboto",Sans-serif;border:1px solid #1C6EA4;background-color:#DEEEEB;width:100%;text-align:left;border-collapse:collapse}table.ciramTable td,table.ciramTable th{border:1px solid #AAAAAA;padding:3px 2px}table.ciramTable tbody td{color:#072E06;font-size:15px}table.ciramTable tr:nth-child(even){background:#93C1A7}table.ciramTable thead{background:#3AA44E;background:-moz-linear-gradient(top,#6bbb7a 0,#4dad5f 66%,#3AA44E 100%);background:-webkit-linear-gradient(top,#6bbb7a 0,#4dad5f 66%,#3AA44E 100%);background:linear-gradient(to bottom,#6bbb7a 0,#4dad5f 66%,#3AA44E 100%);border-bottom:2px solid #444444}table.ciramTable thead th{font-size:16px;font-weight:bold;color:#FFFFFF;border-left:2px solid #A5C1B0}table.ciramTable thead th:first-child{border-left:none}table.ciramTable tfoot td{font-size:14px}table.ciramTable tfoot .links{text-align:right}table.ciramTable tfoot .links a{display:inline-block;background:#1C6EA4;color:#FFFFFF;padding:2px 8px;border-radius:5px}		</style>
+<!-- OceanWP CSS -->
+<style type="text/css">
+/* Header CSS */#site-header.has-header-media .overlay-header-media{background-color:rgba(0,0,0,0.5)}
+</style> <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/></meta></head>
+<body class="home page-template page-template-elementor_canvas page page-id-617 wp-embed-responsive no-isotope no-lightbox no-fitvids no-scroll-top no-sidr no-carousel no-matchheight ehf-header ehf-footer ehf-template-oceanwp ehf-stylesheet-oceanwp-child-theme-master oceanwp-theme dropdown-mobile default-breakpoint has-sidebar content-right-sidebar has-topbar has-breadcrumbs mob-menu-slideout-over elementor-default elementor-template-canvas elementor-kit-954 elementor-page elementor-page-617">
+<div class="elementor elementor-617" data-elementor-id="617" data-elementor-settings="[]" data-elementor-type="wp-page">
+<div class="elementor-inner">
+<div class="elementor-section-wrap">
+<section class="elementor-section elementor-top-section elementor-element elementor-element-4b570435 elementor-section-stretched elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-element_type="section" data-id="4b570435" data-settings='{"stretch_section":"section-stretched"}'>
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-179dcec0" data-element_type="column" data-id="179dcec0">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-52cd8f7d elementor-widget elementor-widget-shortcode" data-element_type="widget" data-id="52cd8f7d" data-widget_type="shortcode.default">
+<div class="elementor-widget-container">
+<div class="elementor-shortcode"> <div class="elementor elementor-138" data-elementor-id="138" data-elementor-settings="[]" data-elementor-type="wp-post">
+<div class="elementor-inner">
+<div class="elementor-section-wrap">
+<section class="elementor-section elementor-top-section elementor-element elementor-element-17545da5 elementor-section-stretched elementor-hidden-phone elementor-section-content-bottom elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="17545da5" data-settings='{"stretch_section":"section-stretched","background_background":"classic"}' id="stickmenu">
+<div class="elementor-container elementor-column-gap-no">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-7c8b0c05" data-element_type="column" data-id="7c8b0c05">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-7e9a0d2e elementor-widget elementor-widget-image" data-element_type="widget" data-id="7e9a0d2e" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<div class="elementor-image">
+<a href="https://www.epagri.sc.gov.br/" target="_blank">
+<img alt="" class="attachment-large size-large" height="60" loading="lazy" src="https://ciram.epagri.sc.gov.br/wp-content/uploads/2020/08/LogoEpagri.png" width="59"/> </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-1199f5b" data-element_type="column" data-id="1199f5b">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-0f8b751 elementor-widget elementor-widget-image" data-element_type="widget" data-id="0f8b751" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<div class="elementor-image">
+<a href="https://ciram.epagri.sc.gov.br/">
+<img alt="" class="attachment-large size-large" height="60" loading="lazy" src="https://ciram.epagri.sc.gov.br/wp-content/uploads/2020/08/LogoCiram.png" width="94"/> </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-4f3b6ce6 elementor-sm-83" data-element_type="column" data-id="4f3b6ce6">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-5ac16650 hfe-nav-menu__align-left hfe-submenu-icon-arrow hfe-submenu-animation-none hfe-link-redirect-child hfe-nav-menu__breakpoint-tablet elementor-widget elementor-widget-navigation-menu" data-element_type="widget" data-id="5ac16650" data-widget_type="navigation-menu.default">
+<div class="elementor-widget-container">
+<div class="hfe-nav-menu hfe-layout-horizontal hfe-nav-menu-layout horizontal hfe-pointer__overline hfe-animation__slide" data-layout="horizontal">
+<div class="hfe-nav-menu__toggle elementor-clickable">
+<div class="hfe-nav-menu-icon">
+<i aria-hidden="true" class="fas fa-align-justify" tabindex="0"></i> </div>
+</div>
+<nav class="hfe-nav-menu__layout-horizontal hfe-nav-menu__submenu-arrow" data-close-icon='&lt;i aria-hidden="true" tabindex="0" class="far fa-window-close"&gt;&lt;/i&gt;' data-full-width="yes" data-toggle-icon='&lt;i aria-hidden="true" tabindex="0" class="fas fa-align-justify"&gt;&lt;/i&gt;'><ul class="hfe-nav-menu" id="menu-1-5ac16650"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children parent hfe-has-submenu hfe-creative-menu" id="menu-item-2815"><div class="hfe-has-submenu-container"><a class="hfe-menu-item" href="https://ciram.epagri.sc.gov.br/index.php/o-ciram/areas-de-atuacao/">O CIRAM<span class="hfe-menu-toggle sub-arrow hfe-menu-child-0"><i class="fa"></i></span></a></div>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page hfe-creative-menu" id="menu-item-2729"><a class="hfe-sub-menu-item" href="https://ciram.epagri.sc.gov.br/index.php/o-ciram/areas-de-atuacao/">Áreas de atuação</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page hfe-creative-menu" id="menu-item-333"><a class="hfe-sub-menu-item" href="https://ciram.epagri.sc.gov.br/index.php/o-ciram/equipe/">Equipe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page hfe-creative-menu" id="menu-item-334"><a class="hfe-sub-menu-item" href="https://ciram.epagri.sc.gov.br/index.php/o-ciram/quem-somos/">Quem somos</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children parent hfe-has-submenu hfe-creative-menu" id="menu-item-3461"><div class="hfe-has-submenu-container"><a class="hfe-menu-item" href="https://ciram.epagri.sc.gov.br/index.php/solucoes/agricultura/">SOLUÇÕES<span class="hfe-menu-toggle sub-arrow hfe-menu-child-0"><i class="fa"></i></span></a></div>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page hfe-creative-menu" id="menu-item-3184"><a class="hfe-sub-menu-item" href="https://ciram.epagri.sc.gov.br/index.php/solucoes/agricultura/">Agricultura</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page hfe-creative-menu" id="menu-item-3185"><a class="hfe-sub-menu-item" href="https://ciram.epagri.sc.gov.br/index.php/solucoes/tempo-e-clima/">Tempo e Clima</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children hfe-has-submenu hfe-creative-menu" id="menu-item-290"><div class="hfe-has-submenu-container"><a class="hfe-sub-menu-item" href="https://ciram.epagri.sc.gov.br/index.php/solucoes/condicoes-externas/">Condições extremas<span class="hfe-menu-toggle sub-arrow hfe-menu-child-1"><i class="fa"></i></span></a></div>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page hfe-creative-menu" id="menu-item-1819"><a class="hfe-sub-menu-item" href="https://ciram.epagri.sc.gov.br/index.php/avisos-meteorologicos/">Avisos Meteorológicos</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page hfe-creative-menu" id="menu-item-1818"><a class="hfe-sub-menu-item" href="https://ciram.epagri.sc.gov.br/index.php/avisos-hidrologicos/">Avisos Hidrológicos</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page hfe-creative-menu" id="menu-item-2433"><a class="hfe-sub-menu-item" href="https://ciram.epagri.sc.gov.br/index.php/avisos-maritimos/">Avisos Marítimos</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page hfe-creative-menu" id="menu-item-3183"><a class="hfe-sub-menu-item" href="https://ciram.epagri.sc.gov.br/index.php/solucoes/rios/">Rios</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page hfe-creative-menu" id="menu-item-3182"><a class="hfe-sub-menu-item" href="https://ciram.epagri.sc.gov.br/index.php/solucoes/litoral/">Litoral</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page hfe-creative-menu" id="menu-item-2474"><a class="hfe-sub-menu-item" href="https://ciram.epagri.sc.gov.br/index.php/solucoes/monitoramento/">Monitoramento</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page hfe-creative-menu" id="menu-item-2253"><a class="hfe-sub-menu-item" href="https://ciram.epagri.sc.gov.br/index.php/solucoes/receba-nossos-boletins/">Receba nossos boletins</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children parent hfe-has-submenu hfe-creative-menu" id="menu-item-2814"><div class="hfe-has-submenu-container"><a class="hfe-menu-item" href="https://ciram.epagri.sc.gov.br/index.php/projetos/projetos-concluidos/">PROJETOS<span class="hfe-menu-toggle sub-arrow hfe-menu-child-0"><i class="fa"></i></span></a></div>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page hfe-creative-menu" id="menu-item-304"><a class="hfe-sub-menu-item" href="https://ciram.epagri.sc.gov.br/index.php/projetos/projetos-concluidos/">Projetos concluídos</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page hfe-creative-menu" id="menu-item-305"><a class="hfe-sub-menu-item" href="https://ciram.epagri.sc.gov.br/index.php/projetos/projetos-em-andamento/">Projetos em andamento</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children parent hfe-has-submenu hfe-creative-menu" id="menu-item-2811"><div class="hfe-has-submenu-container"><a class="hfe-menu-item" href="https://ciram.epagri.sc.gov.br/index.php/solucoes/laudos-dados/">SERVIÇOS<span class="hfe-menu-toggle sub-arrow hfe-menu-child-0"><i class="fa"></i></span></a></div>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page hfe-creative-menu" id="menu-item-2237"><a class="hfe-sub-menu-item" href="https://ciram.epagri.sc.gov.br/index.php/solucoes/laudos-dados/">Laudos e dados ambientais</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page hfe-creative-menu" id="menu-item-2154"><a class="hfe-sub-menu-item" href="https://ciram.epagri.sc.gov.br/index.php/serv-casan-peri/">Casan</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page hfe-creative-menu" id="menu-item-2155"><a class="hfe-sub-menu-item" href="https://ciram.epagri.sc.gov.br/index.php/serv-queimados-projeto/">Concórdia</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page hfe-creative-menu" id="menu-item-2156"><a class="hfe-sub-menu-item" href="https://ciram.epagri.sc.gov.br/index.php/serv-porto/">Porto SFS</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom hfe-creative-menu" id="menu-item-2153"><a class="hfe-sub-menu-item" href="http://ciram.epagri.sc.gov.br/pldm_cadastros/">Cadastro de maricultores</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children parent hfe-has-submenu hfe-creative-menu" id="menu-item-2813"><div class="hfe-has-submenu-container"><a class="hfe-menu-item" href="https://ciram.epagri.sc.gov.br/index.php/publicacoes/publicacoes-tecnico-cientificas/">PUBLICAÇÕES<span class="hfe-menu-toggle sub-arrow hfe-menu-child-0"><i class="fa"></i></span></a></div>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page hfe-creative-menu" id="menu-item-286"><a class="hfe-sub-menu-item" href="https://ciram.epagri.sc.gov.br/index.php/publicacoes/publicacoes-tecnico-cientificas/">Publicações técnico-científicas</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu" id="menu-item-150"><a class="hfe-menu-item" href="https://ciram.epagri.sc.gov.br/index.php/contato/">CONTATO</a></li>
+</ul></nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-14ab3448 elementor-sm-83" data-element_type="column" data-id="14ab3448">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-724d9cb elementor-widget elementor-widget-wp-widget-search" data-element_type="widget" data-id="724d9cb" data-widget_type="wp-widget-search.default">
+<div class="elementor-widget-container">
+<form action="https://ciram.epagri.sc.gov.br/" class="searchform" method="get" role="search">
+<label for="ocean-search-form-1">
+<span class="screen-reader-text">Search for:</span>
+<input autocomplete="off" class="field" id="ocean-search-form-1" name="s" placeholder="Pesquisa" type="search"/>
+</label>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-32d38769" data-element_type="column" data-id="32d38769">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-63526da1 elementor-widget elementor-widget-image" data-element_type="widget" data-id="63526da1" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<div class="elementor-image">
+<a href="http://www.agricultura.sc.gov.br/" target="_blank">
+<img alt="LogoGovernoSecretaria60v" src="https://ciram.epagri.sc.gov.br/wp-content/uploads/elementor/thumbs/LogoGovernoSecretaria60v-otmnqq7dantvjh7u7psh5q4grv9xhudg1ekow43byw.png" title="LogoGovernoSecretaria60v"/> </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-1d3de3b2 elementor-section-height-min-height elementor-section-content-middle elementor-hidden-phone elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-element_type="section" data-id="1d3de3b2" data-settings='{"stretch_section":"section-stretched"}'>
+<div class="elementor-container elementor-column-gap-no">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-2f709071" data-element_type="column" data-id="2f709071">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-602f62af elementor-widget elementor-widget-spacer" data-element_type="widget" data-id="602f62af" data-widget_type="spacer.default">
+<div class="elementor-widget-container">
+<div class="elementor-spacer">
+<div class="elementor-spacer-inner"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-729ccb10 elementor-section-height-min-height elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-element_type="section" data-id="729ccb10" data-settings='{"background_background":"classic"}'>
+<div class="elementor-container elementor-column-gap-no">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-c28f67d" data-element_type="column" data-id="c28f67d">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-3990979 elementor-grid-1 elementor-grid-tablet-2 elementor-grid-mobile-1 elementor-widget elementor-widget-elementor-blog-posts" data-element_type="widget" data-id="3990979" data-settings='{"columns":"1","columns_tablet":"2","columns_mobile":"1"}' data-widget_type="elementor-blog-posts.default">
+<div class="elementor-widget-container">
+<div class="wpcap-grid">
+<div class="wpcap-grid-container elementor-grid wpcap-grid-desktop-1 wpcap-grid-tablet-2 wpcap-grid-mobile-1">
+<article class="wpcap-post post-5321 post type-post status-publish format-standard hentry category-avisos-meteorologicos entry" id="post-5321">
+<div class="post-grid-inner">
+<div class="post-grid-text-wrap">
+<h6 class="title">
+<a href="https://ciram.epagri.sc.gov.br/index.php/2020/12/28/aviso-meteorologico-28-12-2020-atencao-pancadas-de-chuva-com-risco-de-alagamentos-e-deslizamentos/">Aviso Meteorológico (28/12/2020) – Atenção: pancadas de chuva com risco de alagamentos e deslizamentos</a>
+</h6>
+<div class="post-grid-excerpt">
+<p>Aviso 1: Atenção: pancadas de chuva com risco de alagamentos e deslizamentos Início: 28/12/2020 às 09:00…</p>
+</div>
+</div>
+</div><!-- .blog-inner -->
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-cdaee45 elementor-section-height-min-height elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-element_type="section" data-id="cdaee45">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-57ebb26" data-element_type="column" data-id="57ebb26">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-9da2b60 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-element_type="widget" data-id="9da2b60" data-widget_type="divider.default">
+<div class="elementor-widget-container">
+<div class="elementor-divider">
+<span class="elementor-divider-separator">
+</span>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-0df78b8 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="0df78b8" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Notícias</h2> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-a47623e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="a47623e">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-66 elementor-top-column elementor-element elementor-element-43bf402" data-element_type="column" data-id="43bf402">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-95d1343 elementor-grid-2 elementor-grid-tablet-2 elementor-grid-mobile-1 elementor-widget elementor-widget-elementor-blog-posts" data-element_type="widget" data-id="95d1343" data-settings='{"columns":"2","columns_tablet":"2","columns_mobile":"1"}' data-widget_type="elementor-blog-posts.default">
+<div class="elementor-widget-container">
+<div class="wpcap-grid">
+<div class="wpcap-grid-container elementor-grid wpcap-grid-desktop-2 wpcap-grid-tablet-2 wpcap-grid-mobile-1">
+<article class="wpcap-post post-5275 post type-post status-publish format-standard has-post-thumbnail hentry category-publicacoes entry has-media" id="post-5275">
+<div class="post-grid-inner">
+<div class="post-grid-thumbnail">
+<a href="https://ciram.epagri.sc.gov.br/index.php/2020/12/23/ferrugem-asiatica-da-soja-em-santa-catarina-avanco-importante-no-monitoramento/">
+<img alt="" class="attachment-medium size-medium wp-post-image" height="225" loading="lazy" sizes="(max-width: 300px) 100vw, 300px" src="https://ciram.epagri.sc.gov.br/wp-content/uploads/2020/12/not_willian_231220_img2-300x225.jpeg" srcset="https://ciram.epagri.sc.gov.br/wp-content/uploads/2020/12/not_willian_231220_img2-300x225.jpeg 300w, https://ciram.epagri.sc.gov.br/wp-content/uploads/2020/12/not_willian_231220_img2.jpeg 640w" width="300"/> </a>
+</div>
+<div class="post-grid-text-wrap">
+<h3 class="title">
+<a href="https://ciram.epagri.sc.gov.br/index.php/2020/12/23/ferrugem-asiatica-da-soja-em-santa-catarina-avanco-importante-no-monitoramento/">Ferrugem asiática da soja em Santa Catarina. Avanço importante no monitoramento</a>
+</h3>
+</div>
+</div><!-- .blog-inner -->
+</article>
+<article class="wpcap-post post-5252 post type-post status-publish format-standard has-post-thumbnail hentry category-publicacoes entry has-media" id="post-5252">
+<div class="post-grid-inner">
+<div class="post-grid-thumbnail">
+<a href="https://ciram.epagri.sc.gov.br/index.php/2020/12/22/epagri-edita-livro-vinhos-de-altitude-de-santa-catarina-caracterizacao-da-regiao-produtora-indicadores-e-instrumentos-para-proposicao-de-uma-indicacao-geografica/">
+<img alt="" class="attachment-medium size-medium wp-post-image" height="225" loading="lazy" sizes="(max-width: 300px) 100vw, 300px" src="https://ciram.epagri.sc.gov.br/wp-content/uploads/2020/12/not_cris_221220_img1-300x225.jpeg" srcset="https://ciram.epagri.sc.gov.br/wp-content/uploads/2020/12/not_cris_221220_img1-300x225.jpeg 300w, https://ciram.epagri.sc.gov.br/wp-content/uploads/2020/12/not_cris_221220_img1.jpeg 640w" width="300"/> </a>
+</div>
+<div class="post-grid-text-wrap">
+<h3 class="title">
+<a href="https://ciram.epagri.sc.gov.br/index.php/2020/12/22/epagri-edita-livro-vinhos-de-altitude-de-santa-catarina-caracterizacao-da-regiao-produtora-indicadores-e-instrumentos-para-proposicao-de-uma-indicacao-geografica/">Epagri edita livro “Vinhos de Altitude de Santa Catarina: Caracterização da região produtora, indicadores e instrumentos para proposição de uma indicação geográfica”</a>
+</h3>
+</div>
+</div><!-- .blog-inner -->
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-de2ecc7" data-element_type="column" data-id="de2ecc7">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-6358faf elementor-grid-1 elementor-grid-tablet-2 elementor-grid-mobile-1 elementor-widget elementor-widget-elementor-blog-posts" data-element_type="widget" data-id="6358faf" data-settings='{"columns":"1","columns_tablet":"2","columns_mobile":"1"}' data-widget_type="elementor-blog-posts.default">
+<div class="elementor-widget-container">
+<div class="wpcap-grid">
+<div class="wpcap-grid-container elementor-grid wpcap-grid-desktop-1 wpcap-grid-tablet-2 wpcap-grid-mobile-1">
+<article class="wpcap-post post-5171 post type-post status-publish format-standard has-post-thumbnail hentry category-videos-especiais entry has-media" id="post-5171">
+<div class="post-grid-inner">
+<div class="post-grid-thumbnail">
+<a href="https://ciram.epagri.sc.gov.br/index.php/2020/12/23/chuva-intensa-atingiu-sc-nesta-quinta-feira-dia-17-12-2020/">
+<img alt="" class="attachment-medium size-medium wp-post-image" height="225" loading="lazy" sizes="(max-width: 300px) 100vw, 300px" src="https://ciram.epagri.sc.gov.br/wp-content/uploads/2020/12/WhatsApp-Image-2020-12-22-at-16.13.05-300x225-1-300x225.jpeg" srcset="https://ciram.epagri.sc.gov.br/wp-content/uploads/2020/12/WhatsApp-Image-2020-12-22-at-16.13.05-300x225-1-300x225.jpeg 300w, https://ciram.epagri.sc.gov.br/wp-content/uploads/2020/12/WhatsApp-Image-2020-12-22-at-16.13.05-300x225-1.jpeg 640w" width="300"/> </a>
+</div>
+<div class="post-grid-text-wrap">
+<h3 class="title">
+<a href="https://ciram.epagri.sc.gov.br/index.php/2020/12/23/chuva-intensa-atingiu-sc-nesta-quinta-feira-dia-17-12-2020/">Previsão Climática para SC (Jan-Fev-Mar)</a>
+</h3>
+</div>
+</div><!-- .blog-inner -->
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-852f1be elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="852f1be">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6259f04b" data-element_type="column" data-id="6259f04b">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-445e9984 elementor-align-center elementor-widget elementor-widget-button" data-element_type="widget" data-id="445e9984" data-widget_type="button.default">
+<div class="elementor-widget-container">
+<div class="elementor-button-wrapper">
+<a class="elementor-button-link elementor-button elementor-size-md" href="https://ciram.epagri.sc.gov.br/index.php/category/publicacoes/" role="button">
+<span class="elementor-button-content-wrapper">
+<span class="elementor-button-text">VEJA MAIS</span>
+</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-20f3ca10 elementor-section-height-min-height elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-element_type="section" data-id="20f3ca10">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-131741a1" data-element_type="column" data-id="131741a1">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-72934 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-element_type="widget" data-id="72934" data-widget_type="divider.default">
+<div class="elementor-widget-container">
+<div class="elementor-divider">
+<span class="elementor-divider-separator">
+</span>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-6cab0af6 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="6cab0af6" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Destaques</h2> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-5b7e223 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="5b7e223">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-5285dbb elementor-sm-50" data-element_type="column" data-id="5285dbb" data-settings='{"background_background":"classic"}'>
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-4786c69 elementor-widget elementor-widget-image" data-element_type="widget" data-id="4786c69" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<div class="elementor-image">
+<a href="https://ciram.epagri.sc.gov.br/index.php/mapa-covid-19/">
+<img alt="sistema_covid" src="https://ciram.epagri.sc.gov.br/wp-content/uploads/elementor/thumbs/sistema_covid-otfots0jp2p5u13kvi9x0wluwqd17qi3svhrm639mg.png" title="sistema_covid"/> </a>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-06335c2 elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="06335c2" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<div class="elementor-text-editor elementor-clearfix"><p class="single-post-title entry-title" style="text-align: center;"><a href="https://ciram.epagri.sc.gov.br/index.php/mapa-covid-19/">Mapa Covid-19</a></p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-bd7979f elementor-sm-50" data-element_type="column" data-id="bd7979f" data-settings='{"background_background":"classic"}'>
+<div class="elementor-column-wrap">
+<div class="elementor-widget-wrap">
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-c59c9ea elementor-sm-50" data-element_type="column" data-id="c59c9ea" data-settings='{"background_background":"classic"}'>
+<div class="elementor-column-wrap">
+<div class="elementor-widget-wrap">
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-6166283 elementor-sm-50" data-element_type="column" data-id="6166283" data-settings='{"background_background":"classic"}'>
+<div class="elementor-column-wrap">
+<div class="elementor-widget-wrap">
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-44248f0 elementor-section-height-min-height elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-element_type="section" data-id="44248f0">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-17aaf08" data-element_type="column" data-id="17aaf08">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-ce23753 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-element_type="widget" data-id="ce23753" data-widget_type="divider.default">
+<div class="elementor-widget-container">
+<div class="elementor-divider">
+<span class="elementor-divider-separator">
+</span>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-aa85fae elementor-widget elementor-widget-heading" data-element_type="widget" data-id="aa85fae" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Soluções para a sociedade</h2> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-fa31322 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="fa31322">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-17a8c6fc elementor-sm-50" data-element_type="column" data-id="17a8c6fc" data-settings='{"background_background":"classic"}'>
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-2a645db8 elementor-widget elementor-widget-image" data-element_type="widget" data-id="2a645db8" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<div class="elementor-image">
+<a href="https://ciram.epagri.sc.gov.br/index.php/solucoes/agricultura/">
+<img alt="img-card-agro" src="https://ciram.epagri.sc.gov.br/wp-content/uploads/elementor/thumbs/img-card-agro-okq335l9w3tdoa9794usfra1q564743p42b3citraw.jpg" title="img-card-agro"/> </a>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-3cc67e76 elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="3cc67e76" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="https://ciram.epagri.sc.gov.br/index.php/solucoes/agricultura/">AGRICULTURA</a></p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-44a8d6da elementor-sm-50" data-element_type="column" data-id="44a8d6da" data-settings='{"background_background":"classic"}'>
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-484bb271 elementor-widget elementor-widget-image" data-element_type="widget" data-id="484bb271" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<div class="elementor-image">
+<a href="https://ciram.epagri.sc.gov.br/index.php/solucoes/tempo-e-clima/">
+<img alt="img-card-tempo" src="https://ciram.epagri.sc.gov.br/wp-content/uploads/elementor/thumbs/img-card-tempo-1-okq2v5ynssvmzluzwoiy8ruzy8jsrqdu0ioihuo86w.jpg" title="img-card-tempo"/> </a>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-40b74754 elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="40b74754" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a data-wplink-edit="true" href="https://ciram.epagri.sc.gov.br/index.php/solucoes/tempo-e-clima/">TEMPO E CLIMA</a></p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-6f7eac12 elementor-sm-50" data-element_type="column" data-id="6f7eac12" data-settings='{"background_background":"classic"}'>
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-41dec1ee elementor-widget elementor-widget-image" data-element_type="widget" data-id="41dec1ee" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<div class="elementor-image">
+<a href="https://ciram.epagri.sc.gov.br/index.php/solucoes/rios/">
+<img alt="img-card-rios" src="https://ciram.epagri.sc.gov.br/wp-content/uploads/elementor/thumbs/img-card-rios-okq3f6wveqakcirryu5sv7xjkrubrkvyfn1xl2z9mg.jpg" title="img-card-rios"/> </a>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-72414b8d elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="72414b8d" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a data-wplink-edit="true" href="https://ciram.epagri.sc.gov.br/index.php/solucoes/rios/">RIOS</a></p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-55610178 elementor-sm-50" data-element_type="column" data-id="55610178" data-settings='{"background_background":"classic"}'>
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-288395eb elementor-widget elementor-widget-image" data-element_type="widget" data-id="288395eb" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<div class="elementor-image">
+<a href="https://ciram.epagri.sc.gov.br/index.php/solucoes/litoral/">
+<img alt="img-card-litoral" src="https://ciram.epagri.sc.gov.br/wp-content/uploads/elementor/thumbs/img-card-litoral-okq39sca40w7l8mej0211314m0hci8fiow0f8szreg.jpg" title="img-card-litoral"/> </a>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-5568c9b3 elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="5568c9b3" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a data-wplink-edit="true" href="https://ciram.epagri.sc.gov.br/index.php/solucoes/litoral/">LITORAL</a></p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-1938ef66 elementor-section-stretched elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-element_type="section" data-id="1938ef66" data-settings='{"stretch_section":"section-stretched"}'>
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-21d81572" data-element_type="column" data-id="21d81572">
+<div class="elementor-column-wrap">
+<div class="elementor-widget-wrap">
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-6798d352 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="6798d352">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-2b73af5 elementor-sm-50" data-element_type="column" data-id="2b73af5" data-settings='{"background_background":"classic"}'>
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-30c6bf7d elementor-view-default elementor-widget elementor-widget-icon" data-element_type="widget" data-id="30c6bf7d" data-widget_type="icon.default">
+<div class="elementor-widget-container">
+<div class="elementor-icon-wrapper">
+<a class="elementor-icon" href="https://ciram.epagri.sc.gov.br/index.php/solucoes/projetos-de-pesquisa/">
+<i aria-hidden="true" class="fas fa-project-diagram"></i> </a>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-7280835 elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="7280835" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="https://ciram.epagri.sc.gov.br/index.php/solucoes/projetos-de-pesquisa/">PROJETOS DE PESQUISA</a></p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-6ce3547a elementor-sm-50" data-element_type="column" data-id="6ce3547a" data-settings='{"background_background":"classic"}'>
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-503b67a7 elementor-view-default elementor-widget elementor-widget-icon" data-element_type="widget" data-id="503b67a7" data-widget_type="icon.default">
+<div class="elementor-widget-container">
+<div class="elementor-icon-wrapper">
+<a class="elementor-icon" href="https://ciram.epagri.sc.gov.br/index.php/mapas/">
+<i aria-hidden="true" class="fas fa-map-marked-alt"></i> </a>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-6c1a551 elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="6c1a551" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="https://ciram.epagri.sc.gov.br/index.php/mapas/">MAPAS</a></p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-2f0bb961 elementor-sm-50" data-element_type="column" data-id="2f0bb961" data-settings='{"background_background":"classic"}'>
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-3f66e134 elementor-view-default elementor-widget elementor-widget-icon" data-element_type="widget" data-id="3f66e134" data-widget_type="icon.default">
+<div class="elementor-widget-container">
+<div class="elementor-icon-wrapper">
+<a class="elementor-icon" href="https://ciram.epagri.sc.gov.br/index.php/publicacoes/publicacoes-tecnico-cientificas/">
+<i aria-hidden="true" class="fas fa-book"></i> </a>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-36c162a elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="36c162a" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="https://ciram.epagri.sc.gov.br/index.php/publicacoes/publicacoes-tecnico-cientificas/">PUBLICAÇÕES</a></p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-2c842ee3 elementor-sm-50" data-element_type="column" data-id="2c842ee3" data-settings='{"background_background":"classic"}'>
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-3d3ec5a7 elementor-view-default elementor-widget elementor-widget-icon" data-element_type="widget" data-id="3d3ec5a7" data-widget_type="icon.default">
+<div class="elementor-widget-container">
+<div class="elementor-icon-wrapper">
+<a class="elementor-icon" href="https://ciram.epagri.sc.gov.br/index.php/solucoes/servicos/">
+<i aria-hidden="true" class="far fa-file-alt"></i> </a>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-2d586a0 elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="2d586a0" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="https://ciram.epagri.sc.gov.br/index.php/solucoes/servicos/">SERVIÇOS</a></p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-61c08c13 elementor-section-stretched elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-element_type="section" data-id="61c08c13" data-settings='{"stretch_section":"section-stretched"}'>
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-f3601f9" data-element_type="column" data-id="f3601f9">
+<div class="elementor-column-wrap">
+<div class="elementor-widget-wrap">
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-697087a elementor-section-height-min-height elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-element_type="section" data-id="697087a">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-36cae482" data-element_type="column" data-id="36cae482">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-6b736aa5 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-element_type="widget" data-id="6b736aa5" data-widget_type="divider.default">
+<div class="elementor-widget-container">
+<div class="elementor-divider">
+<span class="elementor-divider-separator">
+</span>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-3e9f0c66 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="3e9f0c66" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Epagri/Ciram em números</h2> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-7f608f2 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="7f608f2">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-cde53f2" data-element_type="column" data-id="cde53f2">
+<div class="elementor-column-wrap">
+<div class="elementor-widget-wrap">
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-53f82744 elementor-section-content-top elementor-section-height-min-height elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-element_type="section" data-id="53f82744" data-settings='{"stretch_section":"section-stretched","background_background":"classic"}'>
+<div class="elementor-background-overlay"></div>
+<div class="elementor-container elementor-column-gap-no">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4c41d6df" data-element_type="column" data-id="4c41d6df" data-settings='{"background_background":"classic"}'>
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-background-overlay"></div>
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-f235e76 elementor-widget elementor-widget-shortcode" data-element_type="widget" data-id="f235e76" data-widget_type="shortcode.default">
+<div class="elementor-widget-container">
+<div class="elementor-shortcode"><!--[iframe src="//app.powerbi.com/view?r=eyJrIjoiZmUxM2FkNTUtY2M2OS00OTA3LTg0YWQtYzU4Njk1Njc2NDFmIiwidCI6ImZlMjQ5MGEzLTQyYWUtNDFkNy1iMmZiLTUwN2Y4NTRkMDdjZiJ9"  width="100vw" height="300px" scrolling="yes"]-->
+<!-- iframe plugin v.4.5 wordpress.org/plugins/iframe/ -->
+<iframe class="iframe-class" frameborder="0" height="225px" scrolling="yes" src="https://ciram.epagri.sc.gov.br/ciram-numeros-client/" width="100%"></iframe>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-15eb412 elementor-section-stretched elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-element_type="section" data-id="15eb412" data-settings='{"stretch_section":"section-stretched"}'>
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-dfa95a2" data-element_type="column" data-id="dfa95a2">
+<div class="elementor-column-wrap">
+<div class="elementor-widget-wrap">
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-75b9e787 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="75b9e787" data-settings='{"stretch_section":"section-stretched"}'>
+<div class="elementor-container elementor-column-gap-no">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5a006584" data-element_type="column" data-id="5a006584">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-615acf99 elementor-widget elementor-widget-shortcode" data-element_type="widget" data-id="615acf99" data-widget_type="shortcode.default">
+<div class="elementor-widget-container">
+<div class="elementor-shortcode"> <div class="elementor elementor-128" data-elementor-id="128" data-elementor-settings="[]" data-elementor-type="wp-post">
+<div class="elementor-inner">
+<div class="elementor-section-wrap">
+<section class="elementor-section elementor-top-section elementor-element elementor-element-20b8e20e elementor-section-stretched elementor-section-content-top elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="20b8e20e" data-settings='{"stretch_section":"section-stretched","background_background":"classic"}'>
+<div class="elementor-container elementor-column-gap-no">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-60ba6822" data-element_type="column" data-id="60ba6822">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-384d8da8 elementor-widget elementor-widget-spacer" data-element_type="widget" data-id="384d8da8" data-widget_type="spacer.default">
+<div class="elementor-widget-container">
+<div class="elementor-spacer">
+<div class="elementor-spacer-inner"></div>
+</div>
+</div>
+</div>
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-72a9b7c7 elementor-section-full_width elementor-section-content-middle elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="72a9b7c7">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-359b934" data-element_type="column" data-id="359b934">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-5af9f9f8 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-element_type="widget" data-id="5af9f9f8" data-widget_type="divider.default">
+<div class="elementor-widget-container">
+<div class="elementor-divider">
+<span class="elementor-divider-separator">
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-6e6314b3 elementor-section-full_width elementor-section-content-middle elementor-reverse-tablet elementor-reverse-mobile elementor-section-height-min-height elementor-section-height-default" data-element_type="section" data-id="6e6314b3">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-4d9993a9" data-element_type="column" data-id="4d9993a9">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-35d42cf2 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="35d42cf2" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h4 class="elementor-heading-title elementor-size-default">EPAGRI/CIRAM</h4> </div>
+</div>
+<div class="elementor-element elementor-element-4b26d234 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="4b26d234" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Centro de Informações de Recursos
+Ambientais e de Hidrometeorologia 
+de Santa Catarina</h2> </div>
+</div>
+<div class="elementor-element elementor-element-727b1f30 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="727b1f30" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Rodovia Admar Gonzaga, 1347 – Itacorubi</h2> </div>
+</div>
+<div class="elementor-element elementor-element-32d1215e elementor-widget elementor-widget-heading" data-element_type="widget" data-id="32d1215e" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Florianopolis, SC – Brasil – 
+CEP 88034-901
+</h2> </div>
+</div>
+<div class="elementor-element elementor-element-2d68b82a elementor-widget elementor-widget-heading" data-element_type="widget" data-id="2d68b82a" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Fone: (48) 3665-5006
+</h2> </div>
+</div>
+<div class="elementor-element elementor-element-3861820e elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-element_type="widget" data-id="3861820e" data-widget_type="divider.default">
+<div class="elementor-widget-container">
+<div class="elementor-divider">
+<span class="elementor-divider-separator">
+</span>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-28f16d80 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="28f16d80" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h5 class="elementor-heading-title elementor-size-default"><a href="https://ciram.epagri.sc.gov.br/index.php/contato/">FALE CONOSCO: contatociram@epagri.sc.gov.br</a></h5> </div>
+</div>
+<div class="elementor-element elementor-element-19d8c8ca elementor-widget elementor-widget-heading" data-element_type="widget" data-id="19d8c8ca" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h5 class="elementor-heading-title elementor-size-default">Redes sociais</h5> </div>
+</div>
+<div class="elementor-element elementor-element-444292fc elementor-shape-circle elementor-grid-0 elementor-invisible elementor-widget elementor-widget-social-icons" data-element_type="widget" data-id="444292fc" data-settings='{"_animation":"fadeIn"}' data-widget_type="social-icons.default">
+<div class="elementor-widget-container">
+<div class="elementor-social-icons-wrapper elementor-grid">
+<div class="elementor-grid-item">
+<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-animation-push elementor-repeater-item-t62l05g" href="https://www.facebook.com/Epagriciram/" target="_blank">
+<span class="elementor-screen-only">Facebook</span>
+<i class="fab fa-facebook"></i> </a>
+</div>
+<div class="elementor-grid-item">
+<a class="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-animation-push elementor-repeater-item-x8zo8jb" href="https://twitter.com/epagriciram" target="_blank">
+<span class="elementor-screen-only">Twitter</span>
+<i class="fab fa-twitter"></i> </a>
+</div>
+<div class="elementor-grid-item">
+<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-animation-push elementor-repeater-item-qng8wcp" href="https://www.instagram.com/epagri/" target="_blank">
+<span class="elementor-screen-only">Instagram</span>
+<i class="fab fa-instagram"></i> </a>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-2d38bdd7 elementor-hidden-tablet elementor-hidden-phone elementor-widget elementor-widget-spacer" data-element_type="widget" data-id="2d38bdd7" data-widget_type="spacer.default">
+<div class="elementor-widget-container">
+<div class="elementor-spacer">
+<div class="elementor-spacer-inner"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-50146110" data-element_type="column" data-id="50146110">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-61fb708b elementor-widget elementor-widget-heading" data-element_type="widget" data-id="61fb708b" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h4 class="elementor-heading-title elementor-size-default">O CIRAM</h4> </div>
+</div>
+<div class="elementor-element elementor-element-3e940cc6 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="3e940cc6" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h5 class="elementor-heading-title elementor-size-default"><a href="https://ciram.epagri.sc.gov.br/index.php/o-ciram/areas-de-atuacao/">Áreas de atuação</a></h5> </div>
+</div>
+<div class="elementor-element elementor-element-60012158 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="60012158" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h5 class="elementor-heading-title elementor-size-default"><a href="https://ciram.epagri.sc.gov.br/index.php/o-ciram/equipe/">Equipe</a></h5> </div>
+</div>
+<div class="elementor-element elementor-element-561fbd05 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="561fbd05" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h5 class="elementor-heading-title elementor-size-default"><a href="https://ciram.epagri.sc.gov.br/index.php/o-ciram/quem-somos/">Quem somos</a></h5> </div>
+</div>
+<div class="elementor-element elementor-element-4182cf0f elementor-hidden-tablet elementor-hidden-phone elementor-widget elementor-widget-spacer" data-element_type="widget" data-id="4182cf0f" data-widget_type="spacer.default">
+<div class="elementor-widget-container">
+<div class="elementor-spacer">
+<div class="elementor-spacer-inner"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-429ae389" data-element_type="column" data-id="429ae389">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-5c5178cc elementor-widget elementor-widget-heading" data-element_type="widget" data-id="5c5178cc" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h4 class="elementor-heading-title elementor-size-default">SOLUÇÕES</h4> </div>
+</div>
+<div class="elementor-element elementor-element-6bbc0c9 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="6bbc0c9" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h5 class="elementor-heading-title elementor-size-default"><a href="https://ciram.epagri.sc.gov.br/index.php/solucoes/agricultura/">Agricultura</a></h5> </div>
+</div>
+<div class="elementor-element elementor-element-7c23b656 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="7c23b656" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h5 class="elementor-heading-title elementor-size-default"><a href="https://ciram.epagri.sc.gov.br/index.php/solucoes/tempo-e-clima/">Tempo e clima</a></h5> </div>
+</div>
+<div class="elementor-element elementor-element-190fec76 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="190fec76" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h5 class="elementor-heading-title elementor-size-default"><a href="https://ciram.epagri.sc.gov.br/index.php/solucoes/condicoes-externas/">Condições extremas</a></h5> </div>
+</div>
+<div class="elementor-element elementor-element-4cf35bcf elementor-widget elementor-widget-heading" data-element_type="widget" data-id="4cf35bcf" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h5 class="elementor-heading-title elementor-size-default"><a href="https://ciram.epagri.sc.gov.br/index.php/solucoes/rios/">Rios</a></h5> </div>
+</div>
+<div class="elementor-element elementor-element-53c264f7 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="53c264f7" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h5 class="elementor-heading-title elementor-size-default"><a href="https://ciram.epagri.sc.gov.br/index.php/solucoes/litoral/">Litoral</a></h5> </div>
+</div>
+<div class="elementor-element elementor-element-70cf20eb elementor-widget elementor-widget-heading" data-element_type="widget" data-id="70cf20eb" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h5 class="elementor-heading-title elementor-size-default"><a href="https://ciram.epagri.sc.gov.br/index.php/solucoes/monitoramento/">Monitoramento</a></h5> </div>
+</div>
+<div class="elementor-element elementor-element-478c3a4 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="478c3a4" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h5 class="elementor-heading-title elementor-size-default"><a href="https://ciram.epagri.sc.gov.br/index.php/solucoes/receba-nossos-boletins/">Receba nossos boletins</a></h5> </div>
+</div>
+<div class="elementor-element elementor-element-41fb9933 elementor-hidden-tablet elementor-hidden-phone elementor-widget elementor-widget-spacer" data-element_type="widget" data-id="41fb9933" data-widget_type="spacer.default">
+<div class="elementor-widget-container">
+<div class="elementor-spacer">
+<div class="elementor-spacer-inner"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-46c611d8" data-element_type="column" data-id="46c611d8">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-c213b3b elementor-widget elementor-widget-heading" data-element_type="widget" data-id="c213b3b" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h4 class="elementor-heading-title elementor-size-default">PROJETOS</h4> </div>
+</div>
+<div class="elementor-element elementor-element-3c51d0a7 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="3c51d0a7" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h5 class="elementor-heading-title elementor-size-default"><a href="https://ciram.epagri.sc.gov.br/index.php/projetos/projetos-concluidos/">Concluídos</a></h5> </div>
+</div>
+<div class="elementor-element elementor-element-12a1f300 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="12a1f300" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h5 class="elementor-heading-title elementor-size-default"><a href="https://ciram.epagri.sc.gov.br/index.php/projetos/projetos-em-andamento/">Em andamento</a></h5> </div>
+</div>
+<div class="elementor-element elementor-element-1d02300f elementor-widget elementor-widget-heading" data-element_type="widget" data-id="1d02300f" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h5 class="elementor-heading-title elementor-size-default"><a href="https://ciram.epagri.sc.gov.br/index.php/projetos/site-dos-projetos/">Site dos projetos</a></h5> </div>
+</div>
+<div class="elementor-element elementor-element-1b994a80 elementor-hidden-tablet elementor-hidden-phone elementor-widget elementor-widget-spacer" data-element_type="widget" data-id="1b994a80" data-widget_type="spacer.default">
+<div class="elementor-widget-container">
+<div class="elementor-spacer">
+<div class="elementor-spacer-inner"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-050a023" data-element_type="column" data-id="050a023">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-1dabfd1 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="1dabfd1" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h4 class="elementor-heading-title elementor-size-default">SERVICOS</h4> </div>
+</div>
+<div class="elementor-element elementor-element-8c260b1 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="8c260b1" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h5 class="elementor-heading-title elementor-size-default"><a href="https://ciram.epagri.sc.gov.br/index.php/solucoes/laudos-dados/">Laudos</a></h5> </div>
+</div>
+<div class="elementor-element elementor-element-a60b8d7 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="a60b8d7" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h5 class="elementor-heading-title elementor-size-default"><a href="https://ciram.epagri.sc.gov.br/index.php/serv-casan-peri/" target="_blank">Casan</a></h5> </div>
+</div>
+<div class="elementor-element elementor-element-f8c0e48 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="f8c0e48" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h5 class="elementor-heading-title elementor-size-default"><a href="https://ciram.epagri.sc.gov.br/index.php/serv-queimados-projeto/" target="_blank">Concórdia</a></h5> </div>
+</div>
+<div class="elementor-element elementor-element-cbf9852 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="cbf9852" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h5 class="elementor-heading-title elementor-size-default"><a href="https://ciram.epagri.sc.gov.br/index.php/serv-porto/" target="_blank">Porto SFS</a></h5> </div>
+</div>
+<div class="elementor-element elementor-element-e5ca747 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="e5ca747" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h5 class="elementor-heading-title elementor-size-default"><a href="http://ciram.epagri.sc.gov.br/pldm_cadastros/" target="_blank">Cadastro de maricultores</a></h5> </div>
+</div>
+<div class="elementor-element elementor-element-70e5c28 elementor-hidden-tablet elementor-hidden-phone elementor-widget elementor-widget-spacer" data-element_type="widget" data-id="70e5c28" data-widget_type="spacer.default">
+<div class="elementor-widget-container">
+<div class="elementor-spacer">
+<div class="elementor-spacer-inner"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-6b99d05f" data-element_type="column" data-id="6b99d05f">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-59176155 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="59176155" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h4 class="elementor-heading-title elementor-size-default">PUBLICAÇÕES</h4> </div>
+</div>
+<div class="elementor-element elementor-element-fabdc6e elementor-widget elementor-widget-heading" data-element_type="widget" data-id="fabdc6e" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h5 class="elementor-heading-title elementor-size-default"><a href="https://ciram.epagri.sc.gov.br/index.php/publicacoes/publicacoes-tecnico-cientificas/">Publicações técnico-científicas</a></h5> </div>
+</div>
+<div class="elementor-element elementor-element-4a5d4e6b elementor-hidden-tablet elementor-hidden-phone elementor-widget elementor-widget-spacer" data-element_type="widget" data-id="4a5d4e6b" data-widget_type="spacer.default">
+<div class="elementor-widget-container">
+<div class="elementor-spacer">
+<div class="elementor-spacer-inner"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-36e9befb elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="36e9befb">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-174c2481" data-element_type="column" data-id="174c2481">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-8e84084 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-element_type="widget" data-id="8e84084" data-widget_type="divider.default">
+<div class="elementor-widget-container">
+<div class="elementor-divider">
+<span class="elementor-divider-separator">
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-4439f4c8 elementor-section-full_width elementor-reverse-tablet elementor-reverse-mobile elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="4439f4c8">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-52f94576" data-element_type="column" data-id="52f94576">
+<div class="elementor-column-wrap">
+<div class="elementor-widget-wrap">
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-3cd03cb2" data-element_type="column" data-id="3cd03cb2">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-3f160ac elementor-widget elementor-widget-heading" data-element_type="widget" data-id="3f160ac" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h5 class="elementor-heading-title elementor-size-default"><a href="http://ciram.epagri.sc.gov.br/intra_meteorologia/" target="_blank">Intranet Ciram</a></h5> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-e33356e" data-element_type="column" data-id="e33356e">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-761718b1 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="761718b1" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h5 class="elementor-heading-title elementor-size-default"><a href="http://webmail.epagri.sc.gov.br/" target="_blank">Webmail</a></h5> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-56400633" data-element_type="column" data-id="56400633">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-43da8fb8 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="43da8fb8" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h5 class="elementor-heading-title elementor-size-default"><a href="http://intranet.epagri.sc.gov.br/" target="_blank">EpagriNet</a></h5> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-5f660f6 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="5f660f6">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1678595" data-element_type="column" data-id="1678595">
+<div class="elementor-column-wrap elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-1009197 elementor-widget elementor-widget-copyright" data-element_type="widget" data-id="1009197" data-widget_type="copyright.default">
+<div class="elementor-widget-container">
+<div class="hfe-copyright-wrapper">
+<span>© 2020 Epagri/Ciram</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<div class="mobmenu-overlay"></div><div class="mob-menu-header-holder mobmenu" data-close-icon="up-open" data-menu-display="mob-menu-slideout-over" data-open-icon="down-open"><div class="mobmenul-container"><a aria-label="Left Menu Button" class="mobmenu-left-bt mobmenu-trigger-action" data-panel-target="mobmenu-left-panel" href="#"><i class="mob-icon-menu mob-menu-icon"></i><i class="mob-icon-cancel-1 mob-cancel-button"></i></a></div><div class="mob-menu-logo-holder"><h3 class="headertext"><img alt="EPAGRI/CIRAM" class="mob-standard-logo" src="https://ciram.epagri.sc.gov.br/wp-content/uploads/2020/01/logo-ciram-mobile.png"/></h3></div><div class="mobmenur-container"></div></div>
+<div class="mobmenu-left-alignment mobmenu-panel mobmenu-left-panel mobmenu-parent-link">
+<a aria-label="Left Menu Button" class="mobmenu-left-bt" href="#"><i class="mob-icon-cancel-1 mob-cancel-button"></i></a>
+<div class="mobmenu-content">
+<div class="menu-menu-ciram-container"><ul aria-label="Main navigation for mobile devices" id="mobmenuleft" role="navigation"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2815"><a class="" href="https://ciram.epagri.sc.gov.br/index.php/o-ciram/areas-de-atuacao/">O CIRAM</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2729"><a class="" href="https://ciram.epagri.sc.gov.br/index.php/o-ciram/areas-de-atuacao/">Áreas de atuação</a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-333"><a class="" href="https://ciram.epagri.sc.gov.br/index.php/o-ciram/equipe/">Equipe</a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-334"><a class="" href="https://ciram.epagri.sc.gov.br/index.php/o-ciram/quem-somos/">Quem somos</a></li></ul>
+</li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3461"><a class="" href="https://ciram.epagri.sc.gov.br/index.php/solucoes/agricultura/">SOLUÇÕES</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3184"><a class="" href="https://ciram.epagri.sc.gov.br/index.php/solucoes/agricultura/">Agricultura</a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3185"><a class="" href="https://ciram.epagri.sc.gov.br/index.php/solucoes/tempo-e-clima/">Tempo e Clima</a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-290"><a class="" href="https://ciram.epagri.sc.gov.br/index.php/solucoes/condicoes-externas/">Condições extremas</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1819"><a class="" href="https://ciram.epagri.sc.gov.br/index.php/avisos-meteorologicos/">Avisos Meteorológicos</a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1818"><a class="" href="https://ciram.epagri.sc.gov.br/index.php/avisos-hidrologicos/">Avisos Hidrológicos</a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2433"><a class="" href="https://ciram.epagri.sc.gov.br/index.php/avisos-maritimos/">Avisos Marítimos</a></li> </ul>
+</li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3183"><a class="" href="https://ciram.epagri.sc.gov.br/index.php/solucoes/rios/">Rios</a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3182"><a class="" href="https://ciram.epagri.sc.gov.br/index.php/solucoes/litoral/">Litoral</a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2474"><a class="" href="https://ciram.epagri.sc.gov.br/index.php/solucoes/monitoramento/">Monitoramento</a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2253"><a class="" href="https://ciram.epagri.sc.gov.br/index.php/solucoes/receba-nossos-boletins/">Receba nossos boletins</a></li></ul>
+</li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2814"><a class="" href="https://ciram.epagri.sc.gov.br/index.php/projetos/projetos-concluidos/">PROJETOS</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304"><a class="" href="https://ciram.epagri.sc.gov.br/index.php/projetos/projetos-concluidos/">Projetos concluídos</a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-305"><a class="" href="https://ciram.epagri.sc.gov.br/index.php/projetos/projetos-em-andamento/">Projetos em andamento</a></li></ul>
+</li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2811"><a class="" href="https://ciram.epagri.sc.gov.br/index.php/solucoes/laudos-dados/">SERVIÇOS</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2237"><a class="" href="https://ciram.epagri.sc.gov.br/index.php/solucoes/laudos-dados/">Laudos e dados ambientais</a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2154"><a class="" href="https://ciram.epagri.sc.gov.br/index.php/serv-casan-peri/">Casan</a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2155"><a class="" href="https://ciram.epagri.sc.gov.br/index.php/serv-queimados-projeto/">Concórdia</a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2156"><a class="" href="https://ciram.epagri.sc.gov.br/index.php/serv-porto/">Porto SFS</a></li> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2153"><a class="" href="http://ciram.epagri.sc.gov.br/pldm_cadastros/">Cadastro de maricultores</a></li></ul>
+</li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2813"><a class="" href="https://ciram.epagri.sc.gov.br/index.php/publicacoes/publicacoes-tecnico-cientificas/">PUBLICAÇÕES</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-286"><a class="" href="https://ciram.epagri.sc.gov.br/index.php/publicacoes/publicacoes-tecnico-cientificas/">Publicações técnico-científicas</a></li></ul>
+</li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"><a class="" href="https://ciram.epagri.sc.gov.br/index.php/contato/">CONTATO</a></li></ul></div>
+</div><div class="mob-menu-left-bg-holder"></div></div>
+<link href="https://ciram.epagri.sc.gov.br/wp-content/uploads/elementor/css/post-138.css?ver=1598392238" id="elementor-post-138-css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://ciram.epagri.sc.gov.br/wp-content/uploads/elementor/css/post-128.css?ver=1598532311" id="elementor-post-128-css" media="all" rel="stylesheet" type="text/css"/>
+<script id="stickThis-js-extra" type="text/javascript">
+/* <![CDATA[ */
+var sticky_anything_engage = {"element":"#stickmenu","topspace":"0","minscreenwidth":"0","maxscreenwidth":"999999","zindex":"99999","legacymode":"","dynamicmode":"","debugmode":"","pushup":"","adminbar":"1"};
+/* ]]> */
 </script>
-</div>
-</div>
-<div class="clear"></div>
-</div>
-<div class="mb9-sa3" id="rt-main">
-<div class="rt-container">
-<div class="rt-grid-9">
-<div id="rt-content-top">
-</div>
-<div class="clear"></div>
-<div class="separator"></div>
-<div class="rt-block">
-<div id="rt-mainbody">
-<div class="component-content">
-<div class="rt-article"><div class="rt-article-bg">
-<div class="item-page">
-<h1 class="title">
-							Litoral On-line					</h1>
-</div>
-</div></div>
-</div>
-</div>
-</div>
-<div id="rt-content-bottom">
-<div class="rt-grid-9 rt-alpha rt-omega">
-<div class="rt-block">
-<!-- Social Share Buttons | Powered by <a href="http://www.e-max.it" title="Web Agency" target="_blank">Web Agency</a> --><div class="social-share-button-mod">
-<div class="social-share-button-mod-fbl"><div id="fb-root"></div><script src="http://connect.facebook.net/pt_BR/all.js#xfbml=1"></script>
-<fb:like action="like" colorscheme="light" font="arial" href="http://ciram.epagri.sc.gov.br/index.php?option=com_content&amp;view=article&amp;id=2440&amp;Itemid=753" layout="button_count" send="true" show_faces="false" width="100"></fb:like>
-</div>
-<div class="social-share-button-mod-tw">
-<a class="twitter-share-button" data-count="horizontal" data-lang="en" data-text="EPAGRI/CIRAM  - LITORAL ON-LINE" data-url="http://ciram.epagri.sc.gov.br/index.php?option=com_content&amp;view=article&amp;id=2440&amp;Itemid=753" data-via="" href="http://twitter.com/share">Tweet</a><script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
-</div>
-<div class="social-share-button-mod-retweetme">
-<script type="text/javascript">
-tweetmeme_url = "http://ciram.epagri.sc.gov.br/index.php?option=com_content&view=article&id=2440&Itemid=753";
-tweetmeme_style = "compact";
-tweetmeme_source = "";
+<script id="stickThis-js" src="https://ciram.epagri.sc.gov.br/wp-content/plugins/sticky-menu-or-anything-on-scroll/assets/js/stickThis.js?ver=2.1.1" type="text/javascript"></script>
+<script id="imagesloaded-js" src="https://ciram.epagri.sc.gov.br/wp-includes/js/imagesloaded.min.js?ver=4.1.4" type="text/javascript"></script>
+<script id="pojo-a11y-js-extra" type="text/javascript">
+/* <![CDATA[ */
+var PojoA11yOptions = {"focusable":"","remove_link_target":"","add_role_links":"1","enable_save":"1","save_expiration":"12"};
+/* ]]> */
 </script>
-<script src="http://tweetmeme.com/i/scripts/button.js" type="text/javascript"></script>
+<script id="pojo-a11y-js" src="https://ciram.epagri.sc.gov.br/wp-content/plugins/pojo-accessibility/assets/js/app.min.js?ver=1.0.0" type="text/javascript"></script>
+<script id="oceanwp-main-js-extra" type="text/javascript">
+/* <![CDATA[ */
+var oceanwpLocalize = {"isRTL":"","menuSearchStyle":"drop_down","sidrSource":null,"sidrDisplace":"","sidrSide":"left","sidrDropdownTarget":"link","verticalHeaderTarget":"link","customSelects":".woocommerce-ordering .orderby, #dropdown_product_cat, .widget_categories select, .widget_archive select, .single-product .variations_form .variations select","ajax_url":"https:\/\/ciram.epagri.sc.gov.br\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script id="oceanwp-main-js" src="https://ciram.epagri.sc.gov.br/wp-content/uploads/oceanwp/main-scripts.js?ver=1.0" type="text/javascript"></script>
+<script id="wp-embed-js" src="https://ciram.epagri.sc.gov.br/wp-includes/js/wp-embed.min.js?ver=5.6" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='https://ciram.epagri.sc.gov.br/wp-content/themes/oceanwp/assets/js/third/html5.min.js?ver=1.0' id='html5shiv-js'></script>
+<![endif]-->
+<script id="hfe-frontend-js-js" src="https://ciram.epagri.sc.gov.br/wp-content/plugins/header-footer-elementor/inc/js/frontend.js?ver=1.5.4" type="text/javascript"></script>
+<script id="elementor-frontend-modules-js" src="https://ciram.epagri.sc.gov.br/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.0.15" type="text/javascript"></script>
+<script id="jquery-ui-core-js" src="https://ciram.epagri.sc.gov.br/wp-includes/js/jquery/ui/core.min.js?ver=1.12.1" type="text/javascript"></script>
+<script id="elementor-dialog-js" src="https://ciram.epagri.sc.gov.br/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.8.1" type="text/javascript"></script>
+<script id="elementor-waypoints-js" src="https://ciram.epagri.sc.gov.br/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2" type="text/javascript"></script>
+<script id="swiper-js" src="https://ciram.epagri.sc.gov.br/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6" type="text/javascript"></script>
+<script id="share-link-js" src="https://ciram.epagri.sc.gov.br/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=3.0.15" type="text/javascript"></script>
+<script id="elementor-frontend-js-before" type="text/javascript">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"i18n":{"shareOnFacebook":"Compartilhar no Facebook","shareOnTwitter":"Compartilhar no Twitter","pinIt":"Fixar","download":"Baixar","downloadImage":"Baixar imagem","fullscreen":"Tela cheia","zoom":"Zoom","share":"Compartilhar","playVideo":"Reproduzir v\u00eddeo","previous":"Anterior","next":"Pr\u00f3ximo","close":"Fechar"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"3.0.15","is_static":false,"legacyMode":{"elementWrappers":true},"urls":{"assets":"https:\/\/ciram.epagri.sc.gov.br\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":617,"title":"EPAGRI%2FCIRAM%20%E2%80%93%20Centro%20de%20Informa%C3%A7%C3%B5es%20de%20Recursos%20Ambientais%20e%20de%20Hidrometeorologia%20de%20Santa%20Catarina","excerpt":"","featuredImage":false}};
+</script>
+<script id="elementor-frontend-js" src="https://ciram.epagri.sc.gov.br/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.0.15" type="text/javascript"></script>
+<a accesskey="s" class="pojo-skip-link pojo-skip-content" href="#content" id="pojo-a11y-skip-content" tabindex="1">Skip to content</a>
+<nav class="pojo-a11y-toolbar-right" id="pojo-a11y-toolbar" role="navigation">
+<div class="pojo-a11y-toolbar-toggle">
+<a class="pojo-a11y-toolbar-link pojo-a11y-toolbar-toggle-link" href="javascript:void(0);" title="Ferramentas de Acessibilidade">
+<span class="pojo-sr-only sr-only">Open toolbar</span>
+<svg fill="currentColor" viewbox="0 0 100 100" width="1em" xmlns="http://www.w3.org/2000/svg">
+<g><path d="M60.4,78.9c-2.2,4.1-5.3,7.4-9.2,9.8c-4,2.4-8.3,3.6-13,3.6c-6.9,0-12.8-2.4-17.7-7.3c-4.9-4.9-7.3-10.8-7.3-17.7c0-5,1.4-9.5,4.1-13.7c2.7-4.2,6.4-7.2,10.9-9.2l-0.9-7.3c-6.3,2.3-11.4,6.2-15.3,11.8C7.9,54.4,6,60.6,6,67.3c0,5.8,1.4,11.2,4.3,16.1s6.8,8.8,11.7,11.7c4.9,2.9,10.3,4.3,16.1,4.3c7,0,13.3-2.1,18.9-6.2c5.7-4.1,9.6-9.5,11.7-16.2l-5.7-11.4C63.5,70.4,62.5,74.8,60.4,78.9z"></path><path d="M93.8,71.3l-11.1,5.5L70,51.4c-0.6-1.3-1.7-2-3.2-2H41.3l-0.9-7.2h22.7v-7.2H39.6L37.5,19c2.5,0.3,4.8-0.5,6.7-2.3c1.9-1.8,2.9-4,2.9-6.6c0-2.5-0.9-4.6-2.6-6.3c-1.8-1.8-3.9-2.6-6.3-2.6c-2,0-3.8,0.6-5.4,1.8c-1.6,1.2-2.7,2.7-3.2,4.6c-0.3,1-0.4,1.8-0.3,2.3l5.4,43.5c0.1,0.9,0.5,1.6,1.2,2.3c0.7,0.6,1.5,0.9,2.4,0.9h26.4l13.4,26.7c0.6,1.3,1.7,2,3.2,2c0.6,0,1.1-0.1,1.6-0.4L97,77.7L93.8,71.3z"></path></g> </svg>
+</a>
 </div>
-<div class="social-share-button-mod-gone">
-<!-- Place this tag in your head or just before your close body tag -->
-<script src="http://apis.google.com/js/plusone.js" type="text/javascript"> {lang: 'pt_BR'}</script>
-<!-- Place this tag where you want the +1 button to render -->
-<g:plusone href="http://ciram.epagri.sc.gov.br/index.php?option=com_content&amp;view=article&amp;id=2440&amp;Itemid=753" size="medium"></g:plusone>
-</div>
-</div>
-<div style="clear:both;"></div>
-<div class="social_share_buttons_credits" style="display:none;">Powered by <a href="http://www.e-max.it" target="_blank" title="Web Marketing">Web Marketing</a></div><!-- Social Share Buttons | Powered by <a href="http://www.e-max.it" title="Web Agency" target="_blank">Web Agency</a> --><div style="clear:both;"></div> </div>
-</div>
-</div>
-<div class="clear"></div>
-<div class="separator"></div>
-</div>
-<div class="rt-grid-3">
-<div id="rt-sidebar-a">
-<div class="rt-block">
-<div class="menuLeftHeader">PRINCIPAIS SERVIÇOS</div>
-<ul class="menuServicos">
-<li class="menuLeft"><a href="http://www.ciram.sc.gov.br/agroconnect/" target="_blank"><img alt="Agroconnect" src="images/menu_servicos/ico_agroalerta.jpg"/><span class="menuTexto">Agroconnect</span> </a></li><li class="menuLeft"><a href="/index.php?option=com_content&amp;view=article&amp;id=2405&amp;Itemid=141" title="Previsão do Tempo"><img alt="Previsão do Tempo" src="images/menu_servicos/ico_previsaotempo.jpg"/><span class="image-title">Previsão do Tempo</span> </a></li><li class="menuLeft"><a href="/index.php?option=com_content&amp;view=article&amp;id=113&amp;Itemid=427" title="Previsão para o Mar"><img alt="Previsão para o Mar" src="images/menu_servicos/ico_mar.jpg"/><span class="image-title">Previsão para o Mar</span> </a></li><li class="menuLeft"><a href="/index.php?option=com_content&amp;view=article&amp;id=98&amp;Itemid=198" title="Monitoramento On-line"><img alt="Monitoramento On-line" src="images/menu_servicos/ico_monitoramento.jpg"/><span class="image-title">Monitoramento On-line</span> </a></li><li class="menuLeft"><a href="/index.php?option=com_content&amp;view=article&amp;id=2224&amp;Itemid=250" title="Nível dos Rios"><img alt="Rios On-Line" src="images/menu_servicos/ico_nivelrios.jpg"/><span class="image-title">Rios On-Line</span> </a></li><li class="menuLeft"><a href="/index.php?option=com_content&amp;view=article&amp;id=2440&amp;Itemid=753"><img alt="Litoral On-Line" src="images/ico_litoral_online.png"/><span class="image-title">Litoral On-Line</span> </a></li><li class="menuLeft"><a href="http://ciram.epagri.sc.gov.br/apicultura/" target="_blank" title="Apicultura"><img alt="Apis On-Line" src="images/menu_servicos/ico_apicultura.png"/><span class="menuTexto">Apis On-Line</span> </a></li><li class="menuLeft"><a href="http://ciram.epagri.sc.gov.br/CebolaNet/" target="_blank" title="Cebola Net"><img alt="Cebola Net" src="images/menu_servicos/ico_cebola.png"/><span class="menuTexto">Cebola Net</span> </a></li><li class="menuLeft"><a href="/index.php?option=com_content&amp;view=article&amp;id=60&amp;Itemid=199" title="Imagem de Satélite"><img alt="Imagem de Satélite" src="images/menu_servicos/ico_imagemsatelite.jpg"/><span class="image-title">Imagem de Satélite</span> </a></li><li class="menuLeft"><a href="/index.php?option=com_content&amp;view=article&amp;id=2943&amp;Itemid=664" title="Imagens do Radar/SC"><img alt="Imagens do Radar/SC" src="images/menu_servicos/ico_radar1.png"/><span class="image-title">Imagens do Radar/SC</span> </a></li><li class="menuLeft"><a href="/index.php?option=com_content&amp;view=article&amp;id=559&amp;Itemid=200" title="WebGis e Mapas para Download"><img alt="Mapas Digitais" src="images/menu_servicos/ico_mapasdigitais.jpg"/><span class="image-title">Mapas Digitais</span> </a></li><li class="menuLeft"><a href="/index.php?option=com_content&amp;view=article&amp;id=64&amp;Itemid=226" title="Solicitação de Informações"><img alt="Solicitação de Laudos e Dados" src="images/menu_servicos/ico_laudotecni.jpg"/><span class="image-title">Solicitação de Laudos e Dados</span> </a></li></ul>
-</div>
-<div class="rt-block">
-<div class="custom">
-<style scoped="scoped" type="text/css"><!--
-.restritoLogos {height:80px;}
---></style>
-<div class="restrito"><img align="absmiddle" src="images/ico_acessorestrito.jpg"/>Acesso restrito</div>
-<div class="restritoLogos"><a href="intra_meteorologia/" style="color: #0000cc; text-decoration: none;" target="_blank"> <img alt="ciram-intranet" height="61" src="images/ciram-intranet.png" width="79"/> </a>  <!--
-	<a href="parceiros/defesa_civil/" target="_blank">
-		<img src="images/lg_restrito_defesacivil.png" height="61" width="79" />
-	</a>&nbsp;
-	--> <!--
-	<a href="baseweb/" target="_blank">
-		<img src="images/logo_sds_novo.png" alt="defesa_civil" />
-	</a>
-	--> <img alt="defesa_civil" src="images/logo_sds_novo.png"/></div>
-</div>
-</div>
-</div>
-</div>
-<div class="clear"></div>
-</div>
-</div>
-<div id="rt-conteudobaixo">
-<div class="rt-container">
-<div class="clear"></div>
-</div>
-</div>
-<div id="rt-bottom">
-<div class="shadow-up"><img alt="" src="http://ciram.epagri.sc.gov.br/templates/ammon/images/shadow-up.png"/></div>
-<div class="rt-container">
-<div class="rt-grid-12 rt-alpha rt-omega">
-<div class="rt-block">
-<ul class="sf-menu menu">
-<li id="item-229"><a href="http://ciram.epagri.sc.gov.br/index.php?option=com_content&amp;view=featured&amp;Itemid=101">Pagina Inicial</a></li><li id="item-230"><a href="/index.php?option=com_content&amp;view=article&amp;id=50&amp;Itemid=230">INSTITUCIONAL</a></li><li id="item-231"><a href="/index.php?option=com_content&amp;view=article&amp;id=104&amp;Itemid=231">SERVIÇOS</a></li><li id="item-232"><a href="/index.php?option=com_content&amp;view=article&amp;id=53&amp;Itemid=196">PROJETOS</a></li><li id="item-233"><a href="/index.php?option=com_content&amp;view=article&amp;id=86&amp;Itemid=233">PUBLICAÇÕES</a></li><li id="item-234"><a href="/index.php?option=com_content&amp;view=article&amp;id=40&amp;Itemid=234">CONTATO</a></li></ul>
-</div>
-</div>
-<div class="clear"></div>
-</div>
-</div>
-<div id="rt-footer">
-<div class="rt-container">
-<div class="rt-grid-12 rt-alpha rt-omega">
-<div class="rt-block">
-<div class="copyright">
-<a href="http://ciram.epagri.sc.gov.br/" title="EPAGRI/CIRAM"><img alt="EPAGRI/CIRAM" src="images/logo2.png"/></a>
-<div class="copyright-text"><p>Empresa de Pesquisa Agropecuária e Extensão Rural de Santa Catarina - Epagri<br>Rod. Admar Gonzaga, 1.347, Itacorubi - Caixa Postal 502 - CEP 88034-901 Florianópolis - SC - Brasil<br>Fone: 55 48 3665.5006 | Fax: 55 48 3665.5142</br></br></p></div>
-<div class="clear"></div>
-</div> </div>
-</div>
-<div class="clear"></div>
+<div class="pojo-a11y-toolbar-overlay">
+<div class="pojo-a11y-toolbar-inner">
+<p class="pojo-a11y-toolbar-title">Ferramentas de Acessibilidade</p>
+<ul class="pojo-a11y-toolbar-items pojo-a11y-tools">
+<li class="pojo-a11y-toolbar-item">
+<a class="pojo-a11y-toolbar-link pojo-a11y-btn-resize-font pojo-a11y-btn-resize-plus" data-action="resize-plus" data-action-group="resize" href="#" tabindex="-1">
+<span class="pojo-a11y-toolbar-icon"><svg version="1.1" viewbox="0 0 448 448" width="1em" xmlns="http://www.w3.org/2000/svg"><path "="" d="M256 200v16c0 4.25-3.75 8-8 8h-56v56c0 4.25-3.75 8-8 8h-16c-4.25 0-8-3.75-8-8v-56h-56c-4.25 0-8-3.75-8-8v-16c0-4.25 3.75-8 8-8h56v-56c0-4.25 3.75-8 8-8h16c4.25 0 8 3.75 8 8v56h56c4.25 0 8 3.75 8 8zM288 208c0-61.75-50.25-112-112-112s-112 50.25-112 112 50.25 112 112 112 112-50.25 112-112zM416 416c0 17.75-14.25 32-32 32-8.5 0-16.75-3.5-22.5-9.5l-85.75-85.5c-29.25 20.25-64.25 31-99.75 31-97.25 0-176-78.75-176-176s78.75-176 176-176 176 78.75 176 176c0 35.5-10.75 70.5-31 99.75l85.75 85.75c5.75 5.75 9.25 14 9.25 22.5z" fill="currentColor"></path></svg></span><span class="pojo-a11y-toolbar-text">Aumentar Texto</span> </a>
+</li>
+<li class="pojo-a11y-toolbar-item">
+<a class="pojo-a11y-toolbar-link pojo-a11y-btn-resize-font pojo-a11y-btn-resize-minus" data-action="resize-minus" data-action-group="resize" href="#" tabindex="-1">
+<span class="pojo-a11y-toolbar-icon"><svg version="1.1" viewbox="0 0 448 448" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 200v16c0 4.25-3.75 8-8 8h-144c-4.25 0-8-3.75-8-8v-16c0-4.25 3.75-8 8-8h144c4.25 0 8 3.75 8 8zM288 208c0-61.75-50.25-112-112-112s-112 50.25-112 112 50.25 112 112 112 112-50.25 112-112zM416 416c0 17.75-14.25 32-32 32-8.5 0-16.75-3.5-22.5-9.5l-85.75-85.5c-29.25 20.25-64.25 31-99.75 31-97.25 0-176-78.75-176-176s78.75-176 176-176 176 78.75 176 176c0 35.5-10.75 70.5-31 99.75l85.75 85.75c5.75 5.75 9.25 14 9.25 22.5z" fill="currentColor"></path></svg></span><span class="pojo-a11y-toolbar-text">Diminuir Texto</span> </a>
+</li>
+<li class="pojo-a11y-toolbar-item">
+<a class="pojo-a11y-toolbar-link pojo-a11y-btn-background-group pojo-a11y-btn-grayscale" data-action="grayscale" data-action-group="schema" href="#" tabindex="-1">
+<span class="pojo-a11y-toolbar-icon"><svg version="1.1" viewbox="0 0 448 448" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M15.75 384h-15.75v-352h15.75v352zM31.5 383.75h-8v-351.75h8v351.75zM55 383.75h-7.75v-351.75h7.75v351.75zM94.25 383.75h-7.75v-351.75h7.75v351.75zM133.5 383.75h-15.5v-351.75h15.5v351.75zM165 383.75h-7.75v-351.75h7.75v351.75zM180.75 383.75h-7.75v-351.75h7.75v351.75zM196.5 383.75h-7.75v-351.75h7.75v351.75zM235.75 383.75h-15.75v-351.75h15.75v351.75zM275 383.75h-15.75v-351.75h15.75v351.75zM306.5 383.75h-15.75v-351.75h15.75v351.75zM338 383.75h-15.75v-351.75h15.75v351.75zM361.5 383.75h-15.75v-351.75h15.75v351.75zM408.75 383.75h-23.5v-351.75h23.5v351.75zM424.5 383.75h-8v-351.75h8v351.75zM448 384h-15.75v-352h15.75v352z" fill="currentColor"></path></svg></span><span class="pojo-a11y-toolbar-text">Escala de Cinza</span> </a>
+</li>
+<li class="pojo-a11y-toolbar-item">
+<a class="pojo-a11y-toolbar-link pojo-a11y-btn-background-group pojo-a11y-btn-high-contrast" data-action="high-contrast" data-action-group="schema" href="#" tabindex="-1">
+<span class="pojo-a11y-toolbar-icon"><svg version="1.1" viewbox="0 0 448 448" width="1em" xmlns="http://www.w3.org/2000/svg"><path "="" d="M192 360v-272c-75 0-136 61-136 136s61 136 136 136zM384 224c0 106-86 192-192 192s-192-86-192-192 86-192 192-192 192 86 192 192z" fill="currentColor"></path></svg></span><span class="pojo-a11y-toolbar-text">Alto Contraste</span> </a>
+</li>
+<li class="pojo-a11y-toolbar-item">
+<a class="pojo-a11y-toolbar-link pojo-a11y-btn-background-group pojo-a11y-btn-negative-contrast" data-action="negative-contrast" data-action-group="schema" href="#" tabindex="-1">
+<span class="pojo-a11y-toolbar-icon"><svg version="1.1" viewbox="0 0 448 448" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 240c-23.75-36.75-56.25-68.25-95.25-88.25 10 17 15.25 36.5 15.25 56.25 0 61.75-50.25 112-112 112s-112-50.25-112-112c0-19.75 5.25-39.25 15.25-56.25-39 20-71.5 51.5-95.25 88.25 42.75 66 111.75 112 192 112s149.25-46 192-112zM236 144c0-6.5-5.5-12-12-12-41.75 0-76 34.25-76 76 0 6.5 5.5 12 12 12s12-5.5 12-12c0-28.5 23.5-52 52-52 6.5 0 12-5.5 12-12zM448 240c0 6.25-2 12-5 17.25-46 75.75-130.25 126.75-219 126.75s-173-51.25-219-126.75c-3-5.25-5-11-5-17.25s2-12 5-17.25c46-75.5 130.25-126.75 219-126.75s173 51.25 219 126.75c3 5.25 5 11 5 17.25z" fill="currentColor"></path></svg></span><span class="pojo-a11y-toolbar-text">Contraste Negativo</span> </a>
+</li>
+<li class="pojo-a11y-toolbar-item">
+<a class="pojo-a11y-toolbar-link pojo-a11y-btn-links-underline" data-action="links-underline" data-action-group="toggle" href="#" tabindex="-1">
+<span class="pojo-a11y-toolbar-icon"><svg version="1.1" viewbox="0 0 448 448" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M364 304c0-6.5-2.5-12.5-7-17l-52-52c-4.5-4.5-10.75-7-17-7-7.25 0-13 2.75-18 8 8.25 8.25 18 15.25 18 28 0 13.25-10.75 24-24 24-12.75 0-19.75-9.75-28-18-5.25 5-8.25 10.75-8.25 18.25 0 6.25 2.5 12.5 7 17l51.5 51.75c4.5 4.5 10.75 6.75 17 6.75s12.5-2.25 17-6.5l36.75-36.5c4.5-4.5 7-10.5 7-16.75zM188.25 127.75c0-6.25-2.5-12.5-7-17l-51.5-51.75c-4.5-4.5-10.75-7-17-7s-12.5 2.5-17 6.75l-36.75 36.5c-4.5 4.5-7 10.5-7 16.75 0 6.5 2.5 12.5 7 17l52 52c4.5 4.5 10.75 6.75 17 6.75 7.25 0 13-2.5 18-7.75-8.25-8.25-18-15.25-18-28 0-13.25 10.75-24 24-24 12.75 0 19.75 9.75 28 18 5.25-5 8.25-10.75 8.25-18.25zM412 304c0 19-7.75 37.5-21.25 50.75l-36.75 36.5c-13.5 13.5-31.75 20.75-50.75 20.75-19.25 0-37.5-7.5-51-21.25l-51.5-51.75c-13.5-13.5-20.75-31.75-20.75-50.75 0-19.75 8-38.5 22-52.25l-22-22c-13.75 14-32.25 22-52 22-19 0-37.5-7.5-51-21l-52-52c-13.75-13.75-21-31.75-21-51 0-19 7.75-37.5 21.25-50.75l36.75-36.5c13.5-13.5 31.75-20.75 50.75-20.75 19.25 0 37.5 7.5 51 21.25l51.5 51.75c13.5 13.5 20.75 31.75 20.75 50.75 0 19.75-8 38.5-22 52.25l22 22c13.75-14 32.25-22 52-22 19 0 37.5 7.5 51 21l52 52c13.75 13.75 21 31.75 21 51z" fill="currentColor"></path></svg></span><span class="pojo-a11y-toolbar-text">Links Sublinhados</span> </a>
+</li>
+<li class="pojo-a11y-toolbar-item">
+<a class="pojo-a11y-toolbar-link pojo-a11y-btn-reset" data-action="reset" href="#" tabindex="-1">
+<span class="pojo-a11y-toolbar-icon"><svg version="1.1" viewbox="0 0 448 448" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M384 224c0 105.75-86.25 192-192 192-57.25 0-111.25-25.25-147.75-69.25-2.5-3.25-2.25-8 0.5-10.75l34.25-34.5c1.75-1.5 4-2.25 6.25-2.25 2.25 0.25 4.5 1.25 5.75 3 24.5 31.75 61.25 49.75 101 49.75 70.5 0 128-57.5 128-128s-57.5-128-128-128c-32.75 0-63.75 12.5-87 34.25l34.25 34.5c4.75 4.5 6 11.5 3.5 17.25-2.5 6-8.25 10-14.75 10h-112c-8.75 0-16-7.25-16-16v-112c0-6.5 4-12.25 10-14.75 5.75-2.5 12.75-1.25 17.25 3.5l32.5 32.25c35.25-33.25 83-53 132.25-53 105.75 0 192 86.25 192 192z" fill="currentColor"></path></svg></span>
+<span class="pojo-a11y-toolbar-text">Reset</span>
+</a>
+</li>
+</ul>
 </div>
 </div>
-</div><!-- Container End -->
-
-
+</nav>
+</body>
+</html>
