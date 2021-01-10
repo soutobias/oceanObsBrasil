@@ -17,6 +17,7 @@ import user_config
 
 sys.path.append(user_config.path )
 sys.path.append(user_config.path + "/database" )
+sys.path.append(user_config.path + "/mur" )
 
 import db_function as db
 
@@ -85,7 +86,7 @@ for p in range(len(pontos_lat)):
     str_coord = ' '.join(box_coord)
 
 
-    str_download = 'python3.8 subset_mur.py -s %s -f %s -b %s -x MUR-JPL-L4-GLOB-v4.1' % (start_date, end_date,str_coord)
+    str_download = 'python3.8 %smur/subset_mur.py -s %s -f %s -b %s -x MUR-JPL-L4-GLOB-v4.1' % (user_config.path, start_date, end_date,str_coord)
 
     download_status = os.system(str_download)
 
