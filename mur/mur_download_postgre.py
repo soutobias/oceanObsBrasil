@@ -38,7 +38,7 @@ if list_files:
 
 # Last date of data to start the download
 try:
-    start_date = db.query_last_data(['type'], ['mur']).date_time[0]
+    start_date = db.query_last_data(['data_type'], ['mur']).date_time[0]
 except:
     start_date = None
 
@@ -165,7 +165,7 @@ sst_final['sst'] = sst_final['sst'].astype(np.float64)
 sst_final['date_time'] = sst_final['date_time'].apply(lambda data: datetime.strftime(data,"%Y-%m-%d %H:%M:%S"))
 
 sst_final["institution"] = 'mur'
-sst_final["type"] = 'mur'
+sst_final["data_type"] = 'mur'
 
 print(sst_final)
 

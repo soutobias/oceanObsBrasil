@@ -72,7 +72,7 @@ def delete_old_data_no_station(df):
 
     con = conn_qc_db()
 
-    query = "DELETE FROM data_no_stations WHERE type = '%s' AND institution = '%s'  AND date_time >= '%s'" % (df.type[0], df.institution[0], df["date_time"].min())
+    query = "DELETE FROM data_no_stations WHERE data_type = '%s' AND institution = '%s'  AND date_time >= '%s'" % (df.data_type[0], df.institution[0], df["date_time"].min())
 
     cur = con.connect()
 

@@ -55,7 +55,7 @@ time.sleep(3)
 table_NM = pd.read_html(driver.page_source)
 soup=BeautifulSoup(driver.page_source, 'html.parser')
 
-stations = db.select_station(["institution", "type"], ["epagri", "tide"]).sort_values(by=['id'])
+stations = db.select_station(["institution", "data_type"], ["epagri", "tide"]).sort_values(by=['id'])
 for i in range(len(stations)):
     # l = soup.find("div", {"id": stations.url[i] }).get_text().split("Mare Obser")[0].strip()
     df = table_NM[i]

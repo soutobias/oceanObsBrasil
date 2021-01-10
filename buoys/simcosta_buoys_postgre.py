@@ -36,7 +36,7 @@ def remove_dup_columns(frame):
      return frame.iloc[:, keep_icols]
 
 
-boias_simcosta = db.select_station(["institution", "type"], ["simcosta", "buoy"])
+boias_simcosta = db.select_station(["institution", "data_type"], ["simcosta", "buoy"])
 tempoini=str(int(np.ceil(time.time()-3600*24)))
 tempofim=str(int(np.ceil(time.time())))
 

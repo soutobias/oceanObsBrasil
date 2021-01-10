@@ -293,7 +293,7 @@ df.columns = ['date_time', 'lat', 'lon', 'swvht']
 df = df.replace(to_replace =['None', 'NULL', ' ', ''], value =np.nan)
 
 df["institution"] = 'jason3'
-df["type"] = 'altimeter'
+df["data_type"] = 'altimeter'
 
 print(df)
 try:

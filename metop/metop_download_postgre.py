@@ -26,7 +26,7 @@ date_format = '%Y-%m-%dT%H:%M:%SZ'
 
 # Ultimo dado/data de Metop_A
 try:
-    date_a = db.query_last_data(['type', 'institution'], ['A', 'ascat']).date_time[0]
+    date_a = db.query_last_data(['data_type', 'institution'], ['A', 'ascat']).date_time[0]
 except:
     date_a = None
 
@@ -41,7 +41,7 @@ else:
 
 # Ultimo dado/data de Metop_B
 try:
-    date_b = db.query_last_data(['type', 'institution'], ['B', 'ascat']).date_time[0]
+    date_b = db.query_last_data(['data_type', 'institution'], ['B', 'ascat']).date_time[0]
 except:
     date_b = None
 
@@ -57,7 +57,7 @@ else:
 
 # Ultimo dado/data de Metop_C
 try:
-    date_c = db.query_last_data(['type', 'institution'], ['C', 'ascat']).date_time[0]
+    date_c = db.query_last_data(['data_type', 'institution'], ['C', 'ascat']).date_time[0]
 except:
     date_c = None
 
@@ -85,7 +85,7 @@ try:
     ascat_a = metop(metop_a_id, start_date_a, end_date,cwd+'')
     ascat_a.columns = ['date_time', 'lat', 'lon', 'wdir', 'wspd']
     ascat_a["institution"] = 'ascat'
-    ascat_a["type"] = 'A'
+    ascat_a["data_type"] = 'A'
     db.delete_old_data_no_station(ascat_a)
     db.insert_new_data_no_station(ascat_a)
 except:
@@ -95,7 +95,7 @@ try:
     ascat_b = metop(metop_b_id, start_date_b, end_date,cwd+'')
     ascat_b.columns = ['date_time', 'lat', 'lon', 'wdir', 'wspd']
     ascat_b["institution"] = 'ascat'
-    ascat_b["type"] = 'B'
+    ascat_b["data_type"] = 'B'
     db.delete_old_data_no_station(ascat_b)
     db.insert_new_data_no_station(ascat_b)
 except:
@@ -105,7 +105,7 @@ try:
     ascat_c = metop(metop_c_id, start_date_c, end_date,cwd+'')
     ascat_c.columns = ['date_time', 'lat', 'lon', 'wdir', 'wspd']
     ascat_c["institution"] = 'ascat'
-    ascat_c["type"] = 'C'
+    ascat_c["data_type"] = 'C'
     db.delete_old_data_no_station(ascat_c)
     db.insert_new_data_no_station(ascat_c)
 except:

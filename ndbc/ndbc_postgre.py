@@ -216,7 +216,7 @@ df.columns = ['date_time', 'lat', 'lon', 'wdir', 'wspd', 'swvht', 'tp', 'wvdir',
 df = df.replace(to_replace =['None', 'NULL', ' ', ''], value =np.nan)
 
 df["institution"] = 'ndbc'
-df["type"] = 'gts'
+df["data_type"] = 'gts'
 
 print(df)
 
