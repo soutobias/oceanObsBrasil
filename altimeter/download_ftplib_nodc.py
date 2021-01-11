@@ -16,8 +16,10 @@ def download_ftplib_nodc(datahora1):
     username = ''
     password = ''
 
+    print("teste")
+    print(datahora1)
     # Directory and matching information
-    directory = 'pub/data.nodc/jason2/subs/'
+    directory = 'pub/data.nodc/jason3/ogdr/ogdr/'
 
     datahora=time.gmtime()
     ano=datahora.tm_year
@@ -47,6 +49,12 @@ def download_ftplib_nodc(datahora1):
     ftp.login(username, password)
     ftp.cwd(directory)
 
+    dir_list = []
+    ftp.dir(dir_list.append)
+    directory2 = dir_list[-1].split(' ')[-1]
+    print(directory)
+    ftp.cwd(directory2)
+
     if dia1!=dia:
         hour=0
         while hour<=hora:
@@ -54,7 +62,7 @@ def download_ftplib_nodc(datahora1):
                 valor="0"+str(hour)
             else:
                 valor=str(hour)
-            filematch = "*JA3_OPR_*"+str(ano)+mes+dia+"_"+valor+"*.nc"
+            filematch = "JA3_OPN_*"+str(ano)+mes+dia+"_"+valor+"*.nc"
             for filename in ftp.nlst(filematch):
                 fhandle = open(filename, 'wb')
                 print ('Getting ' + filename)
@@ -68,7 +76,8 @@ def download_ftplib_nodc(datahora1):
                 valor="0"+str(hora1)
             else:
                 valor=str(hora1)
-            filematch = "*JA3_OPR_*_*_"+str(ano)+mes1+dia1+"_"+valor+"*_*_*.nc"
+            filematch = "JA3_OPN_*_*_"+str(ano)+mes1+dia1+"_"+valor+"*_*_*.nc"
+            print(ftp.nlst(filematch))
             for filename in ftp.nlst(filematch):
                 fhandle = open(filename, 'wb')
                 print ('Getting ' + filename)
@@ -84,7 +93,7 @@ def download_ftplib_nodc(datahora1):
                 valor="0"+str(hour1)
             else:
                 valor=str(hour1)
-            filematch = "*JA3_OPR_*_*_"+str(ano)+mes+dia+"_"+valor+"*_*_*.nc"
+            filematch = "JA3_OPN_*_*_"+str(ano)+mes+dia+"_"+valor+"*_*_*.nc"
             for filename in ftp.nlst(filematch):
                 fhandle = open(filename, 'wb')
                 print ('Getting ' + filename)
